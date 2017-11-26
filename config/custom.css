@@ -1,0 +1,1594 @@
+  /* General CSS */
+
+  body
+  {
+    background-image: url("http://i66.tinypic.com/2vs0vbq.png") !important;
+    background-size: cover !important;
+  }
+
+  .ps-room.ps-room-light
+  {
+    background-color: rgba(210, 237, 249, 0.5) !important;
+    border: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .ps-room.ps-room-light.scrollable
+  {
+    background-color: rgba(210, 237, 249, 0.5)/*rgba(143, 211, 240)*/ !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .pad .button, .ps-room.ps-room-light.scrollable p .button
+  {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 4px;
+    border-color: rgb(0, 0, 0) !important;
+    color: #000 !important;
+    text-shadow: 0px 0px 0px !important;
+  }
+
+  .pad .button:hover, .ps-room.ps-room-light.scrollable p .button:hover
+  {
+    background: rgba(255, 102, 102, 0.8) !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+    border-color: rgb(255, 102, 102) !important;
+    color: #000;
+  }
+
+  .ps-room.ps-room-light .roomlist, .roomlisttop
+  {
+    width: 100%;
+    max-width: 100% !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .ps-room.ps-room-light .roomlist
+  {
+    background: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .roomlist a.ilink
+  {
+    background: rgb(255, 255, 255) !important;
+    border-color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    border-radius: 6px;
+    text-shadow: none !important;
+    color: #000;
+  }
+
+  .roomlist a.ilink:hover
+  {
+    background: rgba(255, 102, 102, 0.8) !important;
+    border-color: #000;
+    border-radius: 6px;
+    color: #000;
+    text-shadow: 0px 0px 0px !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+  }
+  
+
+  .roomlist a.ilink small
+  {
+    text-shadow: none !important;
+    color: #000;
+  }
+
+  .roomcounters button, roomcounters button:havor
+  {
+    background: none !important;
+    border-color: #000;
+    border-radius: 4px;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+    color: #000 !important;
+  }
+
+  .textbox, .textbox:hover, .textbox:focus
+  {
+    background: rgba(210, 237, 255, 0.8) !important;
+    border-color: #000;
+    text-shadow: none !important;
+    color: #000 !important;
+  }
+
+  .broadcast-blue
+  {
+    background-color: rgb(210, 237, 249) !important;
+    border-left-style: solid !important;
+    border-color: #000 !important;
+    border-width: 12px !important;
+    border-right-style: solid !important;
+    border-radius: 6px !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+    text-align: center;
+  }
+
+  .broadcast-blue:havor
+  {
+    background-color: rgb(255, 102, 102);
+    border-left-style: solid !important;
+    border-right-style: solid !important;
+    border-color: #000 !important;
+    border-width: 12px !important;
+    border-radius: 6px !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+    text-align: center;
+  }
+
+  .broadcast-blue a
+  {
+    color: #000;
+    text-decoration: underline !important;
+  }
+
+  .broadcast-red
+  {
+    background-color: rgb(255, 102, 102) !important;
+    border-left-style: solid !important;
+    border-right-style: solid !important;
+    border-radius: 6px !important;
+    border-color: #000 !important;
+    border-width: 12px !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+    color: #000 !important;
+    text-align: center !important;
+  }
+
+  .broadcast-red a
+  {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  .broadcast-green
+  {
+    background-color: rgb(0, 153, 51) !important;
+    border-left-style: solid !important;
+    border-right-style: solid !important;
+    border-radius: 6px !important;
+    border-width: 12px !important;
+    border-color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+    color: #000 !important;
+    text-align: center !important;
+  }
+
+  .broadcast-green a
+  {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  .hangman-blue
+  {
+    background: rgba(26, 186, 255, 0.7);
+    color: #000;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #000;
+    border-width: 4px;
+  }
+
+  .hangman-green
+  {
+    background: rgb(0, 153, 51);
+    color: #000;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #000;
+    border-width: 4px;
+  }
+
+  .ambush
+  {
+    background: rgba(26, 186, 255, 0.7);
+    color: #000;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #000;
+    border-width: 4px;
+    text-align: center;
+  }
+
+  .hangman-red
+  {
+    background: rgba(255, 102, 102, 0.7);
+    color: #000;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #000;
+    border-width: 4px;
+  }
+
+  .uno
+  {
+    background: rgba(255, 102, 102, 0.7);
+    color: #000;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #000;
+    border-width: 4px;
+  }
+
+  .message-announce
+  {
+    background: rgb(210, 237, 249) !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    color: #000;
+  } 
+  
+  /* General CSS End */
+  
+  /* Header CSS */
+  
+  .header
+  {
+    background: rgba(210, 237, 249, 0.5) url("http://oi65.tinypic.com/15wly8p.jpg") no-repeat !important;
+    /* impulse logo url("http://i.imgur.com/8FtRdtw.png") no-repeat !important; */
+  }
+
+  .header .logo
+  {
+    opacity: 0;
+  }
+
+  .maintabbarbottom
+  {
+    background: rgb(210, 237, 249) !important;
+    border-color: #000;
+  }
+
+  .tabbar a.button.notifying
+  {
+    background: rgba(255, 102, 102, 0.8) !important;
+    border-color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .tabbar a.button.notifying:hover
+  {
+    background: rgba(255, 102, 102, 0.8) !important;
+    border-color: #000 !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .tabbar a.button.subtle-notifying
+  {
+    background: rgba(210, 237, 249, 0.8) !important;
+    border-color: #000 !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  }
+
+  .tabbar a.button.cur, .tabbar a.button.cur:hover
+  {
+    background: rgba(210, 237, 249, 0.8) !important;
+    border-color: #000 !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  }
+
+  .tabbar a.cur + .closebutton
+  {
+    color: #000 !important;
+  }
+
+  .tabbar a.button, .userbar button.icon
+  {
+    background: rgba(210, 237, 249) !important;
+    border-color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .tabbar .closebutton
+  {
+    color: #000;
+  }
+
+  .tabbar .closebutton:hover, .tabbar a.cur + .closebutton:hover
+  {
+    color: #000 !important;
+  }
+
+  .tabbar a.button:hover, .userbar button.icon:hover
+  {
+    background: rgba(255, 102, 102, 0.8) !important;
+    border-color: #000;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  }
+
+  .userbar .username
+  {
+    color: black;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  } 
+  
+  /* Header CSS End */
+  
+  /* Chat CSS */
+  
+  .chat-log
+  {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border-width: 0px 0px 1px 1px !important;
+    border-style: solid !important;
+    border-color: #000 !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  }
+
+  .chat small
+  {
+    color: #000 !important;
+  }
+
+  .infobox
+  {
+    background: rgba(245, 245, 245, 0.6) !important;
+    background-size: cover !important;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 4px !important;
+    border-color: #000 !important;
+    border-left-style: none !important;
+    border-right-style: none !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  }
+
+  .infobox a
+  {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  .infobox code
+  {
+    color: #000;
+  }
+
+  .message small
+  {
+    color: #000 !important;
+  }
+
+  .message .utilichart .result
+  {
+    background: none !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    color: black;
+    text-align: center !important;
+  }
+
+  .pm-log a.ilink, pm-log a.ilink:havor
+  {
+    color: rgb(255, 102, 102) !important;
+    font-style: bold !important;
+    font-style: underline !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+  }
+
+  .chat-log a.ilink, .chat-log a.ilink:havor
+  {
+    color: rgb(255, 102, 102) !important;
+    font-style: bold !important;
+    font-style: underline !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+  }
+
+  .infobox a.ilink, .infobox a.ilink:havor
+  {
+    color: rgb(255, 102, 102) !important;
+    font-style: bold !important;
+    font-style: underline !important;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+  }
+
+  .chat.mine
+  {
+    background: transparent !important;
+  }
+
+  .message-pm
+  {
+    color: #000 !important;
+  }
+
+  .chat-log-add
+  {
+    border-color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+    color: #000 !important;
+  }
+
+  .chat-log-add .chatbox label
+  {
+    text-shadow: none !important;
+  }
+
+  .userlist
+  {
+    background: rgba(210, 237, 249, 0.8) !important;
+    border-color: rgb(0, 0, 0);
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  }
+
+  .userlist li
+  {
+    border-color: #000 !important;
+  }
+
+  .userlist li span, .userlist li strong
+  {
+    text-shadow: none !important;
+  }
+
+  .userlist li button:hover
+  {
+    background: rgba(210, 237, 259, 0.8) !important;
+    color: #000;
+    border-color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .userlist-count
+  {
+    color: #000 !important;
+  }
+
+  .userlist li em.group
+  {
+    color: #000 !important;
+  } 
+  
+  /* Chat CSS End */
+  
+  /* Menu CSS */
+  
+  .menugroup
+  {
+    background: none !important;
+    border: none !important;
+    color: #000 !important;
+    font-style: bold !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .menugroup button, .select, .menugroup .button.mainmenu2, .menugroup .button.mainmenu4
+  {
+    background: rgb(102, 179, 255) url("https://orig00.deviantart.net/d9b2/f/2012/316/a/c/free_bouncy_glaceon_icon_by_kattling-d5kt02m.gif") right no-repeat !important;
+    border-color: #000 !important;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 2px !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .menugroup button:hover, .select:hover, .menugroup .button.mainmenu2:hover, .menugroup .button.mainmenu4:hover
+  {
+    background: rgb(255, 102, 102) url("https://orig00.deviantart.net/443b/f/2012/307/5/c/free_bouncy_flareon_icon_by_kattling-d5ju0kd.gif") right no-repeat !important;
+  }
+
+  .menugroup a.ilink, .menugroup a.ilink:havor
+  {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold !important;
+    font-style: italic !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .select:disabled
+  {
+    background: rgb(102, 179, 255) !important;
+    border: 2px #000 !important;
+    color: #000 !important;
+    font-style: bold !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .select:disabled:havor
+  {
+    background: rgb(255, 102, 102) !important;
+  }
+
+  .teamselect:disabled strong
+  {
+    color: #000 !important;
+  }
+
+  .menugroup .button.mainmenu1, .menugroup .button.mainmenu3, .menugroup .button.mainmenu5
+  {
+    background: rgb(255, 102, 102) url("https://orig00.deviantart.net/443b/f/2012/307/5/c/free_bouncy_flareon_icon_by_kattling-d5ju0kd.gif") right no-repeat !important;
+    border-color: #000 !important;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 2px !important;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .menugroup .button.mainmenu1:hover, .menugroup .button.mainmenu3:hover, .menugroup .button.mainmenu5:hover
+  {
+    background: rgb(102, 179, 255) url("https://orig00.deviantart.net/d9b2/f/2012/316/a/c/free_bouncy_glaceon_icon_by_kattling-d5kt02m.gif") right no-repeat !important;
+  }
+
+  .battleform label
+  {
+    background: url("http://i.imgur.com/yFWeHx0.png") no-repeat scroll left center transparent !important;
+    padding: 4px;
+    color: #FFF;
+    text-align: left;
+  } 
+  
+  /* Menu CSS End */
+  
+  /* PM Box CSS */
+  
+  .pm-window h3
+  {
+    background: rgba(210, 237, 249, 0.7) !important;
+    border-color: #000 !important;
+    border-top-style: solid !important;
+    border-left-style: solid !important;
+    border-right-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 1px !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .pm-window .closebutton, .pm-window .minimizebutton
+  {
+    color: #000 !important;
+  }
+
+  .pm-window h3 small
+  {
+    color: #000 !important;
+  }
+
+  .pm-window h3:hover
+  {
+    background: rgba(255, 102, 102, 0.7) !important;
+  }
+
+  .pm-window .closebutton:hover, .pm-window .minimizebutton:hover, .pm-window h3:hover .minimizebutton
+  {
+    color: #000 !important;
+  }
+
+  .pm-window .closebutton:hover + .minimizebutton
+  {
+    color: #000 !important;
+  }
+
+  .pm-log, .pm-window.focused .pm-log
+  {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: #000 !important;
+    border-left-style: solid !important;
+    border-right-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 1px !important;
+    color: #000 !important;
+  }
+
+  .unread
+  {
+    background: none;
+  }
+
+  .challenge
+  {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border-color: #000 !important;
+    border-right-style: solid !important;
+    border-left-style: solid !important;
+    border-width: 1px !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .challenge .buttonbar button
+  {
+    background: rgb(102, 179, 255) !important;
+    border-color: #000 !important;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 1px;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .challenge .buttonbar button:hover
+  {
+    background: rgb(210, 237, 249) !important;
+  }
+
+  .pm-log-add, .pm-window.focused .pm-log-add
+  {
+    background: none !important;
+    border-color: #000 !important;
+    border-bottom-style: solid !important;
+    border-right-style: solid !important;
+    border-left-style: solid !important;
+    border-width: 1px !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .pm-log-add .textbox
+  {
+    color: #000 !important;
+  }
+
+  .mainmenufooter
+  {
+    background: none !important;
+    border: none !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .mainmenufooter a
+  {
+    color: #000 !important;
+  }
+
+  .mainmenufooter a:hover
+  {
+    color: rgb(255, 102, 102) !important;
+  } 
+  
+  /* PM Box CSS End */
+  
+  /* Tournaments CSS */
+  
+  .tournament-title
+  {
+    background: rgb(210, 237, 249) !important;
+    color: #000;
+    border-color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .tournament-status, .tournament-toggle
+  {
+    background: rgba(210, 237, 249) !important;
+    border-color: #000;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none;
+  }
+
+  .tournament-box
+  {
+    order-color: #000;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none;
+  }
+
+  .tournament-bracket
+  {
+    background: rgba(21p, 237, 249, 0.8) !important;
+    background-size: cover !important;
+    color: #000;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 1px !important;
+    border-color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none;
+  }
+
+  .tournament-bracket-tree
+  {
+    background: rgba(210, 237, 249, 0.8) !important;
+    border-color: #000 !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .tournament-tools
+  {
+    background: rgba(210, 237,  249, 0.8) !important;
+    border-color: #000;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .tournament-tools .button
+  {
+    background: rgb(102, 179, 255) !important;
+    border-color: #000 !important;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-width: 1px !important;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .tournament-tools .button:hover
+  {
+    background: rgb(255, 102, 102) !important;
+  }
+
+  .tournament-tools .select:disabled
+  {
+    background: rgb(102, 179, 255) !important;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-color: #000 !important;
+    border-width: 1px !important;
+    color: #000 !important;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-shadow: none !important;
+  }
+
+  .tournaments-tools .select:disabled:havor
+  {
+    background: rgb(255, 102, 102) !important;
+    color: #000 !important;
+  }
+
+  .tournament-tools .teamselect:disabled strong
+  {
+    color: #000;
+    text-shadow: none !important;
+  }
+
+  .tournament-tools .select
+  {
+    background: rgb(102, 179, 255) !important;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none !important;
+  }
+
+  .tournament-tools .select:hover
+  {
+    background: rgb(255, 102, 102) !important;
+    color: #000 !important;
+  }
+
+  .tournament-format
+  {
+    color: #000 !important;
+    font-style: bold;
+    font-size: 14px !important;
+    font-family: Gerogia,Times,'Times New Roman',serif !important;
+    text-shadow: none !important;
+  }
+
+  .ps-popup.tournament-popout-bracket
+  {
+    background: rgba(15, 62, 112, 0.5);
+    color: #000 !important;
+  } 
+  
+  /* Tournaments CSS End */
+  
+  /* Popup CSS */
+  
+  .ps-popup
+  {
+    background: rgb(245, 245, 245) !important;
+    color: #000 !important;
+    border-color: #000 !important;
+    border-top-style: solid !important;
+    border-bottom-style: solid !important;
+    border-left-style: none;
+    border-right-style: none;
+    border-width: 4px !important;
+    font-family: Georgia, Times,'Times New Roman',serif !important;
+    text-shadow: none !important;
+  }
+
+  .ps-popup .buttonbar button
+  {
+    background: rgb(210, 237, 249) !important;
+    border-color: #000 !important;
+    border-right-style: solid !important;
+    border-left-style: solid !important;
+    border-width: 1px !important;
+    color: #000 !important;
+    font-family: Georgia, Times,'Times New Roman',serif !important;
+    text-shadow: none !important;
+  }
+
+  .ps-popup .buttonbar button:hover
+  {
+    background: rgb(255, 102, 102) !important;
+    color: #000 !important;
+  }
+
+  .ps-popup a, .ps-popup a.ilink, .popupmenu h3
+  {
+    color: darkblue !important;
+    font-style: bold;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: none !important;
+  }
+
+  .ps-popup a:hover, .ps-popup a.ilink:hover
+  {
+    font-style: bold;
+  }
+
+  .ps-popup a.ilink.yours
+  {
+    color: darkblue !important;
+    font-width: bold;
+    font-style: italic;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: none !important;
+  }
+
+  .popupmenu button.sel
+  {
+    color: black !important;
+    border-color: #000;
+  }
+
+  .popupmenu button.sel:hover
+  {
+    background: transparent;
+    color: #000 !important;
+    border-color: #000;
+  }
+
+  .popupmenu button:hover
+  {
+    background: transparent;
+    color: #000 !important;
+    font-style: bold;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+  } 
+  
+  /* End Popup CSS */
+  
+  /* Battle CSS */
+  
+  /* Weathers */
+  
+  .sunweather,
+   .sunnydayweather,
+   .desolatelandweather
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background: #FFEEBB url(http://i.imgur.com/DNMtOWR.gif) no-repeat scroll left top;
+    color: #664411;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+    background-size: cover !important;
+  }
+
+  .rainweather,
+   .raindanceweather,
+   .primordialseaweather
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background: #99BBFF url(http://i.imgur.com/NQqkU6j.gif) no-repeat scroll left top;
+    background-size: cover !important;
+    color: #0044BB;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+  }
+
+  .sandstormweather
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background: #E6E0AC url(http://i.imgur.com/OEB3hum.gif) no-repeat scroll left top;
+    background-size: cover !important;
+    color: #554433;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+  }
+
+  .hailweather
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background: #AADDEE url(http://i.imgur.com/PweinWm.gif) no-repeat scroll left top;
+    background-size: cover !important;
+    color: #114455;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+  }
+
+  .deltastreamweather
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background: #AAAAAA url(http://play.pokemonshowdown.com/fx/weather-strongwind.png) no-repeat scroll left top;
+    background-size: cover !important;
+    color: #666666;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+  }
+
+  .pseudoweather
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background: #DDAAEE url(http://play.pokemonshowdown.com/fx/weather-trickroom.png) no-repeat scroll left top;
+    background-size: cover !important;
+    color: #661155;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+  } 
+  
+  /* Weathers End */
+  
+  /* Backgrounds */
+  
+  .backdrop
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: 0;
+    background-size: cover !important;
+    background-image: url(http://i.imgur.com/KXYj116.png);
+    opacity: 1 !important;
+  }
+
+  .backdrop[style*="bg-beach.png"]
+  {
+    background-image: url(http://i.imgur.com/KR5Xcgy.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-beachshore.png"]
+  {
+    background-image: url(http://i.imgur.com/kuVq9Gb.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-city.png"]
+  {
+    background-image: url(http://i.imgur.com/AqMv0Vr.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-dampcave.png"]
+  {
+    background-image: url(http://i.imgur.com/te4lJOc.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-deepsea.png"]
+  {
+    background-image: url(http://i.imgur.com/Kou1vu5.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-desert.png"]
+  {
+    background-image: url(http://i.imgur.com/4EwQDTS.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-earthycave.png"]
+  {
+    background-image: url(http://i.imgur.com/Ffd9WMk.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-forest.png"]
+  {
+    background-image: url(http://i.imgur.com/ux0Qk2g.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-icecave.png"]
+  {
+    background-image: url(http://i.imgur.com/jm7L77m.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-meadow.png"]
+  {
+    background-image: url(http://i.imgur.com/S1UT6wM.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-mountain.png"]
+  {
+    background-image: url(http://i.imgur.com/vSMRAXr.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-river.png"]
+  {
+    background-image: url(http://i.imgur.com/0EQhNGM.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-route.png"]
+  {
+    background-image: url(http://i.imgur.com/7GGWeJ1.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-thunderplains.png"]
+  {
+    background-image: url(http://i.imgur.com/nRPiAi7.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-volcanocave.png"]
+  {
+    background-image: url(http://i.imgur.com/UA2v1nN.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  }
+
+  .backdrop[style*="bg-gen1.png"]
+  {
+    background-image: url(http://i.imgur.com/FjWc5ma.png) !important;
+    background-size: cover !important;
+    z-index: 0;
+  } 
+  
+  /* Backgrounds End */
+  
+  /* General Battle */
+  
+  .ps-room.ps-room-opaque
+  {
+    background: rgba(210, 237, 249, 0.7);
+  }
+
+  .ps-room .battle-controls
+  {
+    background: transparent;
+  }
+
+  .ps-room .battle-controls button, .ps-room .battle-controls .button
+  {
+    background: #FFF;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none;
+  }
+
+  .ps-room .battle-controls button:hover, .ps-room .battle-controls .button:hover
+  {
+    background: rgb(255, 102, 102);
+  }
+
+  .battle-controls .whatdo
+  {
+    color: #000;
+  }
+
+  .battle-controls .whatdo small
+  {
+    border-color: #000;
+  }
+
+  .moveselect button
+  {
+    text-decoration: underline;
+    font-style: bold !important;
+    text-align: center !important;
+    border: none !important;
+    color: #000 !important;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: none !important;
+  }
+
+  .movemenu button
+  {
+    height: 50px !important;
+    color: #FFF !important;
+    font-weight: bold;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: none !important;
+  }
+
+  .movemenu button small
+  {
+    text-shadow: none !important;
+    font-weight: normal;
+  }
+
+  .movemenu button.type-Normal
+  {
+    background: #C7AFB5 url("http://i.imgur.com/3C1Bacx.png?2") center no-repeat !important;
+    border-color: #75525C !important;
+    color: white;
+  }
+
+  .movemenu button.type-Normal small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Normal:hover
+  {
+    background: #DFCDD2 url("http://i.imgur.com/3C1Bacx.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Fire
+  {
+    background: #FD4B5A url("http://i.imgur.com/4sLBBTN.png?2") center no-repeat !important;
+    border-color: #AB1F24 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Fire small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Fire:hover
+  {
+    background: #FF767F url("http://i.imgur.com/4sLBBTN.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Water
+  {
+    background: #85A8FB url("http://i.imgur.com/K7r8LVH.png?2") center no-repeat !important;
+    border-color: #1552E1 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Water small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Water:hover
+  {
+    background: #A9C3FF url("http://i.imgur.com/K7r8LVH.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Grass
+  {
+    background: #42C665 url("http://i.imgur.com/628FI5x.png?2") center no-repeat !important;
+    border-color: #147B3D !important;
+    color: white;
+  }
+
+  .movemenu button.type-Grass small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Grass:hover
+  {
+    background: #56D879 url("http://i.imgur.com/628FI5x.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Electric
+  {
+    background: #FAFA72 url("http://i.imgur.com/bzW9xyl.png?2") center no-repeat !important;
+    border-color: #C6C61D !important;
+    color: white;
+  }
+
+  .movemenu button.type-Electric small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Electric:hover
+  {
+    background: #FFFF9B url("http://i.imgur.com/bzW9xyl.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Ice
+  {
+    background: #D8F0FA url("http://i.imgur.com/otB37l2.png?2") center no-repeat !important;
+    border-color: #7CC6EB !important;
+    color: white;
+  }
+
+  .movemenu button.type-Ice small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Ice:hover
+  {
+    background: #E6F8FF url("http://i.imgur.com/otB37l2.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Ground
+  {
+    background: #A8702D url("http://i.imgur.com/F2Ngn3T.png?2") center no-repeat !important;
+    border-color: #6E491F !important;
+    color: white;
+  }
+
+  .movemenu button.type-Ground small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Ground:hover
+  {
+    background: #BA843C url("http://i.imgur.com/F2Ngn3T.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Flying
+  {
+    background: #94B2C7 url("http://i.imgur.com/Al6Gb8u.png?2") center no-repeat !important;
+    border-color: #4A677D !important;
+    color: white;
+  }
+
+  .movemenu button.type-Flying small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Flying:hover
+  {
+    background: #A4C0D5 url("http://i.imgur.com/Al6Gb8u.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Poison
+  {
+    background: #9B69DA url("http://i.imgur.com/d3QQ9Af.png?2") center no-repeat !important;
+    border-color: #5E2D89 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Poison small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Poison:hover
+  {
+    background: #BF8EF6 url("http://i.imgur.com/d3QQ9Af.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Fighting
+  {
+    background: #EF6239 url("http://i.imgur.com/0fjqBIB.png?2") center no-repeat !important;
+    border-color: #994025 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Fighting small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Fighting:hover
+  {
+    background: #FA7851 url("http://i.imgur.com/0fjqBIB.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Psychic
+  {
+    background: #F369B3 url("http://i.imgur.com/QzQIgYi.png?2") center no-repeat !important;
+    border-color: #A52A6C !important;
+    color: white;
+  }
+
+  .movemenu button.type-Psychic small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Psychic:hover
+  {
+    background: #FD7DC1 url("http://i.imgur.com/QzQIgYi.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Dark
+  {
+    background: #595978 url("http://i.imgur.com/dpxY9u7.png?2") center no-repeat !important;
+    border-color: #040707 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Dark small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Dark:hover
+  {
+    background: #737392 url("http://i.imgur.com/dpxY9u7.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Rock
+  {
+    background: #8B3E22 url("http://i.imgur.com/uQRUH3r.png?2") center no-repeat !important;
+    border-color: #48190B !important;
+    color: white;
+  }
+
+  .movemenu button.type-Rock small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Rock:hover
+  {
+    background: #A25032 url("http://i.imgur.com/uQRUH3r.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Bug
+  {
+    background: #3C9950 url("http://i.imgur.com/oPBAAYf.png?2") center no-repeat !important;
+    border-color: #1C4B27 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Bug small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Bug:hover
+  {
+    background: #4FAF65 url("http://i.imgur.com/oPBAAYf.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Ghost
+  {
+    background: #906791 url("http://i.imgur.com/jwbeQbI.png?2") center no-repeat !important;
+    border-color: #33336B !important;
+    color: white;
+  }
+
+  .movemenu button.type-Ghost small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Ghost:hover
+  {
+    background: #AE81AE url("http://i.imgur.com/jwbeQbI.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Steel
+  {
+    background: #60756E url("http://i.imgur.com/KCc2bLu.png?2") center no-repeat !important;
+    border-color: #38A480 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Steel small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Steel:hover
+  {
+    background: #829790 url("http://i.imgur.com/KCc2bLu.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Dragon
+  {
+    background: #62CAD9 url("http://i.imgur.com/ygEvaDc.png?2") center no-repeat !important;
+    border-color: #448A95 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Dragon small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Dragon:hover
+  {
+    background: #7EDCEB url("http://i.imgur.com/ygEvaDc.png?2") center no-repeat !important;
+  }
+
+  .movemenu button.type-Fairy
+  {
+    background: #E91368 url("http://i.imgur.com/0qO7BN7.png?2") center no-repeat !important;
+    border-color: #961A45 !important;
+    color: white;
+  }
+
+  .movemenu button.type-Fairy small
+  {
+    color: white;
+  }
+
+  .movemenu button.type-Fairy:hover
+  {
+    background: #FF3C8A url("http://i.imgur.com/0qO7BN7.png?2") center no-repeat !important;
+  }
+
+  .switchselect button
+  {
+    background: #FFF;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none;
+  }
+
+  .switchmenu button.disabled, .switchmenu button:disabled
+  {
+    background: #FFF;
+    border-color: #000;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+    color: #000;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    text-shadow: none;
+  }
+
+  .switchmenu button
+  {
+    padding: 0px 0px 0px 0 !important;
+  }
+
+  .switchmenu button .hpbar
+  {
+    border-color: #000;
+  }
+
+  .megaevo
+  {
+    background: none;
+    border: none;
+    color: #000;
+  }
+
+  .leftbar, .rightbar
+  {
+    background: rgba(210, 237, 249, 0.7);
+    border-color: #000;
+  }
+
+  .trainer strong
+  {
+    color: #000;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+  }
+
+  .battle
+  {
+    border-color: #000 !important;
+  }
+
+  .battle-log
+  {
+    background: rgb(255, 255, 255);
+    border-color: #000;
+  }
+
+  .battle-log-add
+  {
+    background: transparent;
+    border-top-color: #000;
+    border-left-color: #000;
+    color: #000;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: 0px 0px 0px !important;
+  }
+
+  .battle-log-add .textbox, .battle-log-add .textbox:hover, .battle-log-add .textbox:focus
+  {
+    border-color: #000;
+  }
+
+  .battle-log h2
+  {
+    background: rgb(210, 237, 249);
+    border-color: 000;
+    color: #000;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: 0px 0px 0px !important;
+  }
+
+  .turn
+  {
+    opacity: 0.7 !important;
+    background: rgb(210, 237, 249);
+    padding: 4px 8px;
+    border-width: 1px;
+    border-color: #000;
+    color: #000;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: 0px 0px 0px !important;
+  }
+
+  .battle-log .rated strong
+  {
+    background: rgb(210, 237, 249);
+    font-style: italic;
+    font-family: Georgia,Times,'Times New Roman',serif !important;
+    text-shadow: 0px 0px 0px !important;
+  } 
+  
+  /* General Battle End */
+  
+/* COLORS START */
+#lobby-userlist-user-anrinn strong em, #lobby-userlist-user-anrinn strong, #lobby-userlist-user-anrinn span, #staff-userlist-user-anrinn strong em, #staff-userlist-user-anrinn strong, #staff-userlist-user-anrinn span, #development-userlist-user-anrinn strong em, #development-userlist-user-anrinn strong, #development-userlist-user-anrinn span, #shadowbanroom-userlist-user-anrinn strong em, #shadowbanroom-userlist-user-anrinn strong, #shadowbanroom-userlist-user-anrinn span, #tournaments-userlist-user-anrinn strong em, #tournaments-userlist-user-anrinn strong, #tournaments-userlist-user-anrinn span, #gamecorner-userlist-user-anrinn strong em, #gamecorner-userlist-user-anrinn strong, #gamecorner-userlist-user-anrinn span, #casino-userlist-user-anrinn strong em, #casino-userlist-user-anrinn strong, #casino-userlist-user-anrinn span, #youbanistan-userlist-user-anrinn strong em, #youbanistan-userlist-user-anrinn strong, #youbanistan-userlist-user-anrinn span, #sggame-userlist-user-anrinn strong em, #sggame-userlist-user-anrinn strong, #sggame-userlist-user-anrinn span, #surgeleague-userlist-user-anrinn strong em, #surgeleague-userlist-user-anrinn strong, #surgeleague-userlist-user-anrinn span{
+color: #41b9e1 !important;
+}
+.chat.chatmessage-anrinn strong {
+color: #41b9e1 !important;
+}
+/* COLORS END */
