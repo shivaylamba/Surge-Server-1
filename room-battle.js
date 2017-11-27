@@ -28,7 +28,7 @@ const MAX_TURN_TIME_CHALLENGE = 300;
 const NOT_DISCONNECTED = 100;
 const DISCONNECTION_TICKS = 13;
 
-// time after a player disabling the timer beforee they can re-enable it
+// time after a player disabling the timer before they can re-enable it
 const TIMER_COOLDOWN = 20 * 1000;
 
 global.Config = require('./config/config');
