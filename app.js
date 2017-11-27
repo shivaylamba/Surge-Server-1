@@ -58,7 +58,7 @@ try {
 const FS = require('./fs');
 
 /*********************************************************
- * Load configuration
+ * Load configurations
  *********************************************************/
 
 try {
@@ -92,7 +92,7 @@ if (Config.watchconfig) {
 
 global.WL = {};
 
-global.Db = require('nef')(require('nef-mongo')('mongodb://PrinceSky:Musaddiq777@ds113606.mlab.com:13606/surge-db'));
+global.Db = require('nef')(require('nef-fs')('config/db'));
 
 global.Monitor = require('./monitor');
 
