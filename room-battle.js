@@ -28,12 +28,12 @@ const MAX_TURN_TIME_CHALLENGE = 300;
 const NOT_DISCONNECTED = 100;
 const DISCONNECTION_TICKS = 13;
 
-// time after a player disabling the timer before they can re-enable it
+// time after a player disabling the timer beforee they can re-enable it
 const TIMER_COOLDOWN = 20 * 1000;
 
 global.Config = require('./config/config');
 
-global.Db = require('nef')(require('nef-mongo')('mongodb://PrinceSky:Musaddiq777@ds113606.mlab.com:13606/surge-db'));
+global.Db = require('nef')(require('nef-fs')('config/db'));
 global.WL = require('./WL.js').WL;
 
 class SimulatorManager extends ProcessManager {
