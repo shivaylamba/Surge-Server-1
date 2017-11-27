@@ -10,8 +10,8 @@
     "nef": "^1.1.0",
     "request": "^2.83.0",
     "request-image-size": "^2.1.0",
-    "sockjs": "0.3.18",
-    "nef-mongo": "^1.0.1"
+    "sockjs": "^0.3.18",
+    "nef-fs": "^1.0.0"
   },
   "optionalDependencies": {
     "cloud-env": "0.2.2",
