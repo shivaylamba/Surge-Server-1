@@ -130,7 +130,7 @@ class Hangman extends Rooms.RoomGame {
 			result = 2;
 		}
 
-		let output = '<div class="hangman-' + (result === 1 ? 'red' : (result === 2 ? 'green' : 'blue')) + '">';
+		let output = '<div class="broadcast-' + (result === 1 ? 'red' : (result === 2 ? 'green' : 'blue')) + '">';
 		output += '<p style="text-align:left;font-weight:bold;font-size:10pt;margin:5px 0 0 15px">' + (result === 1 ? 'Too bad! The mon has been hanged.' : (result === 2 ? 'The word has been guessed. Congratulations!' : 'Hangman')) + '</p>';
 		output += '<table><tr><td style="text-align:center;">' + this.hangingMan() + '</td><td style="text-align:center;width:100%;word-wrap:break-word">';
 
