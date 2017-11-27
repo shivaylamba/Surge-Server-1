@@ -108,7 +108,7 @@ exports.commands = {
 	//shop: 'eshop', //Uncomment this if you want this to be able to be used using the /shop command
 	shop: {
 		add: function (target, room, user, connection, cmd, message) {
-			if (!this.can('roomowner')) return false
+			if (!this.can('roomowner')) return false;
 			if (!allowThisShop) return this.errorReply('This shop is closed');
 			if (WL.eShop.closed) return this.sendReply('An error closed the shop.');
 			target = target.split(',');

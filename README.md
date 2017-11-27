@@ -1,32 +1,24 @@
-WaveLength Server @ Pokémon Showdown
+Surge Server @ Pokémon Showdown
 ========================================================================
 
-Navigation: [Wavelength][1] | [PS Server repository][10] | [PS Client repository][2] | [PS Dex repository][3]
+Navigation: [Wavelength](http://surge.psim.us) | [PS Server Client](https://github.com/Zarel/Pokemon-Showdown-Client) | [PS repository](https://github.com/Zarel/Pokemon-Showdown) | [PS Dex repository](https://github.com/Zarel/Pokemon-Showdown-Dex)
 
-  [1]: http://wavelength.psim.us/
-  [2]: https://github.com/Zarel/Pokemon-Showdown-Client
-  [3]: https://github.com/Zarel/Pokemon-Showdown-Dex
-  [10]: https://github.com/Zarel/Pokemon-Showdown
-
-[![Build Status](https://travis-ci.org/HoeenCoder/Wavelength.svg?branch=master)](https://travis-ci.org/HoeenCoder/Wavelength)
-[![dependencies Status](https://david-dm.org/HoeenCoder/Wavelength/status.svg)](https://david-dm.org/HoeenCoder/Wavelength)
-[![devDependencies Status](https://david-dm.org/HoeenCoder/Wavelength/dev-status.svg)](https://david-dm.org/HoeenCoder/Wavelength?type=dev)
-[![optionalDependencies Status](https://david-dm.org/HoeenCoder/Wavelength/optional-status.svg)](https://david-dm.org/HoeenCoder/Wavelength?type=optional)
+[![Build Status](https://travis-ci.org/Surge-Master/Surge-Server.svg?branch=master)](https://travis-ci.org/Surge-Master/Surge-Server)
+[![dependencies Status](https://david-dm.org/Surge-Master/Surge-Server/status.svg)](https://david-dm.org/Surge-Master/Surge-Server)
+[![devDependencies Status](https://david-dm.org/Surge-Master/Surge-Server/dev-status.svg)](https://david-dm.org/Surge-Master/Surge-Server?type=dev)
+[![optionalDependencies Status](https://david-dm.org/Surge-Master/Surge-Server/optional-status.svg)](https://david-dm.org/Surge-Master/Surge-Server?type=optional)
 
 
 
 Introduction
 ------------------------------------------------------------------------
 
-This is the source code for the Pokémon Showdown server [Wavelength][4], a website for Pokémon battling. Pokémon Showdown simulates singles, doubles and triples battles in all the games out so far (Generations 1 through 7).
+This is the source code for the Pokémon Showdown server [Surge](http://surge.psim.us), a website for Pokémon battling. Pokémon Showdown simulates singles, doubles and triples battles in all the games out so far (Generations 1 through 7).
 
 This repository contains the files needed to set up your own Pokémon Showdown server. The Wavelength server also comes with some custom additions not found on the main repo. This repo will still have all the features from the main server. Note that to set up a server, you'll also need a server computer.
 
 You can use your own computer as a server, but for other people to connect to your computer, you'll need to expose a port (default is 8000 but you can choose a different one) to connect to, which sometimes requires [port forwarding][5] (note that this isn't possible on certain internet connections).
-
-  [4]: http://wavelength.psim.us/
-  [5]: http://en.wikipedia.org/wiki/Port_forwarding
-
+[Port Forwarding](http://en.wikipedia.org/wiki/Port_forwarding)
 
 Installing
 ------------------------------------------------------------------------
@@ -39,11 +31,11 @@ Installing
 Detailed installation instructions
 ------------------------------------------------------------------------
 
-Pokémon Showdown requires you to have [Node.js][6] installed, 8.x or later (7.7 or later can work, but you might as well be on the latest stable).
+Pokémon Showdown requires you to have [Node.js](http://nodejs.org) installed, 8.x or later (7.7 or later can work, but you might as well be on the latest stable).
 
 ```bash
-$ git clone https://github.com/HoeenCoder/Wavelength.git
-cd wavelength && npm install
+$ git clone https://github.com/Surge-Master/Surge-Server.git
+cd Surge-Server && npm install
 node app.js
 ```
 
@@ -59,7 +51,6 @@ This will set your command line's location to Pokémon Showdown's folder. You'll
 
 Copy `config/config-example.js` into `config/config.js`, and edit as you please.
 
-  [6]: https://nodejs.org/
 
 Configuring your server
 ------------------------------------------------------------------------
@@ -97,7 +88,7 @@ License
 
 Wavelength and Pokémon Showdown's server is distributed under the terms of the [MIT License][9].
 
-  [9]: https://github.com/HoeenCoder/Wavelength/blob/master/LICENSE
+  [License](https://github.com/Surge-Master/Surge-Server/blob/master/LICENSE)
 
 
 Maintainers
@@ -107,8 +98,9 @@ This server is brought to you and maintained by the following people:
 
 Owners
 
-- [HoeenCoder](https://github.com/HoeenCoder)
-- [Mystifi](https://github.com/Mystifi)
+- [HoeenCoder](https://github.com/HoeenCoder) (Wavelength)
+- [Mystifi](https://github.com/Mystifi) (Wavelength)
+- [Prince Sky](https://github.com/PrinceSky-PS) (Surge)
 
 Contributors
 

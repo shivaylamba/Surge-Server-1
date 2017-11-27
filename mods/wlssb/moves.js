@@ -1,80 +1,6 @@
 "use strict";
 
 exports.BattleMovedex = {
-	// Prince Sky
-	travisfix: {
-		category: "Special",
-		accuracy: true,
-		basePower: 90,
-		id: "travisfix",
-		isNonstandard: true,
-		name: "Travis Fix",
-		pp: 10,
-		priority: 1,
-		secondary: {
-			chance: 30,
-			volatileStatus: "confusion",
-		},
-		desc: "Fixes travis errors and has 30% chance of confusing foes.",
-		onPrepareHit: function (target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "Electric Terrian", source);
-			this.add('-anim', source, "Photon Geyser", source);
-		},
-		onHit: function (target, source, move) {
-			this.add('c|~Prince Sky|OMG! anrin n caused travis errors, Lets fix them.');
-		},
-		target: "normal",
-		type: "dragon",
-	},
-	// Anrin N
-	n: {
-		category: "Special",
-		accuracy: true,
-		basePower: 130,
-		id: "n",
-		isNonstandard: true,
-		name: "N",
-		pp: 10,
-		secondary: {
-			chance: 20,
-			volatileStatus: "paralysis",
-		},
-		desc: "Power of Gods and has 20% chance of Paralysis foes.",
-		onPrepareHit: function (target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "Judgment", source);
-			this.add('-anim', source, "Roar of Time", source);
-			this.add('-anim', source, "Land's Wrath", source);
-		},
-		onHit: function (target, source, move) {
-			this.add('c|~Anrin N|Time to say good bye xaa');
-		},
-		target: "normal",
-		type: "psychic",
-	},
-	// Snorlax The Rain
-	snorlaxslam: {
-	    category: "Physical",
-	    accuracy: true,
-	    basePower: 110,
-	    id: "snorlaxslam",
-	    isNonestandard: true,
-	    name: "Snorlax Slam",
-	    pp: 5,
-	    noPPBoosts: true,
-	    sleepUsable: true,
-	    onPrepareHit: function (target, source, move) {
-	        this.attrLastMove('[still]');
-	        this.add('-anim', source, "Body Slam", target);
-	    },
-	    desc: "Snorlax most be sleeping or this move will fail.",
-	    onHit: function (target, source, move) {
-	        this.add('c|~Snorlax The Rain|Mighty snorlax coming your way.');
-	    },
-	    target: "normal",
-	    type: "normal",
-	},
 	// A Helpful Rayquaza
 	rayquazaroar: {
 		category: "Physical",
@@ -150,26 +76,45 @@ exports.BattleMovedex = {
 		target: "self",
 		type: "Fire",
 	},
-	// HiroZ
-	crystallizedukaku: {
+	// Snorlax Slam
+	snorlaxslam: {
+	    accuracy: 100,
+	    basePower: 110,
+	    category: "Physical",
+	    id: "snorlaxslam",
+	    name: "Snorlax Slam",
+	    isNonstandard: true,
+	    priority: -1,
+	    pp: 5,
+	    sleepUsable: true,
+	    target: "normal",
+	    type: "Normal",
+	    desc: "Lazy Move That Always Hits Last",
+	    onPrepareHit: function (target, source) {
+	    this.add('-anim', source, "Body Slam", target);
+	    },
+	},
+	// Prince Sky
+	travisfix: {
 		accuracy: 100,
-		basePower: 140,
+		basePower: 100,
 		category: "Special",
-		id: "crystallizedukaku",
+		id: "travisfix",
 		isNonstandard: true,
-		name: "Crystallized Ukaku",
+		name: "Travis Fix",
 		pp: 10,
-		priority: 0,
+		priority: 1,
 		target: "normal",
-		type: "Dark",
+		type: "Dragon",
 		secondary: {
 			chance: 30,
-			status: 'tox',
+			status: 'par',
 		},
-		desc: "30% chance to badly poison",
+		desc: "30% chance to paralise the foes and fixes travis errors.",
 		onPrepareHit: function (target, source) {
 			this.attrLastMove('[still]');
-			this.add('-anim', source, "Blizzard", target);
+			this.add('-anim', source, "Charge", target);
+			this.add('-anim', source, "Photon Geyser", target);
 		},
 	},
 	// Kraken Mare
@@ -195,64 +140,23 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Water",
 	},
-	// C733937 123
-	lightshotgigalance: {
-		category: "Physical",
-		basePower: 150,
-		id: "lightshotgigalance",
-		isNonstandard: true,
-		name: "Lightshot Giga-Lance",
-		self: {
-			volatileStatus: 'mustrecharge',
-		},
-		secondary: {
-			chance: 30,
-			self: {
-				boosts: {
-					spa: 1,
-					spe: 1,
-					spd: 1,
-					atk: 1,
-					def: 1,
-				},
-			},
-		},
-		desc: "30% chance to boost all stats (except acc and eva), must recharge",
-		pp: 15,
-		priority: 0,
-		onHit: function (target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', target, "Sacred Sword", target);
-		},
-		target: "normal",
-		type: "Rock",
-	},
-	// Serperiorater
-	saberstrike: {
+	// Anrin N
+	neoblast: {
 		category: "Special",
-		basePower: 140,
-		id: "saberstrike",
+		basePower: 130,
+		id: "neoblast",
 		isNonstandard: true,
-		name: "Saber Strike",
-		secondary: {
-			chance: 100,
-			self: {
-				boosts: {
-					spa: 2,
-				},
-				heal: [1, 5],
-			},
-		},
-		desc: "Boosts user's SpA by 2 stages, and heals health by 1/5 maximum HP",
-		pp: 10,
+		name: "Neo Blast",
+		desc: "A Powerful Blast attack.",
+		pp: 5,
 		priority: 0,
-		onPrepareHit: function (target, source, move) {
+		onPrepareHit: function (target, source) {
 			this.attrLastMove('[still]');
-			this.add('-anim', target, "Glare", target);
-			this.add('-anim', source, "Leaf Storm", target);
+			this.add('-anim', source, "Flare Blitz", source);
+			this.add('-anim', source, "Mach Punch", target);
 		},
 		target: "normal",
-		type: "Grass",
+		type: "Psychic",
 	},
 	// Ashley the Pikachu
 	rocketpunch: {

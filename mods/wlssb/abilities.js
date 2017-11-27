@@ -5,8 +5,7 @@ exports.BattleAbilities = {
     ultraneuroforce: {
         name: "Ultra Neuroforce",
         id: "ultraneuroforce",
-        isNonStandard: true,
-        desc: "Neuroforce + Adaptability.",
+        desc: "Neuroforce + Adaptability",
         onModifyMove: function (move) {
             move.stab = 2;
         },
@@ -14,7 +13,6 @@ exports.BattleAbilities = {
             if (move && move.typeMod > 0) {
                 return this.chainModify([0x1333, 0x1000]);
             }
-            
         },
     },
 	//Ashley the Pikachu

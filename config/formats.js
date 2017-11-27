@@ -370,7 +370,7 @@ exports.Formats = [
 	{
 		name: "[Gen 7] Surge Super Bros",
 
-		mod: 'ssb',
+		mod: 'wlssb',
 		team: 'randomSeasonalRegStaff',
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 		onBegin: function () {
@@ -1573,17 +1573,6 @@ exports.Formats = [
 		searchShow: false,
 		ruleset: ['Pokemon', 'Allow Tradeback', 'Sleep Clause Mod', 'Freeze Clause Mod', 'Species Clause', 'OHKO Clause', 'Evasion Moves Clause', 'HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Uber', 'Unreleased', 'Illegal',
-			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
-			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
-		],
-	},
-	{
-		name: "[Gen 1] Stadium",
-
-		mod: 'stadium',
-		searchShow: false,
-		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Uber',
 			'Nidoking + Fury Attack + Thrash', 'Exeggutor + Poison Powder + Stomp', 'Exeggutor + Sleep Powder + Stomp',
 			'Exeggutor + Stun Spore + Stomp', 'Jolteon + Focus Energy + Thunder Shock', 'Flareon + Focus Energy + Ember',
 		],

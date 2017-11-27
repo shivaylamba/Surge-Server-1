@@ -10,12 +10,12 @@ class RandomSeasonalRegStaffTeams extends RandomTeams {
 			// Admins.
 			'~Prince Sky': {
 				species: 'Necrozma-Ultra',
-				ability: 'Ultra Neuroforce',
+				ability: 'Dragonium Z',
 				item: 'Dragonium Z',
 				gender: 'M',
-				moves: ['Photon Geyser', 'Dark Pulse', 'Earth Power',
+				moves: ['Photon Geyser', 'Earth Power', 'Dark Pulse',
 				],
-				signatureMove: 'Travis Fix',
+				signatureMove: "travisfix",
 				evs: {
 					spa: 252,
 					spe: 252,
@@ -27,11 +27,11 @@ class RandomSeasonalRegStaffTeams extends RandomTeams {
 				species: 'Mewtwo-Mega-Y',
 				ability: 'Prism Armor',
 				item: 'Weakness Policy',
-				gender: 'N',
+				gender: 'M',
 				moves: [
 				    ['Psystrike', 'Aura Sphere'][variant], 'Flamethrower', 'Ice Beam',
 				],
-				signatureMove: 'N',
+				signatureMove: 'neoblast',
 				evs: {
 					spa: 252,
 					spe: 252,
@@ -226,7 +226,7 @@ class RandomSeasonalRegStaffTeams extends RandomTeams {
 				},
 				nature: 'Timid',
 			},
-	};
+		};
 		// convert moves to ids.
 		for (let k in sets) {
 			sets[k].moves = sets[k].moves.map(toId);

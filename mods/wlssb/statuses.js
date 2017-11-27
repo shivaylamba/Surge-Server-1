@@ -12,7 +12,19 @@ exports.BattleStatuses = {
 			this.add('c', '~Desokoro', 'You may have vanquished me today, but beware of the future. I shall not be gone long.');
 		},
 	},
-	desokoro: {
+	princesky: {
+	    exists: true,
+	    onStart: function () {
+	        this.add('c', '~Prince Sky', 'Clap for your world famous 2 times SG Game champ and feel the poweR.');
+	    },
+	    onSwitchOut: function (pokemon) {
+	        this.add('c', '~Prince Sky', 'You are not worthy of challenging me.');
+	    },
+	    onFaint: function (pokemon) {
+	        this.add('c', '~Prince Sky', 'Every dog has his day and this is yours!');
+	    },
+	},
+	anrinn: {
 		exists: true,
 		onStart: function () {
 			this.add('c', '~Anrin N', 'Okie u are DEADDD');

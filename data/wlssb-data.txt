@@ -7,7 +7,7 @@ Ability: Immunity
 	- Immune from PSN status damage.
 Moves: Giga Impact, Rest And Curse.
 Signature Move: Snorlax Slam
-	- Usable while sleeping, It will fail if snorlax is awake.
+	- Normal Type, 3 PP, 110 Base Power, Usable while sleeping.
 Notes: N/A.
 Rank: N/A.
 
@@ -20,9 +20,9 @@ Ability: Ultra Neuroforce
     - Neuroforce + Adaptability.
 Moves: Photon Geyser, Earth Power And Dark Pulse.
 Signature Move: Travis Fix.
-    - Dragon Type, Special, 15 PP, Has 30% chance of confusing foes.
+    - Dragon Type, Special, 10 PP, Has 30% chance of paralises.
 Notes: This beast can sweep your whole team.
-Rank: N/A.
+Rank: S+.
 
 Lycanium Z
 (Lycanroc-Midnight)
