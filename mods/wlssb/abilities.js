@@ -38,7 +38,7 @@ exports.BattleAbilities = {
 			move.stab = 2;
 		},
 		onModifyDamage: function (damage, source, target, move) {
-			if (move && typeMod > 0) { 
+			if (move && move.typeMod > 0) {
 				this.chainModify([0x1333, 0x1000]);
 			}
 		},
