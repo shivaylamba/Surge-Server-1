@@ -18,8 +18,7 @@ exports.commands = {
 			selectors += ', #' + toId(room) + '-userlist-user-' + username + ' em.group';
 		});
 		selectors += '{ \n' + ' ' + color + '\n }';
-		Rooms('staff').add('|raw|' + WL.nameColor(target[0], true) + ' has been given symbol color by ' + WL.nameColor(user.name, true) + '.').update();
-		this.sendReply('You have given ' + WL.nameColor(target[0], true) + ' custom symbol color.');
+		this.sendReply('You have given ' + username + ' custom symbol color.');
 		writeSymbolCSS();
 	},
 	symbolcolorhelp: ['/symbolcolor [username], [color], [room1], [room2] - set users symbol color in chosen rooms.'],
