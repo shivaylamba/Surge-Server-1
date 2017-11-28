@@ -44,7 +44,7 @@ function generateCSS(name, sc) {
 	css += '{\ncolor: ' + sc + ';\n}\n';
 	return css;
 }
- exports.commands = {
+exports.commands = {
 	symbolcolor: 'sc',
 	sc: {
 		set: function (target, room, user) {
