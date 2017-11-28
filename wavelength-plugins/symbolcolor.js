@@ -18,7 +18,7 @@ exports.commands = {
 			selectors += ', #' + toId(room) + '-userlist-user-' + username + ' em.group';
 		});
 		selectors += '{ \n' + ' ' + color + '\n }';
-		Rooms('staff').add('|raw|' + WL.nameColor(target[0], true) + ' has been given symbol color by ' + WL.nameColor(user.name, true) +'.').update();
+		Rooms('staff').add('|raw|' + WL.nameColor(target[0], true) + ' has been given symbol color by ' + WL.nameColor(user.name, true) + '.').update();
 		this.sendReply('You have given ' + WL.nameColor(target[0], true) + ' custom symbol color.');
 		writeSymbolCSS();
 	},
