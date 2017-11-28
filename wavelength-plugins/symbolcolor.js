@@ -10,13 +10,13 @@ const fs = require('fs');
 function load() {
 	fs.readFile('config/symbolcolors.json', 'utf8', function (err, file) {
 		if (err) return;
-		icons = JSON.parse(file);
+		sc = JSON.parse(file);
 	});
 }
 load();
 
 function updateSC() {
-	fs.writeFileSync('config/symbolcolors.json', JSON.stringify(icons));
+	fs.writeFileSync('config/symbolcolors.json', JSON.stringify(sc));
 
 	let newCss = '/* Symbol Colors START */\n';
 
@@ -31,7 +31,7 @@ function updateSC() {
 	WL.reloadCSS();
 }
 
-function generateCSS(name, icon) {
+function generateCSS(name, sc) {
 	let css = '';
 	let rooms = [];
 	name = toId(name);
