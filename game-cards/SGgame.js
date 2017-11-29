@@ -1182,7 +1182,6 @@ exports.commands = {
 		//room.battle.send('choose', data.replace(/\n/g, '\f'));
 		room.battle.choose(user, "pokeball " + target);
 	},
-	gp: 'givepokeballs',
 	givepokeballs: function (target, room, user) {
 		// Allows mods+ to give more pokeballs during the alpha
 		if (!this.can('eval')) return;
