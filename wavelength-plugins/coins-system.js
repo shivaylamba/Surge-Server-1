@@ -121,7 +121,7 @@ exports.commands = {
 		});
 	},
 
-	takecoin: 'takecoins'
+	takecoin: 'takecoins',
 	takecoins: function (target, room, user, connection, cmd) {
 		if (!this.can('forcewin')) return false;
 		if (!target) return this.sendReply("Usage: /" + cmd + " [user], [amount]");
