@@ -53,14 +53,13 @@ class Panagram {
 			this.update();
 		};
 	}
-
+	
 	guess(user, guess) {
 		if (guess.species === this.answer.species) {
-			if (guess.species === this.answer.species) {
-			this.room.add(`|html|${WL.nameColor(user.name, true)} guessed <strong>${guess.species}</strong>, which was the correct answer. He have won 1 buck.`);
+			this.room.add(`|html|${WL.nameColor(user.name, true)} guessed <strong>${guess.species}</strong>, which was the correct answer! This user has also won 1 buck!`);
+			Economy.writeMoney(user.userid, 1);
 			this.end();
-		}
-		else {
+		} else {
 			this.room.add(`|html|${WL.nameColor(user.name, true)} guessed <strong>${guess.species}</strong>, but was not the correct answer...`);
 			this.guessed[toId(guess.species)] = user.userid;
 		}
