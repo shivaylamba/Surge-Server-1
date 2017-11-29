@@ -110,6 +110,33 @@ exports.commands = {
 			);
 		},
 	},
+	favoritetype: 'type',
+	type: {
+		add: "set",
+		set: function (target, room, user) {
+			if (!target) return this.parse("/help type");
+			if (!['Grass', 'Fire', 'Water', 'Poison', 'Ground', 'Rock', 'Bug', 'Electric', 'Ice', 'Ghost', 'Psychic', 'Dragon', 'Dark', 'Fairy', 'Steel', 'Flying'].includes(target)) return this.parse("/help type");
+			Db.type.set(user.userid, target);
+			this.sendReply("You have successfully set your Favorite Type onto your profile.");
+		},
+
+		del: "delete",
+		remove: "delete",
+		delete: function (target, room, user) {
+			if (!Db.type.has(user.userid)) return this.errorReply("Your favorite Type hasn't been set.");
+			Db.type.remove(user.userid);
+			return this.sendReply("Your favorite Typr has been deleted from your profile.");
+		},
+
+		"": "help",
+		help: function (target, room, user) {
+			this.parse('/help type');
+		},
+	},
+	typehelp: [
+		"/type set [Type] - Sets your Favorite Type.",
+		"/type delete - Removes your Favorite Type.",
+	],
 	 pteam: 'profileteam',
 	profileteam: {
 		add: 'set',
