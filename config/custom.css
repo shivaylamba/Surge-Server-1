@@ -1,7 +1,6 @@
 /**************
   * General CSS *
   **************/
-/* ICONS START */
   #lobby-userlist-users {
     background: rgba(255,255,255,0.8) url("http://www.poketools.fr/resources/img/content/poke_icons/635.png") no-repeat left;
 }
@@ -36,14 +35,13 @@
     background: rgba(255,255,255,0.8) url("http://www.pokepedia.fr/images/8/8f/Miniat_6_r_384M.png") no-repeat left;
 }
 
-  /* ICONS END */
   /* CLASS CSS*/
   .intro-div {
     padding: 6px;
     border: none;
     background-color: rgba(0,0,0,0.30);
     color: #3E3E3E;
-    text-shadow: -1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;
+    text-shadow: none;
     margin: 15px;
 }
 .bigbang-button {
@@ -52,7 +50,7 @@
     color: #FFFFFF;
     margin: 1px 3px;
     padding: 2px 4px;
-    text-shadow: 0 0 2px #000000;
+    text-shadow: none;
     box-shadow: 0 0 4px rgba(245, 245, 242, 0.7);
 }
 .bigbang-button:hover {
@@ -61,7 +59,7 @@
     color: #FFFFFF;
     margin: 1px 3px;
     padding: 2px 4px;
-    text-shadow: 0 0 2px #000000;
+    text-shadow: none;
     box-shadow: 0 0 1px #FBFCFD;
 }
 .supernovaq-button {
@@ -106,7 +104,7 @@
 .bigbang-div {
     background: rgba(89,120,123,0.20);
     padding: 5px;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     color: #FFF;
 }
 .paypal-button {
@@ -114,7 +112,7 @@
     color: #30516B;
     margin: 1px 3px;
     padding: 2px 4px;
-    text-shadow: 0 0 2px #FFF;
+    text-shadow: none;
     border-bottom: 2px solid #30516B;
     border-top: 1px solid #D0A805;
     border-right: 1px solid #D0A805;
@@ -125,7 +123,7 @@
     color: #30516B;
     margin: 1px 3px;
     padding: 2px 4px;
-    text-shadow: 0 0 2px #FFF;
+    text-shadow: none;
     border-bottom: 2px solid #30516B;
     border-top: 1px solid #D0A805;
     border-right: 1px solid #D0A805;
@@ -234,7 +232,7 @@
 .rankladder-headers {
   background: #454E50;
   color: #FFF;
-  text-shadow: 1px 1px #262B2C, -1px 1px #262B2C;
+  text-shadow: none;
   border: 1px solid #222; }
 
 .default-td {
@@ -250,7 +248,7 @@
 .first {
   background: #CFB53B;
   color: #645722;
-  text-shadow: 0px 0px 2px #F6EAB9;
+  text-shadow: none;
   padding: 8px; }
 
 .first:hover {
@@ -259,7 +257,7 @@
 .second {
   background: #C0C0C0;
   color: #5B5B5B;
-  text-shadow: 0px 0px 2px #EEE;
+  text-shadow: none;
   padding: 8px; }
 
 .second:hover {
@@ -268,7 +266,7 @@
 .third {
   background: #CD7F32;
   color: #694725;
-  text-shadow: 0px 0px 2px #E4BA91;
+  text-shadow: none;
   padding: 8px; }
 
 .third:hover {
@@ -276,7 +274,7 @@
 
 .card-th {
   background-color: #DCE9F9;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  text-shadow: none;
   border: 1px solid #CCC;
   }
 
@@ -306,14 +304,14 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 15px;
   color: #333;
-  text-shadow: 1px 1px 1px #FFF; 
+  text-shadow: none;
     
 }
 
 .card-td button:hover, .card-button:hover {
   background: rgba(0, 0, 0, 0.06);
   border: 1px solid #CCC;
-  text-shadow: 1px 1px 1px #EEE;
+  text-shadow: none;
   }
 
 .card-td button:focus, .card-button:focus {
@@ -323,7 +321,7 @@
 
   .card-name {
     background-color: #DCE9F9;
-    text-shadow: 0 1px 0;
+    text-shadow: none;
     font-size: 25pt;
     font-weight: 700;
     padding: 5px 20px 10px;
@@ -338,7 +336,7 @@
 }
 .casidiv {
     color: #3E696C;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     background: #E0EAF3;
     width: 100%;
     padding-right: 15px;
@@ -352,7 +350,7 @@
     color: #fff;
     padding: 1px 4px 2px;
     border-bottom: 1px dashed #33556E;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-size: 9pt;
 }
 .lolle {
@@ -363,14 +361,14 @@
     text-decoration: none;
     text-transform: none;
     border-radius: 5px;
-    text-shadow: 0 0 2px #fff
+    text-shadow: none;
     }
 .emote-td {
     background: rgba(69,122,124,0.6);
     border: 2px solid #769191;
     padding: 5px;
     text-align: center;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 
 .emote-td:hover {
@@ -385,13 +383,13 @@ th.table-header {
     font-size: 15pt;
     border-bottom: 5px solid #31536D;
     font-family: arial;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
 }
 
 td.shop-button {
     background: rgba(67,118,126,0.90);
     color: #FFFFFF;
-    text-shadow: 0px 0px 5px #000;
+    text-shadow: none;
     border: 0px solid;
     padding: 10px 10px;
     font-size: 15pt;
@@ -400,7 +398,7 @@ td.shop-button {
 td.shop-button:hover{
     background: rgba(67,118,126,0.60);
     color: #FFFFFF;
-    text-shadow: 0px 0px 5px #000;
+    text-shadow: none;
     border: 0px solid;
     padding: 10px 10px;
     font-size: 15pt;
@@ -412,7 +410,7 @@ td.shop-button:hover{
     color: #30516B;
     background: #E0EAF3;
     border-radius: 5px;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 .viewresults:hover{
     cursor: pointer;
@@ -420,27 +418,27 @@ td.shop-button:hover{
     color: #30516B;
     background: #CDDEED;
     border-radius: 5px;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 .infoboxui {
    background: rgba(69,121,126,0.15);
     border-bottom: 2px solid #30516B;
     color: #012436;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     padding-bottom: 5px;
 }
 .infoboxu {
     background: rgba(68,119,124,0.35);
     border-bottom: 8px solid #30516B;
     color: #30516B;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     padding-bottom: 5px;
     border-right: 2px solid rgba(48, 81, 107, 0.8);
 }
 .savebutton {
     background: #C9AAD8;
     color: #412458;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     border: 1px solid #956AB6;
     border-radius: 5px;
     font-size: 13pt;
@@ -449,7 +447,7 @@ td.shop-button:hover{
 .listbutton {
     background: #C9AAD8;
     color: #412458;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     border: 1px solid #956AB6;
     border-radius: 5px;
     font-size: 13pt;
@@ -470,14 +468,14 @@ body {
     background: #AC8BC6;
     color: white;
     padding: 1px 4px 2px;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
 }
  .broadcast-red {
     background: #D57575;
     border: 1px solid #985555;
     color: #FFD7D7;
     padding: 5px 1px 3px 8px;
-    text-shadow: 1px 1px 1px #985555;
+    text-shadow: none;
     font-family: helvetica, arial, sans-serif;
     text-align: center;
     font-style: normal;
@@ -488,7 +486,7 @@ body {
     border: 1px solid #375735;
     padding: 5px 1px 3px 8px;
     color: #BEFFB9;
-    text-shadow: 1px 1px 1px #375735;
+    text-shadow: none;
     font-family: helvetica, arial, sans-serif;
     text-align: center;
     font-style: normal;
@@ -499,7 +497,7 @@ body {
     border: 1px solid #414D5E;
     padding: 5px 1px 3px 8px;
     color: #C1DAFF;
-    text-shadow: 1px 1px 1px #414D5E;
+    text-shadow: none;
     font-family: helvetica, arial, sans-serif;
     text-align: center;
     font-style: normal;
@@ -507,35 +505,35 @@ body {
 
 .ps-room.ps-room-light.scrollable p {
     color: #D2B6E1;
-    text-shadow: 0 0 2px #2C0832;
+    text-shadow: none;
 }
 
 .ps-room.ps-room-light {
     background: rgba(90, 40, 93, 0.6);
     border-color: #855CA4;
     color: #000000;
-    text-shadow: 0 0 2px #FFFFFF;
+    text-shadow: none;
 }
 
 .ps-room.ps-room-light.scrollable .button {
     background: rgb(187, 145, 191);
     border: 1px solid #855CA4;
     color: #2F1643;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 
 .ps-room.ps-room-light.scrollable .button:hover {
     background: rgb(168, 123, 172);
     border: 1px solid #855CA4;
     color: #2F1643;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 
 .tablist li:first-child .button {
     border: 1px solid #AD98BD;
     background: #CFABEA;
     color: #3F0A3E;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -543,7 +541,7 @@ body {
     border: 1px solid #AD98BD;
     background: #DDC3F0;
     color: #3F0A3E;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -551,7 +549,7 @@ body {
     border: 1px solid #AD98BD;
     background: #E0BDFA;
     color: #3F0A3E;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -559,13 +557,13 @@ body {
     border: 1px solid #AD98BD;
     background: #E9CEFC;
     color: #3F0A3E;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
 .ps-room.ps-room-light.scrollable .rooms-officialchatrooms, .ps-room.ps-room-light.scrollable .rooms-chatrooms {
     color: #CDAFDB;
-    text-shadow: 0 0 2px #12011D;
+    text-shadow: none;
     font-variant: small-caps;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -578,7 +576,7 @@ body {
     border: 2px solid #CA8999;
     background: rgba(161,83,102,0.8);
     color: #FFF;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-size: 10pt;
     padding: 10px;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -588,7 +586,7 @@ body {
     border: 2px solid #F3BDCA;
     background: rgba(193, 126, 142, 0.8);
     color: #FFF;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-size: 10pt;
     padding: 10px;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -597,7 +595,7 @@ body {
 .roomcounters button {
     background: #C5A5D5;
     color: #2A143B;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     border: 1px solid #804EA6;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -605,7 +603,7 @@ body {
 .roomcounters button:hover {
     background: #DAC2E6;
     color: #2A143B;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     border: 1px solid #804EA6;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -628,6 +626,7 @@ body {
     background: rgb(205, 176, 221);
     border: 1px solid #855CA4;
     color: #2F1643;
+	text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 .maintabbar .overflow .button:hover {
@@ -645,6 +644,7 @@ body {
     background: #9B73BB;
     border: 1px solid #B48BD5;
     color: #372745;
+	text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
     
@@ -666,7 +666,7 @@ body {
 .tabbar a.button.cur, .tabbar a.button.cur:hover {
     color: #492765;
     background: url(http://i.imgur.com/7T1XuhL.png) repeat;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     border-color: #855CA4;
     cursor: default;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -674,7 +674,7 @@ body {
     
 .tabbar a.button {
     color: #2F1643;
-    text-shadow: 0 0 2px white;
+    text-shadow: none;
     border: solid 1px #855CA4;
     background: url(http://image.noelshack.com/fichiers/2016/17/1461674648-iojii.png);
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -682,7 +682,7 @@ body {
     
 .tabbar a.button:hover {
     color: #2F1643;
-    text-shadow: 0 0 2px white;
+    text-shadow: none;
     border: solid 1px #855CA4;
     background: url(http://image.noelshack.com/fichiers/2016/17/1461674880-iojii.png);
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -698,14 +698,14 @@ body {
     
 .tabbar a.button.subtle-notifying, .tabbar a.button.subtle-notifying:hover {
     color: #C74A75;
-    text-shadow: 0 0 1px #FFFFFF;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
     
 .header .tabbar a.button.notifying {
     background: #FFBAD8;
     color: #492765;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-style: italic;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -713,7 +713,7 @@ body {
 .header .tabbar a.button.notifying:hover {
     background: #F0ACCA;
     color: #492765;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-style: italic;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -723,18 +723,18 @@ body {
 .teamselect:disabled, .teamselect:disabled:hover {
     background: rgba(198, 93, 128, 0.5);
     color: #FFFFFF;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
  }
  
 .teamselect:disabled strong {
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
 .teamselect:disabled:hover {
     color: #000000;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     background:rgb(206, 198, 211);
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -753,7 +753,7 @@ body {
 
 .menugroup .teamselect strong {
     color: #FFFFFF;
-    text-shadow: 0 -1px 0 #000000;
+    text-shadow: none;
     font-variant: normal;
      font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -770,7 +770,7 @@ body {
     color: #FFFFFF;
     font-variant: small-caps;
     font-size: 11pt;
-    text-shadow: 0 -0.6px 0px #7F4E75;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -826,7 +826,7 @@ body {
     background: #f4e1fd url("http://pldh.net/media/pokemon/gen6/oras/635.png") no-repeat right top;
     color: #311043;
     border: 1px solid #855CA4;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     background-position: 215px -32px;
     border-top: 0;
     border-bottom: 0;
@@ -838,7 +838,7 @@ body {
     color: #381C50;
     font-size: 11pt;
     border: 1px solid #855CA4;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -847,7 +847,7 @@ body {
     color: #5B476D;
     font-size: 11pt;
     border: 1px solid #855CA4;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -855,7 +855,7 @@ body {
     border: 1px solid #855CA4;
     background: url("http://i.imgur.com/7T1XuhL.png") repeat;
     color: #5B476D;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
      font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -864,7 +864,7 @@ body {
     color: #FEEFB9;
     font-size: 11pt;
     border: 1px solid #9B7029;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -903,7 +903,7 @@ body {
     font-size: 9pt;
     padding: 1px 10px;
     border-bottom: 1px solid #AAAAAA;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     color: #451E63;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -922,7 +922,7 @@ body {
     padding: 3px 4px 0;
     border-top: 1px solid #855CA4;
     background: url("http://image.noelshack.com/fichiers/2016/17/1461794382-dsbfbrebersbqrqbe.png") repeat;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
     
@@ -934,7 +934,7 @@ body {
 .chat em {
     padding: 0 4px 0 3px;
     font-style: normal;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 
 .userlist {
@@ -944,7 +944,7 @@ body {
 .userlist li {
     background: rgba(255,255,255,0.8);
     border-bottom: 1px solid #C1C1C1;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     color: #34213B;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -963,7 +963,7 @@ body {
 .tournament-title {
     font-weight: 700;
     color: #240F37;
-    text-shadow: 0 0 2px #fefefe;
+    text-shadow: none;
     background: url("http://image.noelshack.com/fichiers/2016/17/1461674648-iojii.png");
     font-variant: small-caps;
     font-size: 12pt;
@@ -982,7 +982,7 @@ body {
     overflow: hidden;
     font-size: 9pt;
     background: rgba(243, 224, 236, 0.60);
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1005,7 +1005,7 @@ body {
 .teambar button {
     background: url("http://i.imgur.com/kXBK60j.png?1") !important;
     color: #361D49 !important;
-    text-shadow: 0px 0px 2px #FFF !important;
+    text-shadow: none;
     border-color: #735483 !important;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1013,7 +1013,7 @@ body {
 .teambar button:hover {
     background: url("http://i.imgur.com/nVKdc1d.png?2") !important;
     color: #361D49 !important;
-    text-shadow: 0px 0px 2px #FFF !important;
+    text-shadow: none !important;
     border-color: #735483 !important;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1032,7 +1032,7 @@ body {
 
 .teambuilder-results .utilichart .col {
     color: #D3B7E1;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
     
@@ -1045,7 +1045,7 @@ body {
     border: 1px solid #855CA4;
     background: #CFB1DD;
     color: #451138;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1058,7 +1058,7 @@ body {
     border: 1px solid #855CA4;
     background: #AF8EBE;
     color: #451138;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 
 .teambuilder-results .firstresult a:hover, .teambuilder-results .result a:hover {
@@ -1090,7 +1090,7 @@ body {
 
 .setchart label, .setchart-nickname label {
     color: #735483;
-    text-shadow: 1px 1px #F9EEFF;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1109,7 +1109,7 @@ body {
 .teamlist .team {
     background: rgba(207,177,221,0.70);
     color: #462456;
-    text-shadow: 0 0 2px #FFF;
+    text-shadow: none;
     border: 1px solid #855CA4;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1117,7 +1117,7 @@ body {
 .teamlist .team:hover {
     background: rgba(230, 206, 242, 0.7);
     color: #462456;
-    text-shadow: 0 0 2px #FFF;
+    text-shadow: none;
     border: 1px solid #855CA4;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1127,7 +1127,7 @@ body {
     border-top: 1px solid #956AB6;
     border-bottom: 1px solid #956AB6;
     color: #491B3E;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1221,14 +1221,14 @@ body {
     background: #DBACB7;
     color: #000000;
     border: 1px solid #99596B;
-    text-shadow: 0 0 2px #FFFFFF;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
 .popupmenu h3 {
     font-size: 10pt;
     color: #2F2735;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     font-variant: small-caps;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1238,7 +1238,7 @@ body {
     border: 1px solid #52107C;
     padding: 3px 10px;
     color: #52107C;
-    text-shadow: 0 0 2px #FCE3FC;
+    text-shadow: none;
     border-bottom: 1px solid #52107C;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1340,7 +1340,7 @@ body {
     background: #A8C4AE;
     border-color: #B51B73;
     color: #62323E;
-    text-shadow: 1px 1px #8EA99A;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1350,7 +1350,7 @@ body {
 
 .ps-room.ps-room-light.scrollable .rooms-officialchatrooms, .ps-room.ps-room-light.scrollable .rooms-chatrooms {
     color: #C1454F;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-variant: small-caps;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1359,7 +1359,7 @@ body {
     border: 2px solid #CA8999;
     background: #7F4451;
     color: #FFF;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
     font-size: 10pt;
     padding: 10px;
      font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -1402,7 +1402,7 @@ body {
     background: #EB78B3;
     border-color: #981076;
     color: #981076;
-    text-shadow: 1px 1px #CE6198;
+    text-shadow: none;
      font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1419,7 +1419,7 @@ body {
     background: #62323E;
     border-color: #891270;
     color: #A8C4AE;
-    text-shadow: 1px 1px #891270;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1427,7 +1427,7 @@ body {
     background: #A8C4AE;
     border-color: #B51B73;
     color: #62323E;
-    text-shadow: 1px 1px #8EA99A;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1447,7 +1447,7 @@ body {
     background: #A8C4AE;
     border-color: #B51B73;
     color: #62323E;
-    text-shadow: 1px 1px #8EA99A;
+    text-shadow: none;
      font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1516,13 +1516,13 @@ body {
     border-width: 2px;
     background: rgba(136, 162, 149, 0.65);
     color: #335744;
-    text-shadow: 0px 0px 2px #A8C4AE;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
 .dark .menugroup .select:disabled strong {
     color: #335744;
-    text-shadow: 0px 0px 2px #A8C4AE;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1531,7 +1531,7 @@ body {
     border-color: #426B55;
     border-width: 2px;
     color: #62323E;
-    text-shadow: 0px -1px #59816C;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1539,7 +1539,7 @@ body {
     background: url("http://i.imgur.com/o3boxNK.png?1");
     border-color: #335744;
     color: #DFA5B3;
-    text-shadow: 0px -1px #3B5F4D;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1548,7 +1548,7 @@ body {
     background-position: 225px;
     border-color: #891270;
     color: #A8C4AE;
-    text-shadow: 1px 1px #891270;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1590,7 +1590,7 @@ body {
     background-position: 225px;
     border-color: #981076;
     color: #981076;
-    text-shadow: 1px 1px #CE6198;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1633,7 +1633,7 @@ body {
     background: rgba(168, 196, 174, 0.99);
     border-color: #B2454C;
     color: #62323E;
-    text-shadow: 1px 1px 1px #8EA99A;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1642,7 +1642,7 @@ body {
     padding: 2px 8px;
     border: 1px solid #B2454C;
     color: #D25F66;
-    text-shadow: 1px 1px 1px #BBDAC2;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1774,7 +1774,7 @@ body {
 
 .dark .userlist small span, .dark .userlist small {
     color: #333;
-    text-shadow: 1px 1px 1px #CCC !important;
+    text-shadow: none !important;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1810,7 +1810,7 @@ body {
     background: #A8C4AE;
     border-color: #B51B73;
     color: #62323E;
-    text-shadow: 1px 1px #8EA99A;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1818,7 +1818,7 @@ body {
     background: #62323E;
     border-color: #891270;
     color: #A8C4AE;
-    text-shadow: 1px 1px #891270;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1833,7 +1833,7 @@ body {
 .dark .tournament-box {
     background: rgba(239, 252, 242, 0.5);
     color: #000;
-    text-shadow: 0px 0px 2px #EEE;
+    text-shadow: none;
     border-color: #B51B73;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
@@ -1842,7 +1842,7 @@ body {
     background: #A8C4AE;
     border-color: #B51B73;
     color: #62323E;
-    text-shadow: 1px 1px #8EA99A;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1850,7 +1850,7 @@ body {
     background: #62323E;
     border-color: #891270;
     color: #A8C4AE;
-    text-shadow: 1px 1px #891270;
+    text-shadow: none;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -1868,7 +1868,7 @@ body {
     background: #A8C4AE !important;
     border-color: #B51B73 !important;
     color: #62323E !important;
-    text-shadow: 1px 1px #8EA99A !important;
+    text-shadow: none !important;
 }
 
 .dark .teambar button:hover {
@@ -1951,29 +1951,29 @@ body {
 
 .dark .setchart label, .dark .setchart-nickname label {
     color: #A8C4AE;
-    text-shadow: 1px 1px #891270;
+    text-shadow: none;
 }
 
 .dark .utilichart h3, .dark .dexentry h3, .dark .resultheader h3 {
     background: #A8C4AE;
     border-color: #8EA99A;
     color: #62323E;
-    text-shadow: 1px 1px #8EA99A;
+    text-shadow: none;
 }
 
 .dark .utilichart .movenamecol {
     color: #FFF;
-    text-shadow: 1px 1px 1px #222;
+    text-shadow: none;
 }
 
 .dark .utilichart .movedesccol {
     color: #B0CEB4;
-    text-shadow: 1px 1px 1px #444;
+    text-shadow: none;
 }
 
 .dark .utilichart .statcol, .dark .utilichart .bstcol, .dark .utilichart .labelcol, .dark .utilichart .widelabelcol, .dark .utilichart .pplabelcol {
     color: #D25F66;
-    text-shadow: 1px 1px 1px #222;
+    text-shadow: none;
 }
 
 .dark .utilichart .labelcol em, .dark .utilichart .widelabelcol em, .dark .utilichart .pplabelcol em, .dark .utilichart .statcol em, .dark .utilichart .bstcol em {
@@ -2038,7 +2038,7 @@ body {
     padding: 2px 8px;
     border: 1px solid #B2454C;
     color: #D25F66;
-    text-shadow: 1px 1px 1px #BBDAC2;
+    text-shadow: none;
 }
 
 .dark .ps-popup .buttonbar button:hover {
@@ -2054,7 +2054,7 @@ body {
 .dark .ladder th {
     background: #62323E;   
     color: #A8C4AE;
-    text-shadow: 1px 1px #891270;
+    text-shadow: none;
 }
 
 .dark .ladder td {
@@ -2064,7 +2064,7 @@ body {
 
 .dark .ladder td:hover {
     background: rgba(0, 0, 0, 0.8);
-    text-shadow: 0px 0px 2px #C1454F;
+    text-shadow: none;
 }
 
 /* DARK BATTLE CSS */
@@ -2092,7 +2092,7 @@ body {
     background: #62323E;
     border-color: #891270;
     color: #A8C4AE;
-    text-shadow: 1px 1px #891270;
+    text-shadow: none;
 }
 
 .dark .battle-log .chat em {
@@ -2116,7 +2116,7 @@ body {
     background: #A8C4AE;
     border-color: #B51B73;
     color: #62323E;
-    text-shadow: 1px 1px #8EA99A;
+    text-shadow: none;
 }
 
 .dark .battle-controls .button:hover {
@@ -2136,7 +2136,7 @@ body {
     font-family: Verdana,sans-serif;
     font-size: 13pt;
     color: #2F1643;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
 }
 
 .battle-log {
@@ -2146,7 +2146,7 @@ body {
     background: #F8F1FC;
     color: #2F1643;
     top: 9px;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: none;
     left: 640px;
     right: -1px;
     font-family: Verdana,sans-serif;
@@ -2165,7 +2165,7 @@ body {
     right: -1px;
     font-family: Verdana,sans-serif;
     font-size: 10pt;
-    text-shadow: 0 0 2px #000;
+    text-shadow: none;
 }
   /*END BATTLE CSS */
   
@@ -2176,7 +2176,7 @@ body {
   background: #B9FCEE url("http://pldh.net/media/pokexycons/150-mega-x.png") no-repeat !important;
   background-position: 225px -8px !important;
   color: #1EA88C !important;
-  text-shadow: 0px 0px 2px #B6F3E7 !important;
+  text-shadow: none !important;
   border-color: #1F6C5D !important;
 }
 
@@ -2184,7 +2184,7 @@ body {
   background: #A5EFE0 url("http://pldh.net/media/pokexycons/150-mega-x.png") no-repeat !important;
   background-position: 225px -8px !important;
   color: #1EA88C !important;
-  text-shadow: 0px 0px 2px #B6F3E7 !important;
+  text-shadow: none !important;
   border-color: #1F6C5D !important;
 }
 
@@ -3226,234 +3226,4 @@ body {
   {
     border-color: #000 !important;
   }
-/*
-#lobby-userlist-user-niisama, #staff-userlist-user-niisama, #artshop-userlist-user-niisama, #1v1-userlist-user-niisama {
-  background: rgba(255, 255, 255, 0) url("http://i.imgur.com/wM5E2W5.gif") right no-repeat; }
-
-#lobby-userlist-user-hayleysworld, #thelotusleague-userlist-user-hayleysworld, #marketplace-userlist-user-hayleysworld {
-  background: rgba(255, 255, 255, 0) url("http://i.imgur.com/7a2mMxW.gif") right no-repeat; }
-
-#lobby-userlist-user-wndo, #smogontiers-userlist-user-wndo, #thearbiterleague-userlist-user-wndo, #leaguecentral-userlist-user-wndo {
-  background: rgba(255, 255, 255, 0) url("http://i.imgur.com/JIlrHtj.gif") right no-repeat; }
-
-#lobby-userlist-user-aurastormlucario, #casino-userlist-user-aurastormlucario, #lucarioslair-userlist-user-aurastormlucario, #arcadia-userlist-user-aurastormlucario, #staff-userlist-user-aurastormlucario {
-  background: rgba(255, 255, 255, 0) url("http://www.serebii.net/pokedex-dp/icon/448.gif") right no-repeat; }*/
-
-/************************************
-* IMPORTS - MIXINS - VARIABLES ~end *
-************************************/
-/***********************
-* Donation Benefit CSS *
-***********************/
-/****************************
-* Donation Benefit CSS ~end *
-****************************/
-/**************
-* General CSS *
-**************/
-/*******************
-* General CSS ~end *
-*******************/
-/*************
-* Header CSS *
-*************/
-/******************
-* Header CSS ~end *
-******************/
-/***************
-* Roomlist CSS *
-***************/
-/********************
-* Roomlist CSS ~end *
-********************/
-/***********
-* Chat CSS *
-***********/
-/****************
-* Chat CSS ~end *
-****************/
-/*******************
-* Tournaments CSS *
-******************/
-/***********************
-* Tournaments CSS ~end *
-***********************/
-/**********************
-* Mainmenuwrapper CSS *
-**********************/
-/***************************
-* Mainmenuwrapper CSS ~end *
-***************************/
-/************
-* Popup CSS *
-************/
-/*****************
-* Popup CSS ~end *
-*****************/
-/*************
-* Ladder CSS *
-*************/
-/******************
-* Ladder CSS ~end *
-******************/
-/**************
-  * General CSS *
-  **************/
-/*******************
-  * General CSS ~end *
-  *******************/
-/*************
-  * Header CSS *
-  *************/
-/******************
-  * Header CSS ~end *
-  ******************/
-/***************
-  * Roomlist CSS *
-  ***************/
-/********************
-  * Roomlist CSS ~end *
-  ********************/
-/***********
-  * Chat CSS *
-  ***********/
-/****************
-  * Chat CSS ~end *
-  ****************/
-/*******************
-  * Tournaments CSS *
-  ******************/
-/***********************
-  * Tournaments CSS ~end *
-  ***********************/
-/**********************
-  * Mainmenuwrapper CSS *
-  **********************/
-/*****************
-  * Popup CSS ~end *
-  *****************/
-/******************
-  * Teambuilder CSS *
-  ******************/
-/***********************
-  * Teambuilder CSS ~end *
-  ***********************/
-/*************
-  * Battle CSS *
-  *************/
-/******************
-  * Battle CSS ~end *
-  ******************/
-  
-
- 
-/*
-#lobby-userlist-user-aeroliverpool, #staff-userlist-user-aeroliverpool, #tournaments-userlist-user-aeroliverpool, #battlelords-userlist-user-aeroliverpool, #pokefc-userlist-user-aeroliverpool, #shadowbanroom-userlist-user-aeroliverpool, #upperstaff-userlist-user-aeroliverpool, #marketplace-userlist-user-aeroliverpool, #icypath-userlist-user-aeroliverpool, #monotype-userlist-user-aeroliverpool, #videogames-userlist-user-aeroliverpool, #sports-userlist-user-aeroliverpool, #francais-userlist-user-aeroliverpool, #casino-userlist-user-aeroliverpool, #help-userlist-user-aeroliverpool, #thehappyplace-userlist-user-aeroliverpool, #socialmedia-userlist-user-aeroliverpool{
-background: url("http://pldh.net/media/pokexycons/384-mega.png") no-repeat right
-}
-#lobby-userlist-user-classyz, #staff-userlist-user-classyz, #tournaments-userlist-user-classyz, #battlelords-userlist-user-classyz, #pokefc-userlist-user-classyz, #shadowbanroom-userlist-user-classyz, #upperstaff-userlist-user-classyz, #marketplace-userlist-user-classyz, #icypath-userlist-user-classyz, #monotype-userlist-user-classyz, #videogames-userlist-user-classyz, #sports-userlist-user-classyz, #francais-userlist-user-classyz, #casino-userlist-user-classyz, #help-userlist-user-classyz, #thehappyplace-userlist-user-classyz, #socialmedia-userlist-user-classyz{
-background: url("http://pldh.net/media/pokecons_action/212.gif") no-repeat right
-}
-#lobby-userlist-user-alphapaul71, #staff-userlist-user-alphapaul71, #tournaments-userlist-user-alphapaul71, #battlelords-userlist-user-alphapaul71, #pokefc-userlist-user-alphapaul71, #shadowbanroom-userlist-user-alphapaul71, #upperstaff-userlist-user-alphapaul71, #marketplace-userlist-user-alphapaul71, #icypath-userlist-user-alphapaul71, #monotype-userlist-user-alphapaul71, #videogames-userlist-user-alphapaul71, #sports-userlist-user-alphapaul71, #francais-userlist-user-alphapaul71, #casino-userlist-user-alphapaul71, #help-userlist-user-alphapaul71, #thehappyplace-userlist-user-alphapaul71, #socialmedia-userlist-user-alphapaul71{
-background: url("http://media.pldh.net/pokecons_action/484.gif") no-repeat right
-}
-/* ICONS END */
-/*
-#lobby-userlist-user-aeroliverpool, #staff-userlist-user-aeroliverpool, #tournaments-userlist-user-aeroliverpool, #battlelords-userlist-user-aeroliverpool, #pokefc-userlist-user-aeroliverpool, #shadowbanroom-userlist-user-aeroliverpool, #upperstaff-userlist-user-aeroliverpool, #marketplace-userlist-user-aeroliverpool, #monotype-userlist-user-aeroliverpool, #videogames-userlist-user-aeroliverpool, #sports-userlist-user-aeroliverpool, #francais-userlist-user-aeroliverpool, #casino-userlist-user-aeroliverpool, #help-userlist-user-aeroliverpool, #thehappyplace-userlist-user-aeroliverpool, #socialmedia-userlist-user-aeroliverpool, #pokeindia-userlist-user-aeroliverpool, #scartysrealm-userlist-user-aeroliverpool{
-background: url("http://pldh.net/media/pokexycons/384-mega.png") no-repeat right
-}
-#lobby-userlist-user-classyz, #staff-userlist-user-classyz, #tournaments-userlist-user-classyz, #battlelords-userlist-user-classyz, #pokefc-userlist-user-classyz, #shadowbanroom-userlist-user-classyz, #upperstaff-userlist-user-classyz, #marketplace-userlist-user-classyz, #monotype-userlist-user-classyz, #videogames-userlist-user-classyz, #sports-userlist-user-classyz, #francais-userlist-user-classyz, #casino-userlist-user-classyz, #help-userlist-user-classyz, #thehappyplace-userlist-user-classyz, #socialmedia-userlist-user-classyz, #pokeindia-userlist-user-classyz, #scartysrealm-userlist-user-classyz{
-background: url("http://pldh.net/media/pokecons_action/212.gif") no-repeat right
-}
-#lobby-userlist-user-alphapaul71, #staff-userlist-user-alphapaul71, #tournaments-userlist-user-alphapaul71, #battlelords-userlist-user-alphapaul71, #pokefc-userlist-user-alphapaul71, #shadowbanroom-userlist-user-alphapaul71, #upperstaff-userlist-user-alphapaul71, #marketplace-userlist-user-alphapaul71, #monotype-userlist-user-alphapaul71, #videogames-userlist-user-alphapaul71, #sports-userlist-user-alphapaul71, #francais-userlist-user-alphapaul71, #casino-userlist-user-alphapaul71, #help-userlist-user-alphapaul71, #thehappyplace-userlist-user-alphapaul71, #socialmedia-userlist-user-alphapaul71, #pokeindia-userlist-user-alphapaul71, #scartysrealm-userlist-user-alphapaul71{
-background: url("http://media.pldh.net/pokecons_action/484.gif") no-repeat right
-}
-#lobby-userlist-user-ransei, #staff-userlist-user-ransei, #tournaments-userlist-user-ransei, #battlelords-userlist-user-ransei, #pokefc-userlist-user-ransei, #shadowbanroom-userlist-user-ransei, #upperstaff-userlist-user-ransei, #marketplace-userlist-user-ransei, #monotype-userlist-user-ransei, #videogames-userlist-user-ransei, #sports-userlist-user-ransei, #francais-userlist-user-ransei, #casino-userlist-user-ransei, #help-userlist-user-ransei, #thehappyplace-userlist-user-ransei, #socialmedia-userlist-user-ransei, #pokeindia-userlist-user-ransei, #scartysrealm-userlist-user-ransei{
-background: url("http://media.pldh.net/pokecons_action/493.gif") no-repeat right
-}
-*/
-/*
-#lobby-userlist-user-aeroliverpool, #staff-userlist-user-aeroliverpool, #tournaments-userlist-user-aeroliverpool, #battlelords-userlist-user-aeroliverpool, #pokefc-userlist-user-aeroliverpool, #shadowbanroom-userlist-user-aeroliverpool, #upperstaff-userlist-user-aeroliverpool, #marketplace-userlist-user-aeroliverpool, #monotype-userlist-user-aeroliverpool, #videogames-userlist-user-aeroliverpool, #sports-userlist-user-aeroliverpool, #francais-userlist-user-aeroliverpool, #casino-userlist-user-aeroliverpool, #help-userlist-user-aeroliverpool, #thehappyplace-userlist-user-aeroliverpool, #socialmedia-userlist-user-aeroliverpool, #pokeindia-userlist-user-aeroliverpool, #scartysrealm-userlist-user-aeroliverpool, #paul71stestroom-userlist-user-aeroliverpool, #theflashleague-userlist-user-aeroliverpool{
-background: url("http://pldh.net/media/pokexycons/384-mega.png") no-repeat right
-}
-#lobby-userlist-user-classyz, #staff-userlist-user-classyz, #tournaments-userlist-user-classyz, #battlelords-userlist-user-classyz, #pokefc-userlist-user-classyz, #shadowbanroom-userlist-user-classyz, #upperstaff-userlist-user-classyz, #marketplace-userlist-user-classyz, #monotype-userlist-user-classyz, #videogames-userlist-user-classyz, #sports-userlist-user-classyz, #francais-userlist-user-classyz, #casino-userlist-user-classyz, #help-userlist-user-classyz, #thehappyplace-userlist-user-classyz, #socialmedia-userlist-user-classyz, #pokeindia-userlist-user-classyz, #scartysrealm-userlist-user-classyz, #paul71stestroom-userlist-user-classyz, #theflashleague-userlist-user-classyz{
-background: url("http://pldh.net/media/pokecons_action/212.gif") no-repeat right
-}
-#lobby-userlist-user-alphapaul71, #staff-userlist-user-alphapaul71, #tournaments-userlist-user-alphapaul71, #battlelords-userlist-user-alphapaul71, #pokefc-userlist-user-alphapaul71, #shadowbanroom-userlist-user-alphapaul71, #upperstaff-userlist-user-alphapaul71, #marketplace-userlist-user-alphapaul71, #monotype-userlist-user-alphapaul71, #videogames-userlist-user-alphapaul71, #sports-userlist-user-alphapaul71, #francais-userlist-user-alphapaul71, #casino-userlist-user-alphapaul71, #help-userlist-user-alphapaul71, #thehappyplace-userlist-user-alphapaul71, #socialmedia-userlist-user-alphapaul71, #pokeindia-userlist-user-alphapaul71, #scartysrealm-userlist-user-alphapaul71, #paul71stestroom-userlist-user-alphapaul71, #theflashleague-userlist-user-alphapaul71{
-background: url("http://media.pldh.net/pokecons_action/484.gif") no-repeat right
-}
-#lobby-userlist-user-ransei, #staff-userlist-user-ransei, #tournaments-userlist-user-ransei, #battlelords-userlist-user-ransei, #pokefc-userlist-user-ransei, #shadowbanroom-userlist-user-ransei, #upperstaff-userlist-user-ransei, #marketplace-userlist-user-ransei, #monotype-userlist-user-ransei, #videogames-userlist-user-ransei, #sports-userlist-user-ransei, #francais-userlist-user-ransei, #casino-userlist-user-ransei, #help-userlist-user-ransei, #thehappyplace-userlist-user-ransei, #socialmedia-userlist-user-ransei, #pokeindia-userlist-user-ransei, #scartysrealm-userlist-user-ransei, #paul71stestroom-userlist-user-ransei, #theflashleague-userlist-user-ransei{
-background: url("http://media.pldh.net/pokecons_action/493.gif") no-repeat right
-}
-#lobby-userlist-user-paul71, #staff-userlist-user-paul71, #tournaments-userlist-user-paul71, #battlelords-userlist-user-paul71, #pokefc-userlist-user-paul71, #shadowbanroom-userlist-user-paul71, #upperstaff-userlist-user-paul71, #marketplace-userlist-user-paul71, #monotype-userlist-user-paul71, #videogames-userlist-user-paul71, #sports-userlist-user-paul71, #francais-userlist-user-paul71, #casino-userlist-user-paul71, #help-userlist-user-paul71, #thehappyplace-userlist-user-paul71, #socialmedia-userlist-user-paul71, #pokeindia-userlist-user-paul71, #scartysrealm-userlist-user-paul71, #paul71stestroom-userlist-user-paul71, #theflashleague-userlist-user-paul71{
-background: url("http://media.pldh.net/pokecons_action/484.gif") no-repeat right
-}
-ICONS END */
-/* COLORS START
-#lobby-userlist-user-paul71 strong em, #lobby-userlist-user-paul71 strong, #lobby-userlist-user-paul71 span, #staff-userlist-user-paul71 strong em, #staff-userlist-user-paul71 strong, #staff-userlist-user-paul71 span, #tournaments-userlist-user-paul71 strong em, #tournaments-userlist-user-paul71 strong, #tournaments-userlist-user-paul71 span, #battlelords-userlist-user-paul71 strong em, #battlelords-userlist-user-paul71 strong, #battlelords-userlist-user-paul71 span, #pokefc-userlist-user-paul71 strong em, #pokefc-userlist-user-paul71 strong, #pokefc-userlist-user-paul71 span, #shadowbanroom-userlist-user-paul71 strong em, #shadowbanroom-userlist-user-paul71 strong, #shadowbanroom-userlist-user-paul71 span, #upperstaff-userlist-user-paul71 strong em, #upperstaff-userlist-user-paul71 strong, #upperstaff-userlist-user-paul71 span, #marketplace-userlist-user-paul71 strong em, #marketplace-userlist-user-paul71 strong, #marketplace-userlist-user-paul71 span, #videogames-userlist-user-paul71 strong em, #videogames-userlist-user-paul71 strong, #videogames-userlist-user-paul71 span, #sports-userlist-user-paul71 strong em, #sports-userlist-user-paul71 strong, #sports-userlist-user-paul71 span, #francais-userlist-user-paul71 strong em, #francais-userlist-user-paul71 strong, #francais-userlist-user-paul71 span, #casino-userlist-user-paul71 strong em, #casino-userlist-user-paul71 strong, #casino-userlist-user-paul71 span, #help-userlist-user-paul71 strong em, #help-userlist-user-paul71 strong, #help-userlist-user-paul71 span, #thehappyplace-userlist-user-paul71 strong em, #thehappyplace-userlist-user-paul71 strong, #thehappyplace-userlist-user-paul71 span, #pokeindia-userlist-user-paul71 strong em, #pokeindia-userlist-user-paul71 strong, #pokeindia-userlist-user-paul71 span, #paul71stestroom-userlist-user-paul71 strong em, #paul71stestroom-userlist-user-paul71 strong, #paul71stestroom-userlist-user-paul71 span, #theflashleague-userlist-user-paul71 strong em, #theflashleague-userlist-user-paul71 strong, #theflashleague-userlist-user-paul71 span, #tvbooksfilms-userlist-user-paul71 strong em, #tvbooksfilms-userlist-user-paul71 strong, #tvbooksfilms-userlist-user-paul71 span, #legendaryinstitute-userlist-user-paul71 strong em, #legendaryinstitute-userlist-user-paul71 strong, #legendaryinstitute-userlist-user-paul71 span, #thestudio-userlist-user-paul71 strong em, #thestudio-userlist-user-paul71 strong, #thestudio-userlist-user-paul71 span, #test-userlist-user-paul71 strong em, #test-userlist-user-paul71 strong, #test-userlist-user-paul71 span, #pokemongc-userlist-user-paul71 strong em, #pokemongc-userlist-user-paul71 strong, #pokemongc-userlist-user-paul71 span{
-color: orange !important;
-}
-.chat.chatmessage-paul71 strong {
-color: orange !important;
-}
-#lobby-userlist-user-battleguard strong em, #lobby-userlist-user-battleguard strong, #lobby-userlist-user-battleguard span, #staff-userlist-user-battleguard strong em, #staff-userlist-user-battleguard strong, #staff-userlist-user-battleguard span, #tournaments-userlist-user-battleguard strong em, #tournaments-userlist-user-battleguard strong, #tournaments-userlist-user-battleguard span, #battlelords-userlist-user-battleguard strong em, #battlelords-userlist-user-battleguard strong, #battlelords-userlist-user-battleguard span, #pokefc-userlist-user-battleguard strong em, #pokefc-userlist-user-battleguard strong, #pokefc-userlist-user-battleguard span, #shadowbanroom-userlist-user-battleguard strong em, #shadowbanroom-userlist-user-battleguard strong, #shadowbanroom-userlist-user-battleguard span, #upperstaff-userlist-user-battleguard strong em, #upperstaff-userlist-user-battleguard strong, #upperstaff-userlist-user-battleguard span, #marketplace-userlist-user-battleguard strong em, #marketplace-userlist-user-battleguard strong, #marketplace-userlist-user-battleguard span, #videogames-userlist-user-battleguard strong em, #videogames-userlist-user-battleguard strong, #videogames-userlist-user-battleguard span, #sports-userlist-user-battleguard strong em, #sports-userlist-user-battleguard strong, #sports-userlist-user-battleguard span, #francais-userlist-user-battleguard strong em, #francais-userlist-user-battleguard strong, #francais-userlist-user-battleguard span, #casino-userlist-user-battleguard strong em, #casino-userlist-user-battleguard strong, #casino-userlist-user-battleguard span, #help-userlist-user-battleguard strong em, #help-userlist-user-battleguard strong, #help-userlist-user-battleguard span, #thehappyplace-userlist-user-battleguard strong em, #thehappyplace-userlist-user-battleguard strong, #thehappyplace-userlist-user-battleguard span, #pokeindia-userlist-user-battleguard strong em, #pokeindia-userlist-user-battleguard strong, #pokeindia-userlist-user-battleguard span, #paul71stestroom-userlist-user-battleguard strong em, #paul71stestroom-userlist-user-battleguard strong, #paul71stestroom-userlist-user-battleguard span, #theflashleague-userlist-user-battleguard strong em, #theflashleague-userlist-user-battleguard strong, #theflashleague-userlist-user-battleguard span, #tvbooksfilms-userlist-user-battleguard strong em, #tvbooksfilms-userlist-user-battleguard strong, #tvbooksfilms-userlist-user-battleguard span, #legendaryinstitute-userlist-user-battleguard strong em, #legendaryinstitute-userlist-user-battleguard strong, #legendaryinstitute-userlist-user-battleguard span, #thestudio-userlist-user-battleguard strong em, #thestudio-userlist-user-battleguard strong, #thestudio-userlist-user-battleguard span, #test-userlist-user-battleguard strong em, #test-userlist-user-battleguard strong, #test-userlist-user-battleguard span, #pokemongc-userlist-user-battleguard strong em, #pokemongc-userlist-user-battleguard strong, #pokemongc-userlist-user-battleguard span{
-color: Yellow !important;
-}
-.chat.chatmessage-battleguard strong {
-color: Yellow !important;
-}
-#lobby-userlist-user-hurting strong em, #lobby-userlist-user-hurting strong, #lobby-userlist-user-hurting span, #staff-userlist-user-hurting strong em, #staff-userlist-user-hurting strong, #staff-userlist-user-hurting span, #tournaments-userlist-user-hurting strong em, #tournaments-userlist-user-hurting strong, #tournaments-userlist-user-hurting span, #battlelords-userlist-user-hurting strong em, #battlelords-userlist-user-hurting strong, #battlelords-userlist-user-hurting span, #pokefc-userlist-user-hurting strong em, #pokefc-userlist-user-hurting strong, #pokefc-userlist-user-hurting span, #shadowbanroom-userlist-user-hurting strong em, #shadowbanroom-userlist-user-hurting strong, #shadowbanroom-userlist-user-hurting span, #upperstaff-userlist-user-hurting strong em, #upperstaff-userlist-user-hurting strong, #upperstaff-userlist-user-hurting span, #marketplace-userlist-user-hurting strong em, #marketplace-userlist-user-hurting strong, #marketplace-userlist-user-hurting span, #videogames-userlist-user-hurting strong em, #videogames-userlist-user-hurting strong, #videogames-userlist-user-hurting span, #sports-userlist-user-hurting strong em, #sports-userlist-user-hurting strong, #sports-userlist-user-hurting span, #francais-userlist-user-hurting strong em, #francais-userlist-user-hurting strong, #francais-userlist-user-hurting span, #casino-userlist-user-hurting strong em, #casino-userlist-user-hurting strong, #casino-userlist-user-hurting span, #help-userlist-user-hurting strong em, #help-userlist-user-hurting strong, #help-userlist-user-hurting span, #thehappyplace-userlist-user-hurting strong em, #thehappyplace-userlist-user-hurting strong, #thehappyplace-userlist-user-hurting span, #pokeindia-userlist-user-hurting strong em, #pokeindia-userlist-user-hurting strong, #pokeindia-userlist-user-hurting span, #paul71stestroom-userlist-user-hurting strong em, #paul71stestroom-userlist-user-hurting strong, #paul71stestroom-userlist-user-hurting span, #theflashleague-userlist-user-hurting strong em, #theflashleague-userlist-user-hurting strong, #theflashleague-userlist-user-hurting span, #tvbooksfilms-userlist-user-hurting strong em, #tvbooksfilms-userlist-user-hurting strong, #tvbooksfilms-userlist-user-hurting span, #legendaryinstitute-userlist-user-hurting strong em, #legendaryinstitute-userlist-user-hurting strong, #legendaryinstitute-userlist-user-hurting span, #thestudio-userlist-user-hurting strong em, #thestudio-userlist-user-hurting strong, #thestudio-userlist-user-hurting span, #test-userlist-user-hurting strong em, #test-userlist-user-hurting strong, #test-userlist-user-hurting span, #pokemongc-userlist-user-hurting strong em, #pokemongc-userlist-user-hurting strong, #pokemongc-userlist-user-hurting span{
-color: #fc0 !important;
-}
-.chat.chatmessage-hurting strong {
-color: #fc0 !important;
-}
-#lobby-userlist-user-tejas10 strong em, #lobby-userlist-user-tejas10 strong, #lobby-userlist-user-tejas10 span, #staff-userlist-user-tejas10 strong em, #staff-userlist-user-tejas10 strong, #staff-userlist-user-tejas10 span, #tournaments-userlist-user-tejas10 strong em, #tournaments-userlist-user-tejas10 strong, #tournaments-userlist-user-tejas10 span, #battlelords-userlist-user-tejas10 strong em, #battlelords-userlist-user-tejas10 strong, #battlelords-userlist-user-tejas10 span, #pokefc-userlist-user-tejas10 strong em, #pokefc-userlist-user-tejas10 strong, #pokefc-userlist-user-tejas10 span, #shadowbanroom-userlist-user-tejas10 strong em, #shadowbanroom-userlist-user-tejas10 strong, #shadowbanroom-userlist-user-tejas10 span, #upperstaff-userlist-user-tejas10 strong em, #upperstaff-userlist-user-tejas10 strong, #upperstaff-userlist-user-tejas10 span, #marketplace-userlist-user-tejas10 strong em, #marketplace-userlist-user-tejas10 strong, #marketplace-userlist-user-tejas10 span, #videogames-userlist-user-tejas10 strong em, #videogames-userlist-user-tejas10 strong, #videogames-userlist-user-tejas10 span, #sports-userlist-user-tejas10 strong em, #sports-userlist-user-tejas10 strong, #sports-userlist-user-tejas10 span, #francais-userlist-user-tejas10 strong em, #francais-userlist-user-tejas10 strong, #francais-userlist-user-tejas10 span, #casino-userlist-user-tejas10 strong em, #casino-userlist-user-tejas10 strong, #casino-userlist-user-tejas10 span, #help-userlist-user-tejas10 strong em, #help-userlist-user-tejas10 strong, #help-userlist-user-tejas10 span, #thehappyplace-userlist-user-tejas10 strong em, #thehappyplace-userlist-user-tejas10 strong, #thehappyplace-userlist-user-tejas10 span, #pokeindia-userlist-user-tejas10 strong em, #pokeindia-userlist-user-tejas10 strong, #pokeindia-userlist-user-tejas10 span, #paul71stestroom-userlist-user-tejas10 strong em, #paul71stestroom-userlist-user-tejas10 strong, #paul71stestroom-userlist-user-tejas10 span, #theflashleague-userlist-user-tejas10 strong em, #theflashleague-userlist-user-tejas10 strong, #theflashleague-userlist-user-tejas10 span, #tvbooksfilms-userlist-user-tejas10 strong em, #tvbooksfilms-userlist-user-tejas10 strong, #tvbooksfilms-userlist-user-tejas10 span, #legendaryinstitute-userlist-user-tejas10 strong em, #legendaryinstitute-userlist-user-tejas10 strong, #legendaryinstitute-userlist-user-tejas10 span, #thestudio-userlist-user-tejas10 strong em, #thestudio-userlist-user-tejas10 strong, #thestudio-userlist-user-tejas10 span, #test-userlist-user-tejas10 strong em, #test-userlist-user-tejas10 strong, #test-userlist-user-tejas10 span, #pokemongc-userlist-user-tejas10 strong em, #pokemongc-userlist-user-tejas10 strong, #pokemongc-userlist-user-tejas10 span{
-color: 0e5ee !important;
-}
-.chat.chatmessage-tejas10 strong {
-color: 0e5ee !important;
-}
-#lobby-userlist-user-ransei strong em, #lobby-userlist-user-ransei strong, #lobby-userlist-user-ransei span, #staff-userlist-user-ransei strong em, #staff-userlist-user-ransei strong, #staff-userlist-user-ransei span, #tournaments-userlist-user-ransei strong em, #tournaments-userlist-user-ransei strong, #tournaments-userlist-user-ransei span, #battlelords-userlist-user-ransei strong em, #battlelords-userlist-user-ransei strong, #battlelords-userlist-user-ransei span, #pokefc-userlist-user-ransei strong em, #pokefc-userlist-user-ransei strong, #pokefc-userlist-user-ransei span, #shadowbanroom-userlist-user-ransei strong em, #shadowbanroom-userlist-user-ransei strong, #shadowbanroom-userlist-user-ransei span, #upperstaff-userlist-user-ransei strong em, #upperstaff-userlist-user-ransei strong, #upperstaff-userlist-user-ransei span, #marketplace-userlist-user-ransei strong em, #marketplace-userlist-user-ransei strong, #marketplace-userlist-user-ransei span, #videogames-userlist-user-ransei strong em, #videogames-userlist-user-ransei strong, #videogames-userlist-user-ransei span, #sports-userlist-user-ransei strong em, #sports-userlist-user-ransei strong, #sports-userlist-user-ransei span, #francais-userlist-user-ransei strong em, #francais-userlist-user-ransei strong, #francais-userlist-user-ransei span, #casino-userlist-user-ransei strong em, #casino-userlist-user-ransei strong, #casino-userlist-user-ransei span, #help-userlist-user-ransei strong em, #help-userlist-user-ransei strong, #help-userlist-user-ransei span, #thehappyplace-userlist-user-ransei strong em, #thehappyplace-userlist-user-ransei strong, #thehappyplace-userlist-user-ransei span, #pokeindia-userlist-user-ransei strong em, #pokeindia-userlist-user-ransei strong, #pokeindia-userlist-user-ransei span, #paul71stestroom-userlist-user-ransei strong em, #paul71stestroom-userlist-user-ransei strong, #paul71stestroom-userlist-user-ransei span, #theflashleague-userlist-user-ransei strong em, #theflashleague-userlist-user-ransei strong, #theflashleague-userlist-user-ransei span, #tvbooksfilms-userlist-user-ransei strong em, #tvbooksfilms-userlist-user-ransei strong, #tvbooksfilms-userlist-user-ransei span, #legendaryinstitute-userlist-user-ransei strong em, #legendaryinstitute-userlist-user-ransei strong, #legendaryinstitute-userlist-user-ransei span, #thestudio-userlist-user-ransei strong em, #thestudio-userlist-user-ransei strong, #thestudio-userlist-user-ransei span, #test-userlist-user-ransei strong em, #test-userlist-user-ransei strong, #test-userlist-user-ransei span, #pokemongc-userlist-user-ransei strong em, #pokemongc-userlist-user-ransei strong, #pokemongc-userlist-user-ransei span{
-color: #DAC007 !important;
-}
-.chat.chatmessage-ransei strong {
-color: #DAC007 !important;
-}
-#lobby-userlist-user-lilkidpancham strong em, #lobby-userlist-user-lilkidpancham strong, #lobby-userlist-user-lilkidpancham span, #staff-userlist-user-lilkidpancham strong em, #staff-userlist-user-lilkidpancham strong, #staff-userlist-user-lilkidpancham span, #tournaments-userlist-user-lilkidpancham strong em, #tournaments-userlist-user-lilkidpancham strong, #tournaments-userlist-user-lilkidpancham span, #battlelords-userlist-user-lilkidpancham strong em, #battlelords-userlist-user-lilkidpancham strong, #battlelords-userlist-user-lilkidpancham span, #pokefc-userlist-user-lilkidpancham strong em, #pokefc-userlist-user-lilkidpancham strong, #pokefc-userlist-user-lilkidpancham span, #shadowbanroom-userlist-user-lilkidpancham strong em, #shadowbanroom-userlist-user-lilkidpancham strong, #shadowbanroom-userlist-user-lilkidpancham span, #upperstaff-userlist-user-lilkidpancham strong em, #upperstaff-userlist-user-lilkidpancham strong, #upperstaff-userlist-user-lilkidpancham span, #marketplace-userlist-user-lilkidpancham strong em, #marketplace-userlist-user-lilkidpancham strong, #marketplace-userlist-user-lilkidpancham span, #videogames-userlist-user-lilkidpancham strong em, #videogames-userlist-user-lilkidpancham strong, #videogames-userlist-user-lilkidpancham span, #sports-userlist-user-lilkidpancham strong em, #sports-userlist-user-lilkidpancham strong, #sports-userlist-user-lilkidpancham span, #francais-userlist-user-lilkidpancham strong em, #francais-userlist-user-lilkidpancham strong, #francais-userlist-user-lilkidpancham span, #casino-userlist-user-lilkidpancham strong em, #casino-userlist-user-lilkidpancham strong, #casino-userlist-user-lilkidpancham span, #help-userlist-user-lilkidpancham strong em, #help-userlist-user-lilkidpancham strong, #help-userlist-user-lilkidpancham span, #thehappyplace-userlist-user-lilkidpancham strong em, #thehappyplace-userlist-user-lilkidpancham strong, #thehappyplace-userlist-user-lilkidpancham span, #pokeindia-userlist-user-lilkidpancham strong em, #pokeindia-userlist-user-lilkidpancham strong, #pokeindia-userlist-user-lilkidpancham span, #paul71stestroom-userlist-user-lilkidpancham strong em, #paul71stestroom-userlist-user-lilkidpancham strong, #paul71stestroom-userlist-user-lilkidpancham span, #theflashleague-userlist-user-lilkidpancham strong em, #theflashleague-userlist-user-lilkidpancham strong, #theflashleague-userlist-user-lilkidpancham span, #tvbooksfilms-userlist-user-lilkidpancham strong em, #tvbooksfilms-userlist-user-lilkidpancham strong, #tvbooksfilms-userlist-user-lilkidpancham span, #legendaryinstitute-userlist-user-lilkidpancham strong em, #legendaryinstitute-userlist-user-lilkidpancham strong, #legendaryinstitute-userlist-user-lilkidpancham span, #thestudio-userlist-user-lilkidpancham strong em, #thestudio-userlist-user-lilkidpancham strong, #thestudio-userlist-user-lilkidpancham span, #test-userlist-user-lilkidpancham strong em, #test-userlist-user-lilkidpancham strong, #test-userlist-user-lilkidpancham span, #pokemongc-userlist-user-lilkidpancham strong em, #pokemongc-userlist-user-lilkidpancham strong, #pokemongc-userlist-user-lilkidpancham span{
-color: white !important;
-}
-.chat.chatmessage-lilkidpancham strong {
-color: white !important;
-}
-#lobby-userlist-user-aeroliverpool strong em, #lobby-userlist-user-aeroliverpool strong, #lobby-userlist-user-aeroliverpool span, #staff-userlist-user-aeroliverpool strong em, #staff-userlist-user-aeroliverpool strong, #staff-userlist-user-aeroliverpool span, #tournaments-userlist-user-aeroliverpool strong em, #tournaments-userlist-user-aeroliverpool strong, #tournaments-userlist-user-aeroliverpool span, #battlelords-userlist-user-aeroliverpool strong em, #battlelords-userlist-user-aeroliverpool strong, #battlelords-userlist-user-aeroliverpool span, #pokefc-userlist-user-aeroliverpool strong em, #pokefc-userlist-user-aeroliverpool strong, #pokefc-userlist-user-aeroliverpool span, #shadowbanroom-userlist-user-aeroliverpool strong em, #shadowbanroom-userlist-user-aeroliverpool strong, #shadowbanroom-userlist-user-aeroliverpool span, #upperstaff-userlist-user-aeroliverpool strong em, #upperstaff-userlist-user-aeroliverpool strong, #upperstaff-userlist-user-aeroliverpool span, #marketplace-userlist-user-aeroliverpool strong em, #marketplace-userlist-user-aeroliverpool strong, #marketplace-userlist-user-aeroliverpool span, #videogames-userlist-user-aeroliverpool strong em, #videogames-userlist-user-aeroliverpool strong, #videogames-userlist-user-aeroliverpool span, #sports-userlist-user-aeroliverpool strong em, #sports-userlist-user-aeroliverpool strong, #sports-userlist-user-aeroliverpool span, #francais-userlist-user-aeroliverpool strong em, #francais-userlist-user-aeroliverpool strong, #francais-userlist-user-aeroliverpool span, #casino-userlist-user-aeroliverpool strong em, #casino-userlist-user-aeroliverpool strong, #casino-userlist-user-aeroliverpool span, #help-userlist-user-aeroliverpool strong em, #help-userlist-user-aeroliverpool strong, #help-userlist-user-aeroliverpool span, #thehappyplace-userlist-user-aeroliverpool strong em, #thehappyplace-userlist-user-aeroliverpool strong, #thehappyplace-userlist-user-aeroliverpool span, #pokeindia-userlist-user-aeroliverpool strong em, #pokeindia-userlist-user-aeroliverpool strong, #pokeindia-userlist-user-aeroliverpool span, #paul71stestroom-userlist-user-aeroliverpool strong em, #paul71stestroom-userlist-user-aeroliverpool strong, #paul71stestroom-userlist-user-aeroliverpool span, #theflashleague-userlist-user-aeroliverpool strong em, #theflashleague-userlist-user-aeroliverpool strong, #theflashleague-userlist-user-aeroliverpool span, #tvbooksfilms-userlist-user-aeroliverpool strong em, #tvbooksfilms-userlist-user-aeroliverpool strong, #tvbooksfilms-userlist-user-aeroliverpool span, #legendaryinstitute-userlist-user-aeroliverpool strong em, #legendaryinstitute-userlist-user-aeroliverpool strong, #legendaryinstitute-userlist-user-aeroliverpool span, #thestudio-userlist-user-aeroliverpool strong em, #thestudio-userlist-user-aeroliverpool strong, #thestudio-userlist-user-aeroliverpool span, #test-userlist-user-aeroliverpool strong em, #test-userlist-user-aeroliverpool strong, #test-userlist-user-aeroliverpool span, #pokemongc-userlist-user-aeroliverpool strong em, #pokemongc-userlist-user-aeroliverpool strong, #pokemongc-userlist-user-aeroliverpool span{
-color: cyan !important;
-}
-.chat.chatmessage-aeroliverpool strong {
-color: cyan !important;
-}
-#lobby-userlist-user-coldsteelygaze strong em, #lobby-userlist-user-coldsteelygaze strong, #lobby-userlist-user-coldsteelygaze span, #staff-userlist-user-coldsteelygaze strong em, #staff-userlist-user-coldsteelygaze strong, #staff-userlist-user-coldsteelygaze span, #tournaments-userlist-user-coldsteelygaze strong em, #tournaments-userlist-user-coldsteelygaze strong, #tournaments-userlist-user-coldsteelygaze span, #battlelords-userlist-user-coldsteelygaze strong em, #battlelords-userlist-user-coldsteelygaze strong, #battlelords-userlist-user-coldsteelygaze span, #pokefc-userlist-user-coldsteelygaze strong em, #pokefc-userlist-user-coldsteelygaze strong, #pokefc-userlist-user-coldsteelygaze span, #shadowbanroom-userlist-user-coldsteelygaze strong em, #shadowbanroom-userlist-user-coldsteelygaze strong, #shadowbanroom-userlist-user-coldsteelygaze span, #upperstaff-userlist-user-coldsteelygaze strong em, #upperstaff-userlist-user-coldsteelygaze strong, #upperstaff-userlist-user-coldsteelygaze span, #marketplace-userlist-user-coldsteelygaze strong em, #marketplace-userlist-user-coldsteelygaze strong, #marketplace-userlist-user-coldsteelygaze span, #videogames-userlist-user-coldsteelygaze strong em, #videogames-userlist-user-coldsteelygaze strong, #videogames-userlist-user-coldsteelygaze span, #sports-userlist-user-coldsteelygaze strong em, #sports-userlist-user-coldsteelygaze strong, #sports-userlist-user-coldsteelygaze span, #francais-userlist-user-coldsteelygaze strong em, #francais-userlist-user-coldsteelygaze strong, #francais-userlist-user-coldsteelygaze span, #casino-userlist-user-coldsteelygaze strong em, #casino-userlist-user-coldsteelygaze strong, #casino-userlist-user-coldsteelygaze span, #help-userlist-user-coldsteelygaze strong em, #help-userlist-user-coldsteelygaze strong, #help-userlist-user-coldsteelygaze span, #thehappyplace-userlist-user-coldsteelygaze strong em, #thehappyplace-userlist-user-coldsteelygaze strong, #thehappyplace-userlist-user-coldsteelygaze span, #pokeindia-userlist-user-coldsteelygaze strong em, #pokeindia-userlist-user-coldsteelygaze strong, #pokeindia-userlist-user-coldsteelygaze span, #paul71stestroom-userlist-user-coldsteelygaze strong em, #paul71stestroom-userlist-user-coldsteelygaze strong, #paul71stestroom-userlist-user-coldsteelygaze span, #theflashleague-userlist-user-coldsteelygaze strong em, #theflashleague-userlist-user-coldsteelygaze strong, #theflashleague-userlist-user-coldsteelygaze span, #tvbooksfilms-userlist-user-coldsteelygaze strong em, #tvbooksfilms-userlist-user-coldsteelygaze strong, #tvbooksfilms-userlist-user-coldsteelygaze span, #legendaryinstitute-userlist-user-coldsteelygaze strong em, #legendaryinstitute-userlist-user-coldsteelygaze strong, #legendaryinstitute-userlist-user-coldsteelygaze span, #thestudio-userlist-user-coldsteelygaze strong em, #thestudio-userlist-user-coldsteelygaze strong, #thestudio-userlist-user-coldsteelygaze span, #test-userlist-user-coldsteelygaze strong em, #test-userlist-user-coldsteelygaze strong, #test-userlist-user-coldsteelygaze span, #pokemongc-userlist-user-coldsteelygaze strong em, #pokemongc-userlist-user-coldsteelygaze strong, #pokemongc-userlist-user-coldsteelygaze span{
-color: blue !important;
-}
-.chat.chatmessage-coldsteelygaze strong {
-color: blue !important;
-}
-#lobby-userlist-user-classyz strong em, #lobby-userlist-user-classyz strong, #lobby-userlist-user-classyz span, #staff-userlist-user-classyz strong em, #staff-userlist-user-classyz strong, #staff-userlist-user-classyz span, #tournaments-userlist-user-classyz strong em, #tournaments-userlist-user-classyz strong, #tournaments-userlist-user-classyz span, #battlelords-userlist-user-classyz strong em, #battlelords-userlist-user-classyz strong, #battlelords-userlist-user-classyz span, #pokefc-userlist-user-classyz strong em, #pokefc-userlist-user-classyz strong, #pokefc-userlist-user-classyz span, #shadowbanroom-userlist-user-classyz strong em, #shadowbanroom-userlist-user-classyz strong, #shadowbanroom-userlist-user-classyz span, #upperstaff-userlist-user-classyz strong em, #upperstaff-userlist-user-classyz strong, #upperstaff-userlist-user-classyz span, #marketplace-userlist-user-classyz strong em, #marketplace-userlist-user-classyz strong, #marketplace-userlist-user-classyz span, #videogames-userlist-user-classyz strong em, #videogames-userlist-user-classyz strong, #videogames-userlist-user-classyz span, #sports-userlist-user-classyz strong em, #sports-userlist-user-classyz strong, #sports-userlist-user-classyz span, #francais-userlist-user-classyz strong em, #francais-userlist-user-classyz strong, #francais-userlist-user-classyz span, #casino-userlist-user-classyz strong em, #casino-userlist-user-classyz strong, #casino-userlist-user-classyz span, #help-userlist-user-classyz strong em, #help-userlist-user-classyz strong, #help-userlist-user-classyz span, #thehappyplace-userlist-user-classyz strong em, #thehappyplace-userlist-user-classyz strong, #thehappyplace-userlist-user-classyz span, #pokeindia-userlist-user-classyz strong em, #pokeindia-userlist-user-classyz strong, #pokeindia-userlist-user-classyz span, #paul71stestroom-userlist-user-classyz strong em, #paul71stestroom-userlist-user-classyz strong, #paul71stestroom-userlist-user-classyz span, #theflashleague-userlist-user-classyz strong em, #theflashleague-userlist-user-classyz strong, #theflashleague-userlist-user-classyz span, #tvbooksfilms-userlist-user-classyz strong em, #tvbooksfilms-userlist-user-classyz strong, #tvbooksfilms-userlist-user-classyz span, #legendaryinstitute-userlist-user-classyz strong em, #legendaryinstitute-userlist-user-classyz strong, #legendaryinstitute-userlist-user-classyz span, #thestudio-userlist-user-classyz strong em, #thestudio-userlist-user-classyz strong, #thestudio-userlist-user-classyz span, #test-userlist-user-classyz strong em, #test-userlist-user-classyz strong, #test-userlist-user-classyz span, #pokemongc-userlist-user-classyz strong em, #pokemongc-userlist-user-classyz strong, #pokemongc-userlist-user-classyz span{
-color: #00ff00 !important;
-}
-.chat.chatmessage-classyz strong {
-color: #00ff00 !important;
-}
-#lobby-userlist-user-charizard8888 strong em, #lobby-userlist-user-charizard8888 strong, #lobby-userlist-user-charizard8888 span, #staff-userlist-user-charizard8888 strong em, #staff-userlist-user-charizard8888 strong, #staff-userlist-user-charizard8888 span, #tournaments-userlist-user-charizard8888 strong em, #tournaments-userlist-user-charizard8888 strong, #tournaments-userlist-user-charizard8888 span, #battlelords-userlist-user-charizard8888 strong em, #battlelords-userlist-user-charizard8888 strong, #battlelords-userlist-user-charizard8888 span, #pokefc-userlist-user-charizard8888 strong em, #pokefc-userlist-user-charizard8888 strong, #pokefc-userlist-user-charizard8888 span, #shadowbanroom-userlist-user-charizard8888 strong em, #shadowbanroom-userlist-user-charizard8888 strong, #shadowbanroom-userlist-user-charizard8888 span, #upperstaff-userlist-user-charizard8888 strong em, #upperstaff-userlist-user-charizard8888 strong, #upperstaff-userlist-user-charizard8888 span, #marketplace-userlist-user-charizard8888 strong em, #marketplace-userlist-user-charizard8888 strong, #marketplace-userlist-user-charizard8888 span, #videogames-userlist-user-charizard8888 strong em, #videogames-userlist-user-charizard8888 strong, #videogames-userlist-user-charizard8888 span, #sports-userlist-user-charizard8888 strong em, #sports-userlist-user-charizard8888 strong, #sports-userlist-user-charizard8888 span, #francais-userlist-user-charizard8888 strong em, #francais-userlist-user-charizard8888 strong, #francais-userlist-user-charizard8888 span, #casino-userlist-user-charizard8888 strong em, #casino-userlist-user-charizard8888 strong, #casino-userlist-user-charizard8888 span, #help-userlist-user-charizard8888 strong em, #help-userlist-user-charizard8888 strong, #help-userlist-user-charizard8888 span, #thehappyplace-userlist-user-charizard8888 strong em, #thehappyplace-userlist-user-charizard8888 strong, #thehappyplace-userlist-user-charizard8888 span, #pokeindia-userlist-user-charizard8888 strong em, #pokeindia-userlist-user-charizard8888 strong, #pokeindia-userlist-user-charizard8888 span, #paul71stestroom-userlist-user-charizard8888 strong em, #paul71stestroom-userlist-user-charizard8888 strong, #paul71stestroom-userlist-user-charizard8888 span, #theflashleague-userlist-user-charizard8888 strong em, #theflashleague-userlist-user-charizard8888 strong, #theflashleague-userlist-user-charizard8888 span, #tvbooksfilms-userlist-user-charizard8888 strong em, #tvbooksfilms-userlist-user-charizard8888 strong, #tvbooksfilms-userlist-user-charizard8888 span, #legendaryinstitute-userlist-user-charizard8888 strong em, #legendaryinstitute-userlist-user-charizard8888 strong, #legendaryinstitute-userlist-user-charizard8888 span, #thestudio-userlist-user-charizard8888 strong em, #thestudio-userlist-user-charizard8888 strong, #thestudio-userlist-user-charizard8888 span, #test-userlist-user-charizard8888 strong em, #test-userlist-user-charizard8888 strong, #test-userlist-user-charizard8888 span, #pokemongc-userlist-user-charizard8888 strong em, #pokemongc-userlist-user-charizard8888 strong, #pokemongc-userlist-user-charizard8888 span{
-color: #66ff99 !important;
-}
-.chat.chatmessage-charizard8888 strong {
-color: #66ff99 !important;
-}
-#lobby-userlist-user-shinobibankai strong em, #lobby-userlist-user-shinobibankai strong, #lobby-userlist-user-shinobibankai span, #staff-userlist-user-shinobibankai strong em, #staff-userlist-user-shinobibankai strong, #staff-userlist-user-shinobibankai span, #tournaments-userlist-user-shinobibankai strong em, #tournaments-userlist-user-shinobibankai strong, #tournaments-userlist-user-shinobibankai span, #battlelords-userlist-user-shinobibankai strong em, #battlelords-userlist-user-shinobibankai strong, #battlelords-userlist-user-shinobibankai span, #pokefc-userlist-user-shinobibankai strong em, #pokefc-userlist-user-shinobibankai strong, #pokefc-userlist-user-shinobibankai span, #shadowbanroom-userlist-user-shinobibankai strong em, #shadowbanroom-userlist-user-shinobibankai strong, #shadowbanroom-userlist-user-shinobibankai span, #upperstaff-userlist-user-shinobibankai strong em, #upperstaff-userlist-user-shinobibankai strong, #upperstaff-userlist-user-shinobibankai span, #marketplace-userlist-user-shinobibankai strong em, #marketplace-userlist-user-shinobibankai strong, #marketplace-userlist-user-shinobibankai span, #videogames-userlist-user-shinobibankai strong em, #videogames-userlist-user-shinobibankai strong, #videogames-userlist-user-shinobibankai span, #sports-userlist-user-shinobibankai strong em, #sports-userlist-user-shinobibankai strong, #sports-userlist-user-shinobibankai span, #francais-userlist-user-shinobibankai strong em, #francais-userlist-user-shinobibankai strong, #francais-userlist-user-shinobibankai span, #casino-userlist-user-shinobibankai strong em, #casino-userlist-user-shinobibankai strong, #casino-userlist-user-shinobibankai span, #help-userlist-user-shinobibankai strong em, #help-userlist-user-shinobibankai strong, #help-userlist-user-shinobibankai span, #thehappyplace-userlist-user-shinobibankai strong em, #thehappyplace-userlist-user-shinobibankai strong, #thehappyplace-userlist-user-shinobibankai span, #pokeindia-userlist-user-shinobibankai strong em, #pokeindia-userlist-user-shinobibankai strong, #pokeindia-userlist-user-shinobibankai span, #paul71stestroom-userlist-user-shinobibankai strong em, #paul71stestroom-userlist-user-shinobibankai strong, #paul71stestroom-userlist-user-shinobibankai span, #theflashleague-userlist-user-shinobibankai strong em, #theflashleague-userlist-user-shinobibankai strong, #theflashleague-userlist-user-shinobibankai span, #tvbooksfilms-userlist-user-shinobibankai strong em, #tvbooksfilms-userlist-user-shinobibankai strong, #tvbooksfilms-userlist-user-shinobibankai span, #legendaryinstitute-userlist-user-shinobibankai strong em, #legendaryinstitute-userlist-user-shinobibankai strong, #legendaryinstitute-userlist-user-shinobibankai span, #thestudio-userlist-user-shinobibankai strong em, #thestudio-userlist-user-shinobibankai strong, #thestudio-userlist-user-shinobibankai span, #test-userlist-user-shinobibankai strong em, #test-userlist-user-shinobibankai strong, #test-userlist-user-shinobibankai span, #pokemongc-userlist-user-shinobibankai strong em, #pokemongc-userlist-user-shinobibankai strong, #pokemongc-userlist-user-shinobibankai span{
-color: cyan !important;
-}
-.chat.chatmessage-shinobibankai strong {
-color: cyan !important;
-}
- COLORS END */
+/* CSS End */
