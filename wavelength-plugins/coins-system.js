@@ -6,8 +6,8 @@ const fs = require('fs');
 // Ideally, this should be zero.
 const DEFAULT_AMOUNT = 0;
 
-global.coinsN = 'Coins';
-global.coinsP = 'Coins';
+global.creditName = 'Coins';
+global.creditPlural = 'Coins';
 
 let Coins = global.Coins = {
 	/**
@@ -72,6 +72,44 @@ let Coins = global.Coins = {
 	},
 };
 
+global.rankLadder = function (title, type, array, prop, group) {
+	let groupHeader = group || 'Username';
+	const ladderTitle = '<center><h4><u>' + title + '</u></h4></center>';
+	const thStyle = 'class="rankladder-headers default-td" style="background: -moz-linear-gradient(#576468, #323A3C); background: -webkit-linear-gradient(#576468, #323A3C); background: -o-linear-gradient(#576468, #323A3C); background: linear-gradient(#576468, #323A3C); box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3) inset, 1px 1px 1px rgba(255, 255, 255, 0.7) inset;"';
+	const tableTop = '<div style="max-height: 310px; overflow-y: scroll;">' +
+		'<table style="width: 100%; border-collapse: collapse;">' +
+		'<tr>' +
+			'<th ' + thStyle + '>Rank</th>' +
+			'<th ' + thStyle + '>' + groupHeader + '</th>' +
+			'<th ' + thStyle + '>' + type + '</th>' +
+		'</tr>';
+	const tableBottom = '</table></div>';
+	const tdStyle = 'class="rankladder-tds default-td" style="box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3) inset, 1px 1px 1px rgba(255, 255, 255, 0.7) inset;"';
+	const first = 'class="first default-td important" style="box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3) inset, 1px 1px 1px rgba(255, 255, 255, 0.7) inset;"';
+	const second = 'class="second default-td important" style="box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3) inset, 1px 1px 1px rgba(255, 255, 255, 0.7) inset;"';
+	const third = 'class="third default-td important" style="box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3) inset, 1px 1px 1px rgba(255, 255, 255, 0.7) inset;"';
+	let midColumn;
+
+	let tableRows = '';
+
+	for (let i = 0; i < array.length; i++) {
+		if (i === 0) {
+			midColumn = '</td><td ' + first + '>';
+			tableRows += '<tr><td ' + first + '>' + (i + 1) + midColumn + WL.nameColor(array[i].name, true) + midColumn + array[i][prop] + '</td></tr>';
+		} else if (i === 1) {
+			midColumn = '</td><td ' + second + '>';
+			tableRows += '<tr><td ' + second + '>' + (i + 1) + midColumn + WL.nameColor(array[i].name, true) + midColumn + array[i][prop] + '</td></tr>';
+		} else if (i === 2) {
+			midColumn = '</td><td ' + third + '>';
+			tableRows += '<tr><td ' + third + '>' + (i + 1) + midColumn + WL.nameColor(array[i].name, true) + midColumn + array[i][prop] + '</td></tr>';
+		} else {
+			midColumn = '</td><td ' + tdStyle + '>';
+			tableRows += '<tr><td ' + tdStyle + '>' + (i + 1) + midColumn + WL.nameColor(array[i].name, true) + midColumn + array[i][prop] + '</td></tr>';
+		}
+	}
+	return ladderTitle + tableTop + tableRows + tableBottom;
+};
+
 exports.commands = {
 	'!coins': true,
 	coins: 'coin',
@@ -81,9 +119,8 @@ exports.commands = {
 		let userid = toId(target);
 		if (userid.length < 1) return this.sendReply("/wallet - Please specify a user.");
 		if (userid.length > 19) return this.sendReply("/wallet - [user] can't be longer than 19 characters.");
-
 		Coins.readCoins(userid, coins => {
-			this.sendReplyBox(WL.nameColor(target, true) + " has " + coins + ((coins === 1) ? " " + coinsN + "." : " " + coinsP + "."));
+			this.sendReplyBox(WL.nameColor(target, true) + " has " + coins + ((coins === 1) ? " " + creditName + "." : " " + creditPlural + "."));
 			//if (this.broadcasting) room.update();
 		});
 	},
@@ -102,21 +139,21 @@ exports.commands = {
 
 		let amount = Math.round(Number(splitTarget[1]));
 		if (isNaN(amount)) return this.sendReply("/" + cmd + "- [amount] must be a number.");
-		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't give more than 1000 " + coinsN + " at a time.");
-		if (amount < 1) return this.sendReply("/" + cmd + " - You can't give less than one " + coinsN + ".");
+		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't give more than 1000 " + creditName + " at a time.");
+		if (amount < 1) return this.sendReply("/" + cmd + " - You can't give less than one " + creditName + ".");
 
 		let reason = splitTarget[2];
 		if (reason.length > 100) return this.errorReply("Reason may not be longer than 100 characters.");
-		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + coinsN + ".");
+		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + creditName + ".");
 
 		Coins.writeCoins(targetUser, amount, () => {
 			Coins.readCoins(targetUser, newAmount => {
 				if (Users(targetUser) && Users(targetUser).connected) {
-					Users.get(targetUser).popup('|html|You have received ' + amount + ' ' + (amount === 1 ? coinsN : coinsP) +
+					Users.get(targetUser).popup('|html|You have received ' + amount + ' ' + (amount === 1 ? creditName : creditPlural) +
 					' from ' + WL.nameColor(user.userid, true) + '.');
 				}
-				this.sendReply(targetUser + " has received " + amount + ((amount === 1) ? " " + coinsN + "." : " " + coinsP + "."));
-				Coins.logCoins(user.name + " has given " + amount + ((amount === 1) ? " " + coinsN + " " : " " + coinsP + " ") + " to " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + coinsN + "." : " " + coinsP + "."));
+				this.sendReply(targetUser + " has received " + amount + ((amount === 1) ? " " + creditName + "." : " " + creditPlural + "."));
+				Coins.logCoins(user.name + " has given " + amount + ((amount === 1) ? " " + creditName + " " : " " + creditPlural + " ") + " to " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + creditName + "." : " " + creditPlural + "."));
 			});
 		});
 	},
@@ -135,21 +172,21 @@ exports.commands = {
 
 		let amount = Math.round(Number(splitTarget[1]));
 		if (isNaN(amount)) return this.sendReply("/" + cmd + "- [amount] must be a number.");
-		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't take more than 1000 " + coinsN + " at a time.");
-		if (amount < 1) return this.sendReply("/" + cmd + " - You can't take less than one " + coinsN + ".");
+		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't take more than 1000 " + creditName + " at a time.");
+		if (amount < 1) return this.sendReply("/" + cmd + " - You can't take less than one " + credName + ".");
 
 		let reason = splitTarget[2];
 		if (reason.length > 100) return this.errorReply("Reason may not be longer than 100 characters.");
-		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + coinsN + ".");
+		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + creditName + ".");
 
 		Coins.writeCoins(targetUser, -amount, () => {
 			Coins.readCoins(targetUser, newAmount => {
 				if (Users(targetUser) && Users(targetUser).connected) {
-					Users.get(targetUser).popup('|html|' + WL.nameColor(user.userid, true) + ' has removed ' + amount + ' ' + (amount === 1 ? coinsN : coinsP) +
+					Users.get(targetUser).popup('|html|' + WL.nameColor(user.userid, true) + ' has removed ' + amount + ' ' + (amount === 1 ? creditName : creditPlural) +
 					' from you.<br />');
 				}
-				this.sendReply("You removed " + amount + ((amount === 1) ? " " + coinsN + " " : " " + coinsP + " ") + " from " + Chat.escapeHTML(targetUser));
-            Coins.logCoins(user.name + " has taken " + amount + ((amount === 1) ? " " + coinsN + " " : " " + coinsP + " ") + " from " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + coinsN + "." : " " + coinsP + "."));
+				this.sendReply("You removed " + amount + ((amount === 1) ? " " + creditName + " " : " " + creditPlural + " ") + " from " + Chat.escapeHTML(targetUser));
+            Coins.logCoins(user.name + " has taken " + amount + ((amount === 1) ? " " + creditName + " " : " " + creditPlural + " ") + " from " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + creditName + "." : " " + creditPlural + "."));
 			});
 		});
 	},
