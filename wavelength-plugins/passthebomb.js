@@ -177,6 +177,10 @@ class PassTheBomb extends Rooms.RoomGame {
 		let winner = this.getSurvivors()[0][1].name;
 		let msg = '|html|<div class = "infobox"><center>The winner of this game of Pass the Bomb is ' + WL.nameColor(winner, true) + Chat.escapeHTML(winner, true) + '! Congratulations!</center>';
 		this.room.add(msg).update();
+		let msg2 = '|html|<div class="infobox"><center>' + WL.nameColor(winner, true) + Chat.escapeHTML(winner, true) + ' have also won 4 bucks for winning the game of pass the bomb!</center>';
+		this.room.add(msg2).update();
+		Economy.writeMoney(winner, 4);
+		Economy.logTransaction(`${winner} has won 4 ${currencyPlural} for winning the game of pass the bomb.`);
 		this.end();
 	}
 	end(user) {
@@ -204,7 +208,8 @@ let commands = {
 	start: function (target, room, user) {
 		if (room.passthebomb) return this.sendReply("There is already a game of Pass The Bomb going on in this room.");
 		if (!this.canTalk()) return this.errorReply("You cannot use this while unable to speak.");
-		if (!user.can('ban', null, room)) return this.sendReply("You must be ranked @ or higher in this room to start a game of Pass The Bomb.");
+		if (!user.can('broadcast', null, room) && room.id !== 'lobby') return this.errorReply("You must be ranked & or higher in this room to start a game of pass the bomb outside the lobby.");
+		if (!user.can('lock', null, room)) return this.sendReply("You must be ranked & or higher in this room to start a game of Pass The Bomb.");
 
 		if (!target || !target.trim()) target = '60';
 		if (isNaN(target)) return this.sendReply('\'' + target + '\' is not a valid number.');
@@ -263,12 +268,12 @@ exports.commands = {
 	pb: 'passbomb',
 	passbomb: commands.pass,
 	passthebombhelp: [
-		'/passthebomb start [seconds] - Starts a game of Pass The Bomb in the room. The first round will begin after the mentioned number of seconds (1 minute by default). Requires + or higher to use.',
+		'/passthebomb start [seconds] - Starts a game of Pass The Bomb in the room. The first round will begin after the mentioned number of seconds (1 minute by default). Requires @ or higher to use.',
 		'/passthebomb join/leave - Joins/Leaves a game of Pass The Bomb.',
-		'/passthebomb proceed - Forcibly starts the first round of a game. Requires + or higher to use.',
-		'/passthebomb dq [user] - Disqualifies a player from a game of Pass The Bomb. Requires % or higher to use.',
+		'/passthebomb proceed - Forcibly starts the first round of a game. Requires @ or higher to use.',
+		'/passthebomb dq [user] - Disqualifies a player from a game of Pass The Bomb. Requires @ or higher to use.',
 		'/passthebomb pass [user] - Passes the bomb to another player. (NOTE: Spamming this can get you disqualified)',
-		'/passthebomb end - Forcibly ends a game of Pass The Bomb. Requires % or higher to use.',
+		'/passthebomb end - Forcibly ends a game of Pass The Bomb. Requires @ or higher to use.',
 		'(/ptb is a valid alias for /passthebomb)',
 	],
 };
