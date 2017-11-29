@@ -22,7 +22,7 @@ class PassTheBomb extends Rooms.RoomGame {
 		);
 		this.timer = setTimeout(() => {
 			if (this.players.size < 4) {
-				this.room.add('|uhtmlchange|bomb' + this.room.bombCount + this.round + '|<div class = "infobox"><center>This game of Pass the Bomb has been ended due to the lack of players.</center></div>').update();
+				this.room.add('|uhtmlchange|bomb' + this.room.bombCount + this.round + '|<div class = "green"><center>This game of Pass the Bomb has been ended due to the lack of players.</center></div>').update();
 				return this.end();
 			}
 			this.nextRound();
@@ -94,7 +94,7 @@ class PassTheBomb extends Rooms.RoomGame {
 		this.release = setTimeout(() => {
 			this.setBomb();
 			let player = this.players.get(this.holder).name;
-			this.room.add('|uhtmlchange|' + this.getMsg() + '<br><strong style = "font-size: 10pt;">The bomb has been passed to </strong>' + WL.nameColor(this.holder, true) + WL.nameColor(player, true) + '</div>').update();
+			this.room.add('|uhtmlchange|' + this.getMsg() + '<br><strong style = "font-size: 10pt;">The bomb has been passed to </strong>' + WL.nameColor(this.holder, true) /*+ WL.nameColor(player, true)*/+ '</div>').update();
 			this.canPass = true;
 			this.resetTimer();
 		}, (Math.floor(Math.random() * 12) + 3) * 1000);
@@ -175,10 +175,8 @@ class PassTheBomb extends Rooms.RoomGame {
 	}
 	getWinner() {
 		let winner = this.getSurvivors()[0][1].name;
-		let msg = '|html|<div class = "infobox"><center>The winner of this game of Pass the Bomb is ' + WL.nameColor(winner, true) + Chat.escapeHTML(winner, true) + '! Congratulations!</center>';
+		let msg = '|html|<div class = "broadcast-green"><center>The winner of this game of Pass the Bomb is ' + WL.nameColor(winner, true) + '!<br> He have also won 4 bucks for winning the game of pass the bomb!</center>';
 		this.room.add(msg).update();
-		let msg2 = '|html|<div class="infobox"><center>' + WL.nameColor(winner, true) + Chat.escapeHTML(winner, true) + ' have also won 4 bucks for winning the game of pass the bomb!</center>';
-		this.room.add(msg2).update();
 		Economy.writeMoney(winner, 4);
 		Economy.logTransaction(`${winner} has won 4 ${currencyPlural} for winning the game of pass the bomb.`);
 		this.end();
