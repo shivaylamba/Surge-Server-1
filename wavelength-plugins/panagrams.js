@@ -53,7 +53,6 @@ class Panagram {
 			this.update();
 		};
 	}
-	
 	guess(user, guess) {
 		if (guess.species === this.answer.species) {
 			this.room.add(`|html|${WL.nameColor(user.name, true)} guessed <strong>${guess.species}</strong>, which was the correct answer! This user has also won 1 buck!`);
