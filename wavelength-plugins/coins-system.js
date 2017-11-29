@@ -6,8 +6,8 @@ const fs = require('fs');
 // Ideally, this should be zero.
 const DEFAULT_AMOUNT = 0;
 
-global.coinsName = 'Coins';
-global.coinsPlural = 'Coins';
+global.coinsN = 'Coins';
+global.coinsP = 'Coins';
 
 let Coins = global.Coins = {
 	/**
@@ -83,7 +83,7 @@ exports.commands = {
 		if (userid.length > 19) return this.sendReply("/wallet - [user] can't be longer than 19 characters.");
 
 		Coins.readCoins(userid, coins => {
-			this.sendReplyBox(WL.nameColor(target, true) + " has " + coins + ((coins === 1) ? " " + coinsName + "." : " " + coinsPlural + "."));
+			this.sendReplyBox(WL.nameColor(target, true) + " has " + coins + ((coins === 1) ? " " + coinsN + "." : " " + coinsP + "."));
 			//if (this.broadcasting) room.update();
 		});
 	},
@@ -102,21 +102,21 @@ exports.commands = {
 
 		let amount = Math.round(Number(splitTarget[1]));
 		if (isNaN(amount)) return this.sendReply("/" + cmd + "- [amount] must be a number.");
-		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't give more than 1000 " + coinsName + " at a time.");
-		if (amount < 1) return this.sendReply("/" + cmd + " - You can't give less than one " + coinsName + ".");
+		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't give more than 1000 " + coinsN + " at a time.");
+		if (amount < 1) return this.sendReply("/" + cmd + " - You can't give less than one " + coinsN + ".");
 
 		let reason = splitTarget[2];
 		if (reason.length > 100) return this.errorReply("Reason may not be longer than 100 characters.");
-		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + coinsName + ".");
+		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + coinsN + ".");
 
 		Coins.writeCoins(targetUser, amount, () => {
 			Coins.readCoins(targetUser, newAmount => {
 				if (Users(targetUser) && Users(targetUser).connected) {
-					Users.get(targetUser).popup('|html|You have received ' + amount + ' ' + (amount === 1 ? coinsName : coinsPlural) +
+					Users.get(targetUser).popup('|html|You have received ' + amount + ' ' + (amount === 1 ? coinsN : coinsP) +
 					' from ' + WL.nameColor(user.userid, true) + '.');
 				}
-				this.sendReply(targetUser + " has received " + amount + ((amount === 1) ? " " + coinsName + "." : " " + coinsPlural + "."));
-				Coins.logCoins(user.name + " has given " + amount + ((amount === 1) ? " " + coinsName + " " : " " + coinsPlural + " ") + " to " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + coinsName + "." : " " + coinsPlural + "."));
+				this.sendReply(targetUser + " has received " + amount + ((amount === 1) ? " " + coinsN + "." : " " + coinsP + "."));
+				Coins.logCoins(user.name + " has given " + amount + ((amount === 1) ? " " + coinsN + " " : " " + coinsP + " ") + " to " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + coinsN + "." : " " + coinsP + "."));
 			});
 		});
 	},
@@ -135,25 +135,24 @@ exports.commands = {
 
 		let amount = Math.round(Number(splitTarget[1]));
 		if (isNaN(amount)) return this.sendReply("/" + cmd + "- [amount] must be a number.");
-		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't take more than 1000 " + coinsName + " at a time.");
-		if (amount < 1) return this.sendReply("/" + cmd + " - You can't take less than one " + coinsName + ".");
+		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't take more than 1000 " + coinsN + " at a time.");
+		if (amount < 1) return this.sendReply("/" + cmd + " - You can't take less than one " + coinsN + ".");
 
 		let reason = splitTarget[2];
 		if (reason.length > 100) return this.errorReply("Reason may not be longer than 100 characters.");
-		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + coinsName + ".");
+		if (toId(reason).length < 1) return this.errorReply("Please specify a reason to give " + coinsN + ".");
 
 		Coins.writeCoins(targetUser, -amount, () => {
 			Coins.readCoins(targetUser, newAmount => {
 				if (Users(targetUser) && Users(targetUser).connected) {
-					Users.get(targetUser).popup('|html|' + WL.nameColor(user.userid, true) + ' has removed ' + amount + ' ' + (amount === 1 ? coinsName : coinsPlural) +
+					Users.get(targetUser).popup('|html|' + WL.nameColor(user.userid, true) + ' has removed ' + amount + ' ' + (amount === 1 ? coinsN : coinsP) +
 					' from you.<br />');
 				}
-				this.sendReply("You removed " + amount + ((amount === 1) ? " " + coinsName + " " : " " + coinsPlural + " ") + " from " + Chat.escapeHTML(targetUser));
-            Coins.logCoins(user.name + " has taken " + amount + ((amount === 1) ? " " + coinsName + " " : " " + coinsPlural + " ") + " from " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + coinsName + "." : " " + coinsPlural + "."));
+				this.sendReply("You removed " + amount + ((amount === 1) ? " " + coinsN + " " : " " + coinsP + " ") + " from " + Chat.escapeHTML(targetUser));
+            Coins.logCoins(user.name + " has taken " + amount + ((amount === 1) ? " " + coinsN + " " : " " + coinsP + " ") + " from " + targetUser + ". (Reason: " + reason + ") They now have " + newAmount + (newAmount === 1 ? " " + coinsN + "." : " " + coinsP + "."));
 			});
 		});
 	},
-
 	transfercoin: 'transfercoins',
 		transfercoind: function (target, room, user, connection, cmd) {
 		if (!target) return this.sendReply("Usage: /" + cmd + " [user], [amount]");
@@ -167,10 +166,10 @@ exports.commands = {
 
 		let amount = Math.round(Number(splitTarget[1]));
 		if (isNaN(amount)) return this.sendReply("/" + cmd + " - [amount] must be a number.");
-		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't transfer more than 1000 " + coinsName + " at a time.");
-		if (amount < 1) return this.sendReply("/" + cmd + " - You can't transfer less than one " + coinsName + ".");
+		if (amount > 1000) return this.sendReply("/" + cmd + " - You can't transfer more than 1000 " + coinsN + " at a time.");
+		if (amount < 1) return this.sendReply("/" + cmd + " - You can't transfer less than one " + coinsN + ".");
 		Coins.readCoins(user.userid, coins => {
-			if (coins < amount) return this.sendReply("/" + cmd + " - You can't transfer more " + coinsName + " than you have.");
+			if (coins < amount) return this.sendReply("/" + cmd + " - You can't transfer more " + coinsN + " than you have.");
 			if (cmd !== 'transfercoin' && cmd !== 'transfercoins') {
 				return this.popupReply('|html|<center>' +
 					'<button class = "card-td button" name = "send" value = "/transfercoins ' + toId(targetUser) + ', ' + amount + '"' +
@@ -181,14 +180,14 @@ exports.commands = {
 				Coins.writeCoins(targetUser, amount, () => {
 					Coins.readCoins(targetUser, firstAmount => {
 						Coins.readCoins(user.userid, secondAmount => {
-							this.popupReply("You sent " + amount + ((amount === 1) ? " " + coinsPlural : " " + coinsPlural) + " to " + targetUser);
+							this.popupReply("You sent " + amount + ((amount === 1) ? " " + coinsP : " " + coinsP) + " to " + targetUser);
 							Coins.logCoins(
-								user.name + " has transfered " + amount + ((amount === 1) ? " " + coinsPlural : " " + coinsPlural) + " to " + targetUser + "\n" +
-								user.name + " now has " + secondAmount + " " + (secondAmount === 1 ? " " + coinsPlural : " " + coinsPlural) + " " +
-								targetUser + " now has " + firstAmount + " " + (firstAmount === 1 ? " " + coinsPlural : " " + coinsPlural)
+								user.name + " has transfered " + amount + ((amount === 1) ? " " + coinsP : " " + coinsP) + " to " + targetUser + "\n" +
+								user.name + " now has " + secondAmount + " " + (secondAmount === 1 ? " " + coinsP : " " + coinsP) + " " +
+								targetUser + " now has " + firstAmount + " " + (firstAmount === 1 ? " " + coinsP : " " + coinsP)
 							);
 							if (Users.getExact(targetUser) && Users.getExact(targetUser).connected) {
-								Users.getExact(targetUser).send('|popup||html|' + WL.nameColor(user.name, true) + " has sent you " + amount + ((amount === 1) ? " " + coinsPlural : " " + coinsPlural));
+								Users.getExact(targetUser).send('|popup||html|' + WL.nameColor(user.name, true) + " has sent you " + amount + ((amount === 1) ? " " + coinsP : " " + coinsP));
 							}
 						});
 					});
@@ -235,7 +234,7 @@ exports.commands = {
 		});
 		if (!keys.length) return this.sendReplyBox("Coins ladder is empty.");
 		keys.sort(function (a, b) { return b.money - a.coins; });
-		this.sendReplyBox(rankLadder('Richest Users', coinsPlural, keys.slice(0, target), 'coins') + '</div>');
+		this.sendReplyBox(rankLadder('Richest Users', coinsP, keys.slice(0, target), 'coins') + '</div>');
 	},
 
 	resetcoin: 'resetcoins',
@@ -243,8 +242,8 @@ exports.commands = {
 		if (!this.can('roomowner')) return false;
 		if (!target) return this.parse('/help resetcoins');
 		target = toId(target);
-		Economy.writeCoins(target, 0);
-		this.sendReply(target + " now has 0 " + coinsName + ".");
+		Coins.writeCoins(target, 0);
+		this.sendReply(target + " now has 0 " + coinsN + ".");
 	},
 	resetcoinshelp: ['/resetcoins [user] - Resets target user\'s coins to 0. Requires: &, ~'],
 
@@ -254,8 +253,8 @@ exports.commands = {
 		const users = Db.coins.keys().map(curUser => ({amount: Db.coins.get(curUser)}));
 		const total = users.reduce((acc, cur) => acc + cur.amount, 0);
 		let average = Math.floor(total / users.length) || 0;
-		let output = "There " + (total > 1 ? "are " : "is ") + total + " " + (total > 1 ? coinsPlural : coinsName) + " circulating in the economy. ";
-		output += "The average user has " + average + " " + (average > 1 ? coinsPlural : coinsName) + ".";
+		let output = "There " + (total > 1 ? "are " : "is ") + total + " " + (total > 1 ? coinsP : coinsN) + " circulating in the economy. ";
+		output += "The average user has " + average + " " + (average > 1 ? coinsP : coinsN) + ".";
 		this.sendReplyBox(output);
 	},
 };
