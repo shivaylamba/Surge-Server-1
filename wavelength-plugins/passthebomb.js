@@ -33,7 +33,7 @@ class PassTheBomb extends Rooms.RoomGame {
 			'The game will begin in <strong>' + Math.round((this.timeLeft - Date.now()) / 1000) + '</strong> seconds<br>' +
 			'<button name = "send" value = "/passthebomb join">Join!</button></center>';
 		if (this.players.size > 0) {
-			msg += '<center><strong>' + this.players.size + '</strong> ' + (this.players.size === 1 ? 'user has' : 'users have') + ' joined: ' + Array.from(this.players).map(player => Server.nameColor(player[1].name)).join(', ') + '</center>';
+			msg += '<center><strong>' + this.players.size + '</strong> ' + (this.players.size === 1 ? 'user has' : 'users have') + ' joined: ' + Array.from(this.players).map(player => WL.nameColor(player[1].name)).join(', ') + '</center>';
 		}
 		this.room.add('|uhtmlchange|' + msg + '</div>');
 	}
@@ -94,7 +94,7 @@ class PassTheBomb extends Rooms.RoomGame {
 		this.release = setTimeout(() => {
 			this.setBomb();
 			let player = this.players.get(this.holder).name;
-			this.room.add('|uhtmlchange|' + this.getMsg() + '<br><strong style = "font-size: 10pt;">The bomb has been passed to </strong>' + WL.nameColor(this.holder, true) + Server.nameColor(player, true) + '</div>').update();
+			this.room.add('|uhtmlchange|' + this.getMsg() + '<br><strong style = "font-size: 10pt;">The bomb has been passed to </strong>' + WL.nameColor(this.holder, true) + WL.nameColor(player, true) + '</div>').update();
 			this.canPass = true;
 			this.resetTimer();
 		}, (Math.floor(Math.random() * 12) + 3) * 1000);
