@@ -126,7 +126,7 @@ exports.commands = {
 		delete: function (target, room, user) {
 			if (!Db.type.has(user.userid)) return this.errorReply("Your favorite Type hasn't been set.");
 			Db.type.remove(user.userid);
-			return this.sendReply("Your favorite Typr has been deleted from your profile.");
+			return this.sendReply("Your favorite Type has been deleted from your profile.");
 		},
 
 		"": "help",
