@@ -117,7 +117,7 @@ exports.commands = {
 				'Users can guess answers by simply typing them into the chat as well.'
 			);
 		},
-		start: function (target, room, user, connection) {
+		start: function (target, room, user) {
 			if (room.pGamesDisabled) return this.errorReply("Panagrams is currently disabled for this room.");
 			if (pGames[room.id]) return this.errorReply("There is currently a game of panagram going on in this room.");
 			if (!this.can('ban', null, room)) return this.errorReply("You must be ranked # or higher to start a game of panagram in this room.");
@@ -133,7 +133,7 @@ exports.commands = {
 			this.sendReplyBox(`Panagram Hint:<br />${pGames[room.id].hint}`);
 		},
 		guess: 'g',
-		gp: function (target, room, user, connection) {
+		gp: function (target, room, user) {
 			if (!pGames[room.id]) return this.errorReply("There is no game of panagram going on in this room.");
 			if (!this.canTalk()) return;
 			if (!target) return this.sendReply(`|html|/panagram g <em>Pokémon Name</em> - Guesses a Pokémon in a game of Panagram.`);
@@ -143,7 +143,7 @@ exports.commands = {
 			if (toId(guess.species) in pGames[room.id].guessed) return this.sendReply('That Pokémon has already been guessed!');
 			pGames[room.id].guess(user, guess);
 		},
-		end: function (target, room, user, connection) {
+		end: function (target, room, user) {
 			if (!pGames[room.id]) return this.errorReply("There is no game of panagram going on in this room.");
 			if (!this.can('ban', null, room)) return this.sendReply("You must be ranked @ or higher to end a game of panagram in this room.");
 			let ra = pGames[room.id].sessions > target;
