@@ -176,9 +176,9 @@ class PassTheBomb extends Rooms.RoomGame {
 	getWinner() {
 		let winner = this.getSurvivors()[0][1].name;
 		let msg = '|html|<div class = "broadcast-green"><center>The winner of this game of Pass the Bomb is ' + WL.nameColor(winner, true) + '!<br> He have also won 4 bucks for winning the game of pass the bomb!</center>';
-		this.room.add(msg).update();
+		this.room.add(msg).update();/*
 		Economy.writeMoney(winner, 4);
-		Economy.logTransaction(`${winner} has won 4 ${currencyPlural} for winning the game of pass the bomb.`);
+		Economy.logTransaction(`${winner} has won 4 ${currencyPlural} for winning the game of pass the bomb.`);*/
 		this.end();
 	}
 	end(user) {
@@ -201,9 +201,36 @@ let commands = {
 	help: function () {
 		this.parse('/help passthebomb');
 	},
+	off: 'disable',
+		disable: function (target, room, user) {
+			if (!this.can('gamemanagement', null, room)) return;
+			if (room.ptbDisabled) {
+				return this.errorReply("Pass the bomb is already disabled in this room.");
+			}
+			room.ptbDisabled = true;
+			if (room.chatRoomData) {
+				room.chatRoomData.ptbDisabled = true;
+				Rooms.global.writeChatRoomData();
+			}
+			return this.sendReply("Pass the bomb has been disabled for this room.");
+		},
+		on: 'enable',
+		enable: function (target, room, user) {
+			if (!this.can('gamemanagement', null, room)) return;
+			if (!room.ptbDisabled) {
+				return this.errorReply("Pass the bomb is already enabled in this room.");
+			}
+			delete room.ptbDisabled;
+			if (room.chatRoomData) {
+				delete room.chatRoomData.ptbDisabled;
+				Rooms.global.writeChatRoomData();
+			}
+			return this.sendReply("Pass the bomb has been enabled for this room.");
+		},
 	'new': 'start',
 	begin: 'start',
 	start: function (target, room, user) {
+		if (room.ptbDisabled) return this.errorReply("Pass the bomb is currently disabled for this room.");
 		if (room.passthebomb) return this.sendReply("There is already a game of Pass The Bomb going on in this room.");
 		if (!this.canTalk()) return this.errorReply("You cannot use this while unable to speak.");
 		if (!user.can('broadcast', null, room) && room.id !== 'lobby') return this.errorReply("You must be ranked & or higher in this room to start a game of pass the bomb outside the lobby.");
