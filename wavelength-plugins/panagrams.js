@@ -33,7 +33,7 @@ class Panagram {
 
 		this.room.add(
 			`|html|<div class = "broadcast-blue"><center>A game of Panagram was started! Scrambled Pokemon: <strong>${this.mixed}</strong><br /> (Remaining Sessions: ${this.sessions})<br />` +
-			`<small>Use /gp [pokemon] to guess!</small></center>`
+			`<small>Use /panagram g [pokemon] to guess!</small></center>`
 		);
 		this.guessed = {};
 		this.hint = [
@@ -63,9 +63,12 @@ class Panagram {
 			this.guessed[toId(guess.species)] = user.userid;
 		}
 	}
-
 	end(forced) {
-		if (forced) this.room.add(`|html|The game of panagram has been forcibly ended. The answer was <strong>${this.answer.species}</strong>.`);
+		if (forced) this.room.add(`|html|The game of panagram has been forcibly ended.`);
+		delete pGames[this.room.id];
+	}
+	skip(forced) {
+		if (forced) this.room.add(`|html|The session of panagram has been forcibly skip. The answer was <strong>${this.answer.species}</strong>.`);
 		if (this.sessions > 1 && !forced) {
 			pGames[this.room.id] = new Panagram(this.room, this.sessions - 1);
 			this.room.update();
@@ -111,6 +114,7 @@ exports.commands = {
 				'<i style = "color:gray">By SilverTactic (Siiilver) and panpawn. Revised by Insist.</i></center><br />' +
 				'<code>/panagram start[session number]</code> - Starts a game of Panagram in the room for [session number] games (Panagrams are just anagrams with Pokemon). Alternate forms and CAP Pokemon won\'t be selected. Requires # or higher.<br />' +
 				'<code>/panagram end</code> - Ends a game of panagram. Requires @ or higher.<br />' +
+				'<code>/panagram skip</code> - Skip one panagram session. Requires @ or higher.<br />' +
 				'<code>/panagram hint</code> - Gives a hint to the answer.<br />' +
 				'<code>/panagram g</code> - Guesses the answer.<br />' +
 				'<code>/panagram on/off</code> - Enable or disable panagram in a room. Requires #.<br />' +
@@ -144,10 +148,17 @@ exports.commands = {
 			pGames[room.id].guess(user, guess);
 		},
 		end: function (target, room, user) {
-			if (!pGames[room.id]) return this.errorReply("There is no game of panagram going on in this room.");
-			if (!this.can('ban', null, room)) return this.sendReply("You must be ranked @ or higher to end a game of panagram in this room.");
-			let ra = pGames[room.id].sessions > target;
-			if (ra) room.add(`|html|The current session of panagram has been ended by ${WL.nameColor(user.name, true)}. The answer was <strong>${pGames[room.id].answer.species}</strong>.`);
+			if (!pGames[room.id]) return this.errorReply("There is no game of panagram in this room.");
+			if (!this.can('ban', null, room)) return this.errorReply("You must be ranked @ or higher to end a game of panagra in this room.");
+			let end = delete pGames[this.room.id];
+			if (end) = room.add('|html|The game of panagram has been ended by ' + WL.nameColor(user.name, true) + '.');
+			pGames[room.id].end;
+		},
+		skip: function (target, room, user) {
+			if (!pGames[room.id]) return this.errorReply("There is no game of panagram going in this room.");
+			if (!this.can('ban', null, room)) return this.sendReply("You must be ranked @ or higher to skip a session of panagram in this room.");
+			let ra = pGames[room.id].sessions > 1;
+			if (ra) room.add(`|html|The current session of panagram has been skiped by ${WL.nameColor(user.name, true)}. The answer was <strong>${pGames[room.id].answer.species}</strong>.`);
 			pGames[room.id].end(!ra);
 		},
 	},
