@@ -534,6 +534,9 @@ exports.commands = {
 				if (Db.pokemon.has(toId(username))) {
 					profile += '&nbsp;<font color="#24678d"><strong>Favorite Pokemon:</strong></font> ' + Db.pokemon.get(toId(username)) + '<br />';
 				}
+				if (Db.type.has(toId(username))) {
+					profile += '&nbsp;<font color="#24678d"><strong>Favorite Type:</strong></font> <img src="https://vignette.wikia.nocookie.net/pokemon/images/6/64/Type_' + Db.type.get(toId(username)) + '.gif"><br />';
+				}
 				if (WL.getFaction(toId(username))) {
 					profile += '&nbsp;<font color="#24678d"><strong>Faction:</strong></font> ' + WL.getFaction(toId(username)) + '<br />';
 				}
