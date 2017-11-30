@@ -158,7 +158,7 @@ exports.commands = {
 			if (!this.can('ban', null, room)) return this.sendReply("You must be ranked @ or higher to skip a session of panagram in this room.");
 			let ra = pGames[room.id].sessions > 1;
 			if (ra) room.add(`|html|The current session of panagram has been skiped by ${WL.nameColor(user.name, true)}. The answer was <strong>${pGames[room.id].answer.species}</strong>.`);
-			pGames[room.id].end(!ra);
+			pGames[room.id].skip(!ra);
 		},
 	},
 };
