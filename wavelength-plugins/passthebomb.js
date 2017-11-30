@@ -72,7 +72,7 @@ class PassTheBomb extends Rooms.RoomGame {
 		}
 	}
 	getMsg() {
-		let msg = 'bomb' + this.room.bombCount + this.round + '|<div class = "infobox"><center><strong>Round ' + this.round + '</strong><br>' +
+		let msg = 'bomb' + this.room.bombCount + this.round + '|<div class="broadcast-green"><center><strong>Round ' + this.round + '</strong><br>' +
 			'Players: ' + this.getSurvivors().map(player => WL.nameColor(player[1].name)).join(', ') +
 			'<br><small>Use /pb or /passbomb [player] to Pass The Bomb to another player!</small>';
 		return msg;
