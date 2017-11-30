@@ -114,9 +114,10 @@ exports.commands = {
 	type: {
 		add: "set",
 		set: function (target, room, user) {
+		    let type = target.toLowerCase();
 			if (!target) return this.parse("/help type");
-			if (!['Grass', 'Fire', 'Water', 'Poison', 'Ground', 'Rock', 'Bug', 'Electric', 'Ice', 'Ghost', 'Psychic', 'Dragon', 'Dark', 'Fairy', 'Steel', 'Flying'].includes(target)) return this.parse("/help type");
-			Db.type.set(user.userid, target);
+			if (!['grass', 'fire', 'water', 'poison', 'ground', 'rock', 'bug', 'electric', 'ice', 'ghost', 'psychic', 'dragon', 'dark', 'fairy', 'steel', 'flying', 'normal', 'fighting'].includes(target)) return this.sendReply('Valid types are: fire, water, grass, electric, normal, fighting, rock, ice, ground, dragon, fairy, psychic, ghost, dark, flying, poison, steel and bug.');
+			Db.type.set(user.userid, type);
 			this.sendReply("You have successfully set your Favorite Type onto your profile.");
 		},
 
@@ -535,7 +536,7 @@ exports.commands = {
 					profile += '&nbsp;<font color="#24678d"><strong>Favorite Pokemon:</strong></font> ' + Db.pokemon.get(toId(username)) + '<br />';
 				}
 				if (Db.type.has(toId(username))) {
-					profile += '&nbsp;<font color="#24678d"><strong>Favorite Type:</strong></font> <img src="https://vignette.wikia.nocookie.net/pokemon/images/6/64/Type_' + Db.type.get(toId(username)) + '.gif"><br />';
+					profile += '&nbsp;<font color="#24678d"><strong>Favorite Type:</strong></font> <img src="https://www.serebii.net/pokedex-bw/type/' + Db.type.get(toId(username)) + '.gif"><br />';
 				}
 				if (WL.getFaction(toId(username))) {
 					profile += '&nbsp;<font color="#24678d"><strong>Faction:</strong></font> ' + WL.getFaction(toId(username)) + '<br />';
