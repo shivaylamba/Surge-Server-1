@@ -108,7 +108,7 @@ exports.commands = {
 			if (!this.runBroadcast()) return;
 			this.sendReplyBox(
 				'<center><strong>Panagram Help</strong><br />' +
-				'<i style = "color:gray">By SilverTactic (Siiilver) and panpawn. Revised by Insist.</i></center><br />' +
+				'<i style = "color:gray">By SilverTactic (Siiilver) and panpawn. Revised by Insist and Modified by Prince Sky.</i></center><br />' +
 				'<code>/panagram start[session number]</code> - Starts a game of Panagram in the room for [session number] games (Panagrams are just anagrams with Pokemon). Alternate forms and CAP Pokemon won\'t be selected. Requires # or higher.<br />' +
 				'<code>/panagram end</code> - Ends a game of panagram. Requires @ or higher.<br />' +
 				'<code>/panagram skip</code> - Skip one panagram session. Requires @ or higher.<br />' +
