@@ -444,16 +444,11 @@ exports.commands = {
 			teamDisplay += '</div></center>';
 			return teamDisplay;
 		}
-		 function background(user) {
-			let bg = Db.backgrounds.get(user);
-			if (!Db.backgrounds.has(user)) return '<div>';
-			return '<div style="background:url(' + bg + ')">';
-		}
 
 		function showProfile() {
 			Economy.readMoney(toId(username), currency => {
 				let profile = '';
-				profile += background(toId(username)) + showBadges(toId(username));
+				profile += showBadges(toId(username));
 				profile += '<img src="' + avatar + '" height="80" width="80" align="left"></div>';
 				profile += '&nbsp;<font color="#24678d"><b>Name:</b></font> ' + WL.nameColor(username, true) + '&nbsp;' + getFlag(toId(username)) + ' ' + showTitle(username) + '<br />';
 				profile += '&nbsp;<font color="#24678d"><b>Group:</b></font> ' + userGroup + ' ' + devCheck(username) + vipCheck(username) + '<br />';
@@ -488,10 +483,6 @@ exports.commands = {
 		"/pokemon delete - Removes a user's favorite pokemon.",
 		"/type set [type] - Sets a user's favorite type.",
 		"type delete - Removes a user's favorite type.",
-		"/bg set [user], [link] - Sets the user's profile background. Requires + or higher.",
-		"/bg delete [user] - Removes the user's profile background. Requires + or higher.",
-		"/fc set [friend code] - Sets your Friend Code.",
-		"/fc delete [friend code] - Removes your Friend Code.",
 		"/dev give [user] - Gives a user Dev Status. Requires @ or higher.",
 		"/dev take [user] - Removes a user's Dev Status. Requires @ or higher.",
 		"/vip give [user] - Gives a user VIP Status. Requires @ or higher.",
