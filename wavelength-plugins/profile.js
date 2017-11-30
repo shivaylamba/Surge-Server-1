@@ -187,7 +187,7 @@ exports.commands = {
 			);
 		},
 	},
- 	dev: {
+	dev: {
 		give: function (target, room, user) {
 			if (!this.can('declare')) return false;
 			if (!target) return this.parse('/help', true);
