@@ -78,7 +78,6 @@ class Panagram {
 exports.commands = {
 	panagrams: 'panagram',
 	panagram: {
-			// roomowner commands
 		off: 'disable',
 		disable: function (target, room, user) {
 			if (!this.can('gamemanagement', null, room)) return;
@@ -114,7 +113,7 @@ exports.commands = {
 				'<code>/panagram end</code> - Ends a game of panagram. Requires @ or higher.<br />' +
 				'<code>/panagram hint</code> - Gives a hint to the answer.<br />' +
 				'<code>/panagram g</code> - Guesses the answer.<br />' +
-				'<code>/panagram on/off</code> - Enable or disable panagram in a room.<br />' +
+				'<code>/panagram on/off</code> - Enable or disable panagram in a room. Requires #.<br />' +
 				'Users can guess answers by simply typing them into the chat as well.'
 			);
 		},
