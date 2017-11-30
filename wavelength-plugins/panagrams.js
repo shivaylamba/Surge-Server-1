@@ -146,7 +146,7 @@ exports.commands = {
 		end: function (target, room, user, connection) {
 			if (!pGames[room.id]) return this.errorReply("There is no game of panagram going on in this room.");
 			if (!this.can('ban', null, room)) return this.sendReply("You must be ranked @ or higher to end a game of panagram in this room.");
-			let ra = pGames[room.id].sessions > 1);
+			let ra = pGames[room.id].sessions > 1;
 			if (ra) room.add(`|html|The current session of panagram has been ended by ${WL.nameColor(user.name, true)}. The answer was <strong>${pGames[room.id].answer.species}</strong>.`);
 			pGames[room.id].end(!ra);
 		},
