@@ -299,6 +299,7 @@ exports.commands = {
 		'/passthebomb dq [user] - Disqualifies a player from a game of Pass The Bomb. Requires @ or higher to use.',
 		'/passthebomb pass [user] - Passes the bomb to another player. (NOTE: Spamming this can get you disqualified)',
 		'/passthebomb end - Forcibly ends a game of Pass The Bomb. Requires @ or higher to use.',
+		'/passthebomb on/off - Enable/Disable the game of pass the bomb in room. Requires # or higher to use.',
 		'(/ptb is a valid alias for /passthebomb)',
 	],
 };
