@@ -36,7 +36,7 @@ function saveEmoticons() {
 function parseEmoticons(message) {
 	if (emoteRegex.test(message)) {
 		message = WL.parseMessage(message).replace(emoteRegex, function (match) {
-			return '<img src="' + emoticons[match] + '" title="' + match + '" height="40" width="40">';
+			return '<img src="' + emoticons[match] + '" title="' + match + '" height="35" width="35">';
 		});
 		return message;
 	}
