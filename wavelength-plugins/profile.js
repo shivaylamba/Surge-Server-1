@@ -561,7 +561,7 @@ exports.commands = {
 		"/pokemon set [pokemon] - Sets a user's favorite pokemon.",
 		"/pokemon delete - Removes a user's favorite pokemon.",
 		"/type set [type] - Sets a user's favorite type.",
-		"/pokemon delete - Removes a user's favorite type.",
+		"type delete - Removes a user's favorite type.",
 		"/bg set [user], [link] - Sets the user's profile background. Requires + or higher.",
 		"/bg delete [user] - Removes the user's profile background. Requires + or higher.",
 		"/fc set [friend code] - Sets your Friend Code.",
