@@ -94,7 +94,7 @@ class PassTheBomb extends Rooms.RoomGame {
 		this.release = setTimeout(() => {
 			this.setBomb();
 			let player = this.players.get(this.holder).name;
-			this.room.add('|uhtmlchange|' + this.getMsg() + '<br><strong style = "font-size: 10pt;">The bomb has been passed to </strong>' + WL.nameColor(this.holder, true) /*+ WL.nameColor(player, true)*/+ '</div>').update();
+			this.room.add('|uhtmlchange|' + this.getMsg() + '<br><strong style = "font-size: 10pt;">The bomb has been passed to </strong>' + WL.nameColor(this.holder, true) + '</div>').update();
 			this.canPass = true;
 			this.resetTimer();
 		}, (Math.floor(Math.random() * 12) + 3) * 1000);
