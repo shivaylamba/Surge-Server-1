@@ -150,8 +150,8 @@ exports.commands = {
 		end: function (target, room, user) {
 			if (!pGames[room.id]) return this.errorReply("There is no game of panagram in this room.");
 			if (!this.can('ban', null, room)) return this.errorReply("You must be ranked @ or higher to end a game of panagra in this room.");
+			delete pGames[this.room.id];
 			room.add('|html|The game of panagram has been ended by ' + WL.nameColor(user.name, true) + '.');
-			pGames[room.id].end;
 		},
 		skip: function (target, room, user) {
 			if (!pGames[room.id]) return this.errorReply("There is no game of panagram going in this room.");
