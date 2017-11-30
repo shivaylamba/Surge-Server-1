@@ -149,9 +149,9 @@ class RoomSettings {
 			return `${this.button('Hangman enabled', true)} ${this.button('off', null, 'hangman disable')}`;
 		}
 	}
-	panagram() {
-		if (!this.user.can('editroom', null, this.room)) return this.button(this.room.panagramDisabled ? 'off' : 'Panagrams Enabled', true);
-		if (this.room.panagramDisabled) {
+	pGames() {
+		if (!this.user.can('editroom', null, this.room)) return this.button(this.room.pGamesDisabled ? 'off' : 'Panagrams Enabled', true);
+		if (this.room.pGamesDisabled) {
 			return `${this.button('Panagrams enabled', null, 'panagrams enable')} ${this.button('off', true)}`;
 		} else {
 			return `${this.button('Panagram enabled', true)} ${this.button('off', null, 'panagrams disable')}`;
@@ -167,7 +167,7 @@ class RoomSettings {
 		output += `<strong>Slowchat:</strong> <br />${this.slowchat()}<br />`;
 		output += `<strong>Tournaments:</strong> <br />${this.tourStatus()}<br />`;
 		output += `<strong>UNO:</strong> <br />${this.uno()}<br />`;
-		output += `<strong>Panagrams:</strong> <br />${this.panagram()}<br />`;
+		output += `<strong>Panagrams:</strong> <br />${this.pGames()}<br />`;
 		output += `<strong>Hangman:</strong> <br />${this.hangman()}<br />`;
 		output += '</div>';
 
