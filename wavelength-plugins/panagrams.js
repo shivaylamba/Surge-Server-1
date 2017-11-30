@@ -118,6 +118,7 @@ exports.commands = {
 			);
 		},
 		start: function (target, room, user, connection) {
+			if (room.pGamesDisabled) return this.errorReply("Panagrams is currently disabled for this room.");
 			if (pGames[room.id]) return this.errorReply("There is currently a game of panagram going on in this room.");
 			if (!this.can('ban', null, room)) return this.errorReply("You must be ranked # or higher to start a game of panagram in this room.");
 			if (!target || isNaN(target)) return this.errorReply("Usage: /panagram start [number of sessions]");
