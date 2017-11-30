@@ -150,11 +150,19 @@ class RoomSettings {
 		}
 	}
 	pGames() {
-		if (!this.user.can('editroom', null, this.room)) return this.button(this.room.pGamesDisabled ? 'off' : 'Panagrams Enabled', true);
+		if (!this.user.can('editroom', null, this.room)) return this.button(this.room.pGamesDisabled ? 'off' : 'Panagram Enabled', true);
 		if (this.room.pGamesDisabled) {
 			return `${this.button('Panagrams enabled', null, 'panagrams enable')} ${this.button('off', true)}`;
 		} else {
-			return `${this.button('Panagram enabled', true)} ${this.button('off', null, 'panagrams disable')}`;
+			return `${this.button('Panagram enabled', true)} ${this.button('off', null, 'panagram disable')}`;
+		}
+	}
+	ptb() {
+		if (!this.user.can('editroom', null, this.room)) return this.button(this.room.ptbDisabled ? 'off' : 'Pass the bomb Enabled', true);
+		if (this.room.ptbDisabled) {
+			return `${this.button('Pass the bomb enabled', null, 'pass the bomb disable')} ${this.button('off', true)}`;
+		} else {
+			return `${this.button('Pass the bomb  enabled', true)} ${this.button('off', null, 'pass the bomb disable')}`;
 		}
 	}
 	generateDisplay(user, room, connection) {
@@ -169,6 +177,7 @@ class RoomSettings {
 		output += `<strong>UNO:</strong> <br />${this.uno()}<br />`;
 		output += `<strong>Panagrams:</strong> <br />${this.pGames()}<br />`;
 		output += `<strong>Hangman:</strong> <br />${this.hangman()}<br />`;
+		output += `<strong>Pass The Bomb:</strong> <br />${this.ptb()}<br />`;
 		output += '</div>';
 
 		this.user.sendTo(this.room, `|uhtml${(this.sameCommand ? '' : 'change')}|roomsettings|${output}`);
