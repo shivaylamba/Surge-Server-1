@@ -114,9 +114,9 @@ exports.commands = {
 	type: {
 		add: "set",
 		set: function (target, room, user) {
-		    let type = target.toLowerCase();
+		   let type = target.toLowerCase();
 			if (!target) return this.parse("/help type");
-			if (!['grass', 'fire', 'water', 'poison', 'ground', 'rock', 'bug', 'electric', 'ice', 'ghost', 'psychic', 'dragon', 'dark', 'fairy', 'steel', 'flying', 'normal', 'fighting'].includes(target)) return this.sendReply('Valid types are: fire, water, grass, electric, normal, fighting, rock, ice, ground, dragon, fairy, psychic, ghost, dark, flying, poison, steel and bug.');
+			if (!['grass', 'fire', 'water', 'poison', 'ground', 'rock', 'bug', 'electric', 'ice', 'ghost', 'psychic', 'dragon', 'dark', 'fairy', 'steel', 'flying', 'normal', 'fighting'].includes(type)) return this.sendReply('Valid types are: fire, water, grass, electric, normal, fighting, rock, ice, ground, dragon, fairy, psychic, ghost, dark, flying, poison, steel and bug.');
 			Db.type.set(user.userid, type);
 			this.sendReply("You have successfully set your Favorite Type onto your profile.");
 		},
@@ -559,7 +559,9 @@ exports.commands = {
 		"/pteam add [slot], [dex # of the Pokemon] - Adds a Pokemon onto your profile team. Requires profile edit access.",
 		"/pteam take [user] - Revokes a user's access to edit their profile team. Requires + or higher.",
 		"/pokemon set [pokemon] - Sets a user's favorite pokemon.",
-		"/pokemon delete [poemon] - Removes a user's favorite pokemon.",
+		"/pokemon delete - Removes a user's favorite pokemon.",
+		"/type set [type] - Sets a user's favorite type.",
+		"/pokemon delete - Removes a user's favorite type.",
 		"/bg set [user], [link] - Sets the user's profile background. Requires + or higher.",
 		"/bg delete [user] - Removes the user's profile background. Requires + or higher.",
 		"/fc set [friend code] - Sets your Friend Code.",
