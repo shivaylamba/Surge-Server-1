@@ -63,7 +63,7 @@ class Panagram {
 			this.guessed[toId(guess.species)] = user.userid;
 		}
 	}
-	
+
 	end(forced) {
 		if (forced) this.room.add(`|html|The session of panagram has been forcibly skip. The answer was <strong>${this.answer.species}</strong>.`);
 		if (this.sessions > 1 && !forced) {
