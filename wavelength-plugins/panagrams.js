@@ -133,7 +133,7 @@ exports.commands = {
 			this.sendReplyBox(`Panagram Hint:<br />${pGames[room.id].hint}`);
 		},
 		guess: 'g',
-		gp: function (target, room, user) {
+		g: function (target, room, user) {
 			if (!pGames[room.id]) return this.errorReply("There is no game of panagram going on in this room.");
 			if (!this.canTalk()) return;
 			if (!target) return this.sendReply(`|html|/panagram g <em>Pokémon Name</em> - Guesses a Pokémon in a game of Panagram.`);
