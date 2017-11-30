@@ -16,20 +16,20 @@ class PassTheBomb extends Rooms.RoomGame {
 		}
 		this.timeLeft = Date.now() + seconds * 1000;
 
-		this.room.add('|uhtml|bomb' + this.room.bombCount + this.round + '|<div class = "infobox"><center>A game of <strong>Pass the Bomb</strong> has been started!<br>' +
+		this.room.add('|uhtml|bomb' + this.room.bombCount + this.round + '|<div class="broadcast-green"><center>A game of <strong>Pass the Bomb</strong> has been started!<br>' +
 			'The game will begin in <strong>' + seconds + '</strong> seconds!<br>' +
 			'<button name = "send" value = "/passthebomb join">Join!</button></center></div>'
 		);
 		this.timer = setTimeout(() => {
 			if (this.players.size < 2) {
-				this.room.add('|uhtmlchange|bomb' + this.room.bombCount + this.round + '|<div class = "green"><center>This game of Pass the Bomb has been ended due to the lack of players.</center></div>').update();
+				this.room.add('|uhtmlchange|bomb' + this.room.bombCount + this.round + '|<div class = "broadcast-green"><center>This game of Pass the Bomb has been ended due to the lack of players.</center></div>').update();
 				return this.end();
 			}
 			this.nextRound();
 		}, seconds * 1000);
 	}
 	updateJoins() {
-		let msg = 'bomb' + this.room.bombCount + this.round + '|<div class = "infobox"><center>A game of <strong>Pass the Bomb</strong> has been started!<br>' +
+		let msg = 'bomb' + this.room.bombCount + this.round + '|<div class="broadcast-green"><center>A game of <strong>Pass the Bomb</strong> has been started!<br>' +
 			'The game will begin in <strong>' + Math.round((this.timeLeft - Date.now()) / 1000) + '</strong> seconds<br>' +
 			'<button name = "send" value = "/passthebomb join">Join!</button></center>';
 		if (this.players.size > 0) {
