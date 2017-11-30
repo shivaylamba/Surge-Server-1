@@ -127,7 +127,7 @@ class PassTheBomb extends Rooms.RoomGame {
 
 		this.madeMove = true;
 		this.setBomb(targetId);
-		this.room.add('|html|' + WL.nameColor(user.name) + ' passed the bomb to ' + WL.nameColor(targetId, true) + this.players.get(targetId).name + '</strong>!');
+		this.room.add('|html|' + WL.nameColor(user.name) + ' passed the bomb to ' + WL.nameColor(targetId, true) + '</strong>!');
 
 		if (this.checkWinner()) this.getWinner();
 	}
