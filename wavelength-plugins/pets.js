@@ -150,7 +150,7 @@ exports.commands = {
 			case 'letter':
 				let letter = toId(parts[0]);
 				const letterMenu = '<center>' + letters.map(l => {
-					return '<button name="send" value="/searchpet letter, ' + l + '" ' + (letter === l ? "style="background-color:lightblue;height:30px;width:35px"" : "style="background-color:aliceblue;height:30px;width:35px"") + ">" + l.toUpperCase() + "</button>";
+					return '<button name="send" value="/searchpet letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35px\"" : "style=\"background-color:aliceblue;height:30px;width:35px\"") + ">" + l.toUpperCase() + "</button>";
 				}).join("&nbsp;") + "</center><br />";
 				if (!letter || letters.indexOf(letter) === -1) {
 					return user.popup(definePopup + generalMenu + letterMenu);
