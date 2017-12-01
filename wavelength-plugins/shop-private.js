@@ -103,7 +103,7 @@ function drawMain(output) {
 	}
 	for (let x = 0; x < outputArr.length; x++) {
 		let name = outputArr[x].display;
-		output += '<td style="padding: 8px;"><button style="border: 2px solid #070e96 ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/shop ' + arr[x] + '|1">' + name + '</button></td>';
+		output += '<td style="padding: 8px;"><button style="border: 2px solid #000 ; border-radius: 15px 0px ; background: #6600CC; color: white;" name="send" value="/shop ' + arr[x] + '|1">' + name + '</button></td>';
 		if ((x === 2 || x === 5 || x === 8) && x != (+outputArr.length - +1)) output += '</table><br/><table border=0>';
 	}
 	output += '</table></center><br/></div>';
@@ -112,9 +112,9 @@ function drawMain(output) {
 
 function assembleOutput(output, marquee, shop, selectionType, back, update, user, room, cache) {
 	output += '<br/><div>';
-	output += '<div style="padding: 5px; border: 2px solid #101ad1; background: black; color: #fff; text-shadow: 0px -1px 0px #000; border-radius: 6px; margin: 10px"><div style="float: left; background-color: black; position: absolute; z-index: 10;">' + ((selectionType !== 'main' && selectionType !== 'exit') ? '<button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/shop main|1">Main Menu</button> <button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/shop ' + back + '|1">Back</button> ' : '') + '<button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/shop exit|1">Exit</button></div><marquee style="text-align: center; width: 100%" direction="left">' + marquee + '</marquee></div>';
-	shop = '<div style="padding: 5px; border: 2px solid #101ad1; background: black; color: #fff; text-shadow: 0px -1px 0px #000; border-radius: 6px; margin: 10px"><center><font size=4><i><b>Wavelength Server Shop</b></i></font></center></div><br/><br/>' + output;
-	if (selectionType == 'exit') shop = '<center>Shop closed - click <button style="border: 2px solid #070e96 ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/shop main|1">here</button> to reopen the shop.</center>';
+	output += '<div style="padding: 5px; border: 2px solid #000; background: #6600CC; color: #fff; text-shadow: none; border-radius: 6px; margin: 10px"><div style="float: left; background-color: #6600CC; position: absolute; z-index: 10;">' + ((selectionType !== 'main' && selectionType !== 'exit') ? '<button style="border: 2px solid #000; border-radius: 6px; background: #6600CC; color: white;" name="send" value="/shop main|1">Main Menu</button> <button style="border: 2px solid #000; border-radius: 6px; background: #6600CC; color: white;" name="send" value="/shop ' + back + '|1">Back</button> ' : '') + '<button style="border: 2px solid #000; border-radius: 6px; background: #6600CC; color: white;" name="send" value="/shop exit|1">Exit</button></div><marquee style="text-align: center; width: 100%" direction="left">' + marquee + '</marquee></div>';
+	shop = '<div style="padding: 5px; border: 2px solid #101ad1; background: #6600CC; color: #fff; text-shadow: none; border-radius: 6px; margin: 10px"><center><font size=4><i><b>Wavelength Server Shop</b></i></font></center></div><br/><br/>' + output;
+	if (selectionType == 'exit') shop = '<center>Shop closed - click <button style="border: 2px solid #000; border-radius: 15px 0px ; background: $6600CC; color: white;" name="send" value="/shop main|1">here</button> to reopen the shop.</center>';
 	if (cache) user.shopCache = shop;
 	display(update, user, room, shop);
 }
