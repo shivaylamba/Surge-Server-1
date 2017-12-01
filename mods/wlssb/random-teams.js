@@ -151,7 +151,7 @@ class RandomSeasonalRegStaffTeams extends RandomTeams {
 			// Global Moderators:
 			'@A Helpful Rayquaza': {
 				species: 'Rayquaza-Mega',
-				ability: 'Draco Stream',
+				ability: 'Delta Stream',
 				shiny: true,
 				item: 'Lum Berry',
 				gender: 'M',
@@ -161,6 +161,7 @@ class RandomSeasonalRegStaffTeams extends RandomTeams {
 				evs: {
 					atk: 252,
 					spe: 252,
+					hp: 4,
 				},
 				nature: 'Modest',
 			},
