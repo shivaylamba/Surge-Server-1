@@ -124,180 +124,174 @@ exports.commands = {
 			this.sendReplyBox(rankLadder('Pet Ladder', 'Points', keys.slice(0, 100), 'points'));
 		},
 	},
-};
-
-search: function (target, room, user) {
-	const letters = "abcdefghijklmnopqrstuvwxyz".split("");
-	const categories = {
-		Rarity: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'],// rarities
-		Packs: ['XY-Promo', 'XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'XY-Ancient Origins', 'Double Crisis'],
-		Types: ['Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'Metal'],
-		Tiers: ['OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack'],
-		Generation: ['Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6'], Miscellaneous: ['Trainer', 'Supporter', 'Item', 'Stadium', 'Energy', 'Delta', 'EX-Pack', 'Mega', 'Legendary', 'Full', 'Event'],
-	};
-
-	const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">";// code for scrollable html
-	const divEnd = "</div>";
-	const definePopup = "|wide||html|<center><b>PetSearch</b></center><br />";
-	const generalMenu = "<center>" +
-			'<button name="send" value="/pet search gen" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' +// alphabetical
-			'<button name="send" value="/searchpet category" style=\"background-color:aliceblue;height:30px\">Categories</button>&nbsp;&nbsp;' +//category
-			'</center><br />';
-	if (!target) {
-		return user.popup(definePopup + generalMenu);
-	}
-
-	//quick fix for when target ends with a comma
-	target = target.replace(/\,[\s]+$/i, "");
-	let parts = target.split(",");
-	let actionCommand = parts.shift();
-	let petDisplay;
-	switch (toId(actionCommand)) {
-		case 'letter':
-			let letter = toId(parts[0]);
-			const letterMenu = '<center>' + letters.map(l => {
-				return '<button name="send" value="/searchpet letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35px\"" : "style=\"background-color:aliceblue;height:30px;width:35px\"") + ">" + l.toUpperCase() + "</button>";
-			}).join("&nbsp;") + "</center><br />";
-			if (!letter || letters.indexOf(letter) === -1) {// invalid letter to search for, or none given
-				//only show menu
-				return user.popup(definePopup + generalMenu + letterMenu);
-			}
-			// sort pets by letter
-			let letterMons = {};
-			for (let m in pets) {
-				if (!letterMons[m.charAt(0)]) letterMons[m.charAt(0)] = {};
-				letterMons[m.charAt(0)][m] = 1;
-			}
-			if (!letterMons[letter]) return user.popup(definePopup + generalMenu + letterMenu);
-			// make graphics for the letter
-			petDisplay = Object.keys(letterMons[letter]).sort().map(m => {
-				let pet = pets[m];
-				return '<button name="send" value="/searchpet pet, ' + pet.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="pet-button"><img src="' + pet.pet + '" width="100" title="' + pet.name + '"></button>';
-			}).join("&nbsp;");
-			//send the popup
-			user.lastPetSearch = target;
-			user.popup(definePopup + generalMenu + letterMenu + scrollable + petDisplay + divEnd);
-			break;
-			case 'category':
-			// clean all the parts first
-			parts = parts.map(p => {
-				return toId(p);
-			});
-
-			// create category menu
-			let categoryMenu = ""; for (let c in categories) {
-				categoryMenu += '<b>' + c + ' -</b> ' + categories[c].map(k => {
-					let m = toId(k);
-					// add a special search condition for rarity
-					if (c === "Rarity") m += "rarity";
-					// new params for the search
-					// clone parts
-					let newParams = parts.slice(0);
-					if (parts.indexOf(m) > -1) {
-						// remove it
-						newParams.splice(newParams.indexOf(m), 1);
-					} else {
-						newParams.push(m);
-					}
-					let style = (parts.indexOf(m) > -1 ? "style=\"background-color:lightblue;height:23\"" : "style=\"background-color:aliceblue;height:23\"");
-					// button style checking if currently searching
-					return '<button name="send" value="/searchpet category, ' + newParams.join(", ") + '" ' + style + '>' + k + '</button>';
-				}).join("&nbsp;") + "<br />";
-			}
-			if (!parts.length) {
-				return user.popup(definePopup + generalMenu + categoryMenu);
-			}
-			// now clone the pets and delete the ones who dont match the categories
-			let paramPets = Object.assign({}, pets);
-			// filter out the unneeded ones; ignore rarity
-			for (let i = 0; i < parts.length; i++) {
-				let param = parts[i];
-				// ignore rarity
-				if (/rarity$/i.test(param)) continue;
-				for (let c in paramPets) {
-					let petParams = paramPets[c].gen.join("~").toLowerCase().replace(/[^a-z0-9\~]/g, "").split("~");
-					if (petParams.indexOf(param) === -1) delete paramPets[c];
-					// remove the pet from the currently searched ones.
+	search: function (target, room, user) {
+		const letters = "abcdefghijklmnopqrstuvwxyz".split("");
+		const categories = {
+			Rarity: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'],// rarities
+			Packs: ['XY-Promo', 'XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'XY-Ancient Origins', 'Double Crisis'],
+			Types: ['Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'Metal'],
+			Tiers: ['OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack'],
+			Generation: ['Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6'], Miscellaneous: ['Trainer', 'Supporter', 'Item', 'Stadium', 'Energy', 'Delta', 'EX-Pack', 'Mega', 'Legendary', 'Full', 'Event'],
+		};
+		const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">";// code for scrollable html
+		const divEnd = "</div>";
+		const definePopup = "|wide||html|<center><b>PetSearch</b></center><br />";
+		const generalMenu = "<center>" +
+				'<button name="send" value="/pet search gen" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' +// alphabetical
+				'<button name="send" value="/searchpet category" style=\"background-color:aliceblue;height:30px\">Categories</button>&nbsp;&nbsp;' +//category
+				'</center><br />';
+		if (!target) {
+			return user.popup(definePopup + generalMenu);
+		}
+		//quick fix for when target ends with a comma
+		target = target.replace(/\,[\s]+$/i, "");
+		let parts = target.split(",");
+		let actionCommand = parts.shift();
+		let petDisplay;
+		switch (toId(actionCommand)) {
+			case 'letter':
+				let letter = toId(parts[0]);
+				const letterMenu = '<center>' + letters.map(l => {
+					return '<button name="send" value="/searchpet letter, ' + l + '" ' + (letter === l ? "style=\"background-color:lightblue;height:30px;width:35px\"" : "style=\"background-color:aliceblue;height:30px;width:35px\"") + ">" + l.toUpperCase() + "</button>";
+				}).join("&nbsp;") + "</center><br />";
+				if (!letter || letters.indexOf(letter) === -1) {// invalid letter to search for, or none given//only show menu
+					return user.popup(definePopup + generalMenu + letterMenu);
 				}
-			}
-			// seperate check for rarity
-			let rarityCheck = parts.some(a => {
-				return /rarity$/i.test(a);
-			});
-			if (rarityCheck) {
-				for (let c in paramPets) {
-					let petRare = toId(paramPets[c].rarity);
-					for (let i = 0; i < parts.length; i++) {
-						if (/rarity$/i.test(parts[i])) {
-							// check if rarity is the pet's rarity
-							if (parts[i].replace(/rarity$/i, "") !== petRare) {
-								// remove if not matched delete
-								paramPets[c];
+				// sort pets by letter
+				let letterMons = {};
+				for (let m in pets) {
+					if (!letterMons[m.charAt(0)]) letterMons[m.charAt(0)] = {};
+					letterMons[m.charAt(0)][m] = 1;
+				}
+				if (!letterMons[letter]) return user.popup(definePopup + generalMenu + letterMenu);
+				// make graphics for the letter
+				petDisplay = Object.keys(letterMons[letter]).sort().map(m => {
+					let pet = pets[m];
+					return '<button name="send" value="/searchpet pet, ' + pet.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="pet-button"><img src="' + pet.pet + '" width="100" title="' + pet.name + '"></button>';
+				}).join("&nbsp;");
+				//send the popup
+				user.lastPetSearch = target;
+				user.popup(definePopup + generalMenu + letterMenu + scrollable + petDisplay + divEnd);
+				break;
+			case 'category':
+				// clean all the parts first
+				parts = parts.map(p => {
+					return toId(p);
+				});
+				// create category menu
+				let categoryMenu = ""; for (let c in categories) {
+					categoryMenu += '<b>' + c + ' -</b> ' + categories[c].map(k => {
+						let m = toId(k);
+						// add a special search condition for rarity
+						if (c === "Rarity") m += "rarity";
+						// new params for the search
+						// clone parts
+						let newParams = parts.slice(0);
+						if (parts.indexOf(m) > -1) {
+							// remove it
+							newParams.splice(newParams.indexOf(m), 1);
+						} else {
+							newParams.push(m);
+						}
+						let style = (parts.indexOf(m) > -1 ? "style=\"background-color:lightblue;height:23\"" : "style=\"background-color:aliceblue;height:23\"");
+						// button style checking if currently searching
+						return '<button name="send" value="/searchpet category, ' + newParams.join(", ") + '" ' + style + '>' + k + '</button>';
+					}).join("&nbsp;") + "<br />";
+				}
+				if (!parts.length) {
+					return user.popup(definePopup + generalMenu + categoryMenu);
+				}
+				// now clone the pets and delete the ones who dont match the categories
+				let paramPets = Object.assign({}, pets);
+				// filter out the unneeded ones; ignore rarity
+				for (let i = 0; i < parts.length; i++) {
+					let param = parts[i];
+					// ignore rarity
+					if (/rarity$/i.test(param)) continue;
+					for (let c in paramPets) {
+						let petParams = paramPets[c].gen.join("~").toLowerCase().replace(/[^a-z0-9\~]/g, "").split("~");
+						if (petParams.indexOf(param) === -1) delete paramPets[c];
+						// remove the pet from the currently searched ones
+					}
+				}
+				// seperate check for rarity
+				let rarityCheck = parts.some(a => {
+					return /rarity$/i.test(a);
+				});
+				if (rarityCheck) {
+					for (let c in paramPets) {
+						let petRare = toId(paramPets[c].rarity);
+						for (let i = 0; i < parts.length; i++) {
+							if (/rarity$/i.test(parts[i])) {
+								// check if rarity is the pet's rarity
+								if (parts[i].replace(/rarity$/i, "") !== petRare) {
+									// remove if not matched delete
+									paramPets[c];
+								}
 							}
 						}
 					}
 				}
-			}
-			// no pets left
-			if (!Object.keys(pets).length) {
-				return user.popup(definePopup + generalMenu + categoryMenu + '<br /><center><font color="red"><b>Nothing matches your search</b></font></center>');
-			} user.lastPetSearch = target;
-			// build the display
-			petDisplay = Object.keys(paramPets).sort().map(m => {
-				let pet = paramPets[m];
-				return '<button name="send" value="/petsearch pet, ' + pet.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="pet-button"><img src="' + pet.pet + '" width="100" title="' + pet.name + '"></button>';
-			}).join("&nbsp;");
-			user.popup(definePopup + generalMenu + categoryMenu + scrollable + petDisplay + divEnd);
-			break;
+				// no pets left
+				if (!Object.keys(pets).length) {
+					return user.popup(definePopup + generalMenu + categoryMenu + '<br /><center><font color="red"><b>Nothing matches your search</b></font></center>');
+				}
+				user.lastPetSearch = target;
+				// build the display
+				petDisplay = Object.keys(paramPets).sort().map(m => {
+					let pet = paramPets[m];
+					return '<button name="send" value="/petsearch pet, ' + pet.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="pet-button"><img src="' + pet.pet + '" width="100" title="' + pet.name + '"></button>';
+				}).join("&nbsp;");
+				user.popup(definePopup + generalMenu + categoryMenu + scrollable + petDisplay + divEnd);
+				break;
 			case 'pet':
-			let backButton = '<button name="send" value="/petsearch ' + user.lastPetSearch + '" style="background-color:aliceblue;height:30px;width:35">&lt;&nbsp;Back</button><br /><br />';
-			if (!parts[0] || !(toId(parts[0]) in pets)) {
-				return user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid Pet</b></font></center>');
-			}
-			// build the display screen for the pet
-			let pet = pets[toId(parts[0])];
-			// the image
-			let petImage = '<img src="' + pet.pet + '" height=250>';
-			// the name of the pet
-			let petName = "<b>Name:</b> " + pet.name + "<br />";
-			// the id of the pet
-			let petId = "<font color=\"gray\">(" + pet.title + ")</font><br />";
-			// rarity display
-			let petRarityPoints = '<b>Rarity: </b><font color="' + colors[pet.rarity] + '">' + pet.rarity + '</font> (' + pet.points + ')<br />';
-			// get users that have the pet
-			let allPetUsers = Db('pets').object();
-			let petHolders = [];
-			// dont allow duplicates
-			for (let u in petUsers) {
-				let userData = allPetUsers[u];
-				for (let i = 0; i < userData.length; i++) {
-					let tC = userData[i];
-					if (tC && tC.title === pet.title) {
-						if (!petHolders[u]) petHolders[u] = 0; petHolders[u]++;
+				let backButton = '<button name="send" value="/petsearch ' + user.lastPetSearch + '" style="background-color:aliceblue;height:30px;width:35">&lt;&nbsp;Back</button><br /><br />';
+				if (!parts[0] || !(toId(parts[0]) in pets)) {
+					return user.popup(definePopup + backButton + '<center><font color="red"><b>Invalid Pet</b></font></center>');
+				}
+				// build the display screen for the pet
+				let pet = pets[toId(parts[0])];
+				// the image
+				let petImage = '<img src="' + pet.pet + '" height=250>';
+				// the name of the pet
+				let petName = "<b>Name:</b> " + pet.name + "<br />";
+				// the id of the pet
+				let petId = "<font color=\"gray\">(" + pet.title + ")</font><br />";
+				// rarity display
+				let petRarityPoints = '<b>Rarity: </b><font color="' + colors[pet.rarity] + '">' + pet.rarity + '</font> (' + pet.points + ')<br />';
+				// get users that have the pet
+				let allPetUsers = Db('pets').object();
+				let petHolders = [];
+				// dont allow duplicates
+				for (let u in petUsers) {
+					let userData = allPetUsers[u];
+					for (let i = 0; i < userData.length; i++) {
+						let tC = userData[i];
+						if (tC && tC.title === pet.title) {
+							if (!petHolders[u]) petHolders[u] = 0; petHolders[u]++;
+						}
 					}
 				}
+				// show duplicates as (x#)
+				petHolders = Object.keys(petHolders).sort().map(u => {
+					return "&nbsp;- " + u + (petHolders[u] > 1 ? " (x" + petHolders[u] + ")" : "");
+				});
+				// build the display!
+				petDisplay = "<center><table><tr>" +
+					"<td>" + petImage + "</td>" +// Pet on the left
+					"<td>" +// details now
+					petName + petId + petRarityPoints + petgen +
+					"<b>Users with this pet:</b><br />" +// pet holders
+					"<div style=\"max-height: 130px; overflow-y: scroll\">" +// scrollable
+					petHolders.join("<br />") +"<br />" +
+					"</td></tr></table></center>";// close the table
+				user.popup(definePopup + backButton + petDisplay);
+				break;
+			case 'error':
+			default:
+				user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for PetSearch</b></font></center>');
+				break;
 			}
-			// show duplicates as (x#)
-			petHolders = Object.keys(petHolders).sort().map(u => {
-				return "&nbsp;- " + u + (petHolders[u] > 1 ? " (x" + petHolders[u] + ")" : "");
-			});
-
-			// build the display!
-			petDisplay = "<center><table><tr>" +
-				"<td>" + petImage + "</td>" +// Pet on the left
-				"<td>" +// details now
-				petName + petId + petRarityPoints + petgen +
-				"<b>Users with this pet:</b><br />" +// pet holders
-				"<div style=\"max-height: 130px; overflow-y: scroll\">" +// scrollable
-				petHolders.join("<br />") +"<br />" +
-				"</td></tr></table></center>";// close the table
-			user.popup(definePopup + backButton + petDisplay);
-			break;
-		case 'error':
-		default:
-			user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for PetSearch</b></font></center>');
-			break;
-										}
-},
+	},
 },
 };
