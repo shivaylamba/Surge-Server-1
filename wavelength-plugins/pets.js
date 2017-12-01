@@ -2,6 +2,7 @@
 /********************
 * Pets *
 Skrub's Pet System: Credit to wgc :3
+Fixed And Modified By Prince Sky.
 ********************/
 
 const uuid = require('uuid');
@@ -278,20 +279,21 @@ exports.commands = {
 				});
 				// build the display!
 				petDisplay = "<center><table><tr>" +
-					"<td>" + petImage + "</td>" +// Pet on the left
-					"<td>" +// details now
+					"<td>" + petImage + "</td>" +
+					"<td>" +
 					petName + petId + petRarityPoints + petgen +
-					"<b>Users with this pet:</b><br />" +// pet holders
-					"<div style=\"max-height: 130px; overflow-y: scroll\">" +// scrollable
-					petHolders.join("<br />") +"<br />" +
-					"</td></tr></table></center>";// close the table
+					"<b>Users with this pet:</b><br />" +
+					"<div style=\"max-height: 130px; overflow-y: scroll\">" +
+					petHolders.join("<br />") + "<br />" +
+					"</td></tr></table></center>";
+
 				user.popup(definePopup + backButton + petDisplay);
 				break;
 			case 'error':
 			default:
 				user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for PetSearch</b></font></center>');
 				break;
-			}
+											}
 	},
 },
 };
