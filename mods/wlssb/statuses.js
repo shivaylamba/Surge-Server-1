@@ -131,6 +131,18 @@ exports.BattleStatuses = {
 			this.add('c', '~Kraken Mare', 'Even though I fall, I\'m sure I took a few down with me.');
 		},
 	},
+	ahelpfulrayquaza: {
+		exists: true,
+		onStart: function () {
+			this.add('c', '@A Helpful Rayquaza', 'Now you will die!.');
+		},
+		onSwitchOut: function (pokemon) {
+			this.add('c', '@A Helpful Rayquaza', 'Brb!');
+		},
+		onFaint: function (pokemon) {
+			this.add('c', '@A Helpful Rayquaza', 'What This can\'t be.. You Hacker!!.');
+		},
+	},
 	almightybronzong: {
 		exists: true,
 		onStart: function () {
