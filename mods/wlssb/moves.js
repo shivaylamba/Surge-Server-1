@@ -24,6 +24,29 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Dragon",
 	},
+		// SparkyHeliolisk
+	sparkblast: {
+		category: "Special",
+		accuracy: true,
+		basePower: 100,
+		id: "sparkblast",
+		isNonstandard: true,
+		name: "Spark Blast",
+		pp: 5,
+		noPPBoosts: true,
+		priority: 5,
+		selfdestruct: "no",
+		onPrepareHit: function (target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Thunder", target);
+		},
+		desc: "No Effect.",
+		onHit: function (target, source, move) {
+			this.add('c|@SparkyHeliolisk|Let me just PR that real quick!');
+		},
+		target: "normal",
+		type: "Electric",
+	},
 	// HoeenHero
 	scripting: {
 		category: "Status",
