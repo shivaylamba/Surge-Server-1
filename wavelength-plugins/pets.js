@@ -288,4 +288,40 @@ exports.commands = {
 			}
 		},
 	},
+	pettrade: 'tradepet',
+	pettrade: function (target, room, user) {
+		if (!target) return this.errorReply("/tradepet [pet ID], [user], [targetPet ID]");
+		let parts = target.split(",").map(p => toId(p));
+		if (parts.length !== 3) return this.errorReply("/tradepet [your pet's ID], [targetUser], [targetPet ID]");
+		let match;
+		let forTrade = parts[0];
+		match = false;
+		let userPets = Db('pets').get(user.userid, []);
+		for (let i = 0; i < userPets.length; i++) {
+			if (userPets[i].title === forTrade) {
+				match = true;
+				break;
+			}
+		}
+		if (!match) return this.errorReply("You don't have that pet!");
+		let targetUser = parts[1];
+		let targetTrade = parts[2];
+		let targetPets = Db('pets').get(targetUser, []);
+		match = false;
+		for (let i = 0; i < targetPets.length; i++) {
+			if (targetPets[i].title === targetTrade) {
+				match = true;
+				break;
+			}
+		}
+		if (!match) return this.errorReply(targetUser + " does not have that pet!");
+		let tradeId = uuid.v1();
+		let newTrade = {
+			from: user.userid, to: targetUser, fromExchange: forTrade, toExchange: targetTrade, id: tradeId,
+		};
+		Db('pettrades').set(tradeId, newTrade);
+		this.sendReply("Your trade has been taken submitted.");
+		if (Users.get(targetUser)) Users.get(targetUser).send("|pm|~Mr. Pet Trader|" + targetUser + "|/html <div class=\"broadcast-green\">" + Chat.escapeHTML(user.name) + " has initiated a trade with you. Click <button name=\"send\" value=\"/trades last\">here</button> or use <b>/trades</b> to view your pending trade requests.</div>");
+		user.send("|pm|~Mr. Pet Trader|" + user.userid + "|/html <div class=\"broadcast-green\">Your trade with " + Chat.escapeHTML(targetUser) + " has been initiated. Click <button name=\"send\" value=\"/trades last\">here</button> or use <b>/trades</b> to view your pending trade requests.</div>");
+	},
 };
