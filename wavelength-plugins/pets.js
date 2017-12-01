@@ -125,24 +125,23 @@ exports.commands = {
 		search: function (target, room, user) {
 			const letters = "abcdefghijklmnopqrstuvwxyz".split("");
 			const categories = {
-				Rarity: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'],// rarities
+				Rarity: ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic'],
 				Packs: ['XY-Promo', 'XY-Base', 'XY-Flashfire', 'XY-Furious Fists', 'XY-Phantom Forces', 'XY-Primal Clash', 'XY-Roaring Skies', 'XY-Ancient Origins', 'Double Crisis'],
 				Types: ['Water', 'Fire', 'Fighting', 'Fairy', 'Dragon', 'Colorless', 'Psychic', 'Lightning', 'Darkness', 'Grass', 'Metal'],
 				Tiers: ['OU-Pack', 'UU-Pack', 'Uber-Pack', 'PU-Pack', 'NU-Pack', 'RU-Pack', 'LC-Pack', 'BL-Pack', 'BL2-Pack', 'BL3-Pack'],
 				Generation: ['Gen1', 'Gen2', 'Gen3', 'Gen4', 'Gen5', 'Gen6'],
 				Miscellaneous: ['Trainer', 'Supporter', 'Item', 'Stadium', 'Energy', 'Delta', 'EX-Pack', 'Mega', 'Legendary', 'Full', 'Event'],
 			};
-			const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">";// code for scrollable html
+			const scrollable = "<div style=\"max-height: 300px; overflow-y: scroll\">";
 			const divEnd = "</div>";
 			const definePopup = "|wide||html|<center><b>PetSearch</b></center><br />";
 			const generalMenu = "<center>" +
-					'<button name="send" value="/pet search gen" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' +// alphabetical
-					'<button name="send" value="/searchpet category" style=\"background-color:aliceblue;height:30px\">Categories</button>&nbsp;&nbsp;' +//category
+					'<button name="send" value="/pet search gen" style=\"background-color:aliceblue;height:30px\">Alphabetical</button>&nbsp;&nbsp;' +
+					'<button name="send" value="/searchpet category" style=\"background-color:aliceblue;height:30px\">Categories</button>&nbsp;&nbsp;' +
 					'</center><br />';
 			if (!target) {
 				return user.popup(definePopup + generalMenu);
 			}
-			//quick fix for when target ends with a comma
 			target = target.replace(/\,[\s]+$/i, "");
 			let parts = target.split(",");
 			let actionCommand = parts.shift();
