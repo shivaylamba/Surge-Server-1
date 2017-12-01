@@ -1,9 +1,8 @@
-  'use strict';
-
+'use strict';
+//Useless Commands
 
 exports.commands = {
-  
-    s: 'spank',
+	s: 'spank',
 	spank: function (target, room, user) {
 		if (!target) return this.sendReply('/spank needs a target.');
 		this.parse('/me spanks ' + target + '!');
@@ -41,7 +40,7 @@ exports.commands = {
 		let message = target.slice(commaIndex + 1).trim();
 		if (!targetUser || !message) return this.errorReply("Needs a target.");
 		if (!Users.get(targetUser).name) return false;
-		room.addRaw(Gold.nameColor(Users.get(targetUser).name, true) + '\'s link: <b>"' + message + '"</b>');
+		room.addRaw(WL.nameColor(Users.get(targetUser).name, true) + '\'s link: <b>"' + message + '"</b>');
 	},
 	mt: 'mktour',
 	mktour: function (target, room, user) {
@@ -73,15 +72,13 @@ exports.commands = {
 		if (!target) return this.sendReply('/lick needs a target.');
 		this.parse('/me licks ' + target + ' excessively!');
 	},
-
-	
 	'!hex': true,
 	gethex: 'hex',
 	hex: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		if (!this.canTalk()) return;
 		if (!target) target = toId(user.name);
-		return this.sendReplyBox(`${Gold.nameColor(target.trim(), true)}.  The hexcode for this name color is: ${Gold.hashColor(target)}.`);
+		return this.sendReplyBox(`${WL.nameColor(target.trim(), true)}.  The hexcode for this name color is: ${WL.hashColor(target)}.`);
 	},
 	rsi: 'roomshowimage',
 	roomshowimage: function (target, room, user) {
@@ -109,7 +106,7 @@ exports.commands = {
 		if (names.length < 1) return this.sendReplyBox('There are no users of the rank <font color="#24678d"><b>' + Chat.escapeHTML(Config.groups[target].name) + '</b></font> currently online.');
 		return this.sendReplyBox('There ' + (names.length === 1 ? 'is' : 'are') + ' <font color="#24678d"><b>' + names.length + '</b></font> ' + (names.length === 1 ? 'user' : 'users') + ' with the rank <font color="#24678d"><b>' + Config.groups[target].name + '</b></font> currently online.<br />' + names.join(', '));
 	},
-		golddeclare: function (target, room, user, connection, cmd) {
+	golddeclare: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
 		if (!this.canTalk()) return;
@@ -139,6 +136,4 @@ exports.commands = {
 		this.logModCommand(`${user.name} mod declared ${target}`);
 	},
 	moddeclarehelp: ["/declaremod [message] - Displays a red [message] to all authority in the respected room.  Requires * # & ~"],
-	
-	
-}
+};
