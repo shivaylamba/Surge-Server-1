@@ -155,19 +155,16 @@ exports.commands = {
 				if (!letter || letters.indexOf(letter) === -1) {
 					return user.popup(definePopup + generalMenu + letterMenu);
 				}
-				// sort pets by letter
 				let letterMons = {};
 				for (let m in pets) {
 					if (!letterMons[m.charAt(0)]) letterMons[m.charAt(0)] = {};
 					letterMons[m.charAt(0)][m] = 1;
 				}
 				if (!letterMons[letter]) return user.popup(definePopup + generalMenu + letterMenu);
-				// make graphics for the letter
 				petDisplay = Object.keys(letterMons[letter]).sort().map(m => {
 					let pet = pets[m];
 					return '<button name="send" value="/searchpet pet, ' + pet.title + '" style="border-radius: 12px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2) inset;" class="pet-button"><img src="' + pet.pet + '" width="100" title="' + pet.name + '"></button>';
 				}).join("&nbsp;");
-				//send the popup
 				user.lastPetSearch = target;
 				user.popup(definePopup + generalMenu + letterMenu + scrollable + petDisplay + divEnd);
 				break;
@@ -230,7 +227,6 @@ exports.commands = {
 						}
 					}
 				}
-				// no pets left
 				if (!Object.keys(pets).length) {
 					return user.popup(definePopup + generalMenu + categoryMenu + '<br /><center><font color="red"><b>Nothing matches your search</b></font></center>');
 				}
@@ -289,7 +285,7 @@ exports.commands = {
 			default:
 				user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for PetSearch</b></font></center>');
 				break;
-												}
+			}
 		},
 	},
 };
