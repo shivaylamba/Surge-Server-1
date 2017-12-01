@@ -151,10 +151,10 @@ function failedTransaction(user, item, money, room) {
 
 function successfulTransaction(item, receipt, user, room) {
 	receipt = receipt.split('|');
-	let output = '<div style="padding: 5px; border: 2px solid #101ad1; background: black; color: #fff; text-shadow: 0px -1px 0px #000; border-radius: 6px; margin: 10px; text-align: center"><font size=4><i><b>Wavelength Server Shop</b></i></font></div><br/><br/>';
+	let output = '<div style="padding: 5px; border: 2px solid #000; background: #6600CC; color: #fff; text-shadow: none; border-radius: 6px; margin: 10px; text-align: center"><font size=4><i><b>Surge Server Shop</b></i></font></div><br/><br/>';
 	output += '<center><b>Your purchase was successful</b><br/><br/>' + item.onbuy + '<br/></center><div style="width: 70%;margin: 0 auto;"><b>Name: </b>' + user.name + '<br/><b>Date: </b>' + receipt[1] + '<br/><b>Item: </b>' + receipt[2] + '<br/><b>Price: </b>' + receipt[3] + ' ' + receipt[4] + '<br/><b>Remaining ' + receipt[4] + ': </b>' + receipt[6] + '<br/><b>ReceiptID: </b>' + receipt[5] + '<br/><br/><center>This receipt is stored as your proof of purchase in the event of an error.<br/>Use /receipts to see your recent receipts.<br/><br/>';
-	output += '<button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/shop main|1">Main Menu</button> ' + ((item.multibuy && (receipt[3] < receipt[4])) ? '<button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/rebuy ' + item.name + '">Buy Another</button>' : '');
-	output += '<br/></center></div><div style="padding: 5px; border: 2px solid #101ad1; background: black; color: #fff; text-shadow: 0px -1px 0px #000; border-radius: 6px; margin: 10px"><div style="float: left;"><button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/shop main|1">Main Menu</button> <button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/shop exit|1">Exit</button></div><marquee style="text-align: center; width: 70%" direction="left">Thank you for your purchase!</marquee></div>';
+	output += '<button style="border: 2px solid #000; border-radius: 6px; background: #6600CC; color: white;" name="send" value="/shop main|1">Main Menu</button> ' + ((item.multibuy && (receipt[3] < receipt[4])) ? '<button style="border: 2px solid #070e96 ; border-radius: 6px; background: black ; color: white;" name="send" value="/rebuy ' + item.name + '">Buy Another</button>' : '');
+	output += '<br/></center></div><div style="padding: 5px; border: 2px solid #101ad1; background: #6600cc; color: #fff; text-shadow: none; border-radius: 6px; margin: 10px"><div style="float: left;"><button style="border: 2px solid #000; border-radius: 6px; background: #6600CC; color: white;" name="send" value="/shop main|1">Main Menu</button> <button style="border: 2px solid #000; border-radius: 6px; background: #6600CC; color: white;" name="send" value="/shop exit|1">Exit</button></div><marquee style="text-align: center; width: 70%" direction="left">Thank you for your purchase!</marquee></div>';
 
 	Users.get(user.userid).connections[0].sendTo(room.id, '|uhtmlchange|' + user.userid + 'shop|' + output);
 }
@@ -179,7 +179,7 @@ function genReceiptId() {
 
 //add different currencies as args
 function setupPrice(item, stardust) {
-	if (item.currency === 'stardust') return stardust;
+	if (item.currency === 'bucks') return stardust;
 	//set up different cases here for different currencies
 }
 
@@ -211,7 +211,7 @@ exports.commands = {
 		let selectionType = false;
 		let selection = false;
 		let isUpdate;
-		let marquee = 'Welcome to the Wavelength Server Shop! Credit for the original code goes to Lights; any feedback is welcome.';
+		let marquee = 'Welcome to the Surge Server Shop! Credit for the original code goes to Lights; any feedback is welcome.';
 		if (target) {
 			if (target.trim() === 'help') {
 				return this.sendReplyBox("/shop - opens shop UI<br/>/receipts - lists your recent receipts<br/>/receipt [receipt ID] - displays the details of the specified receipt if you are the owner<br/>/receipts view, [user] - lists receipts of the specified user (requires @)<br/>Multi-Shop overhaul by Lights");
@@ -261,7 +261,7 @@ exports.commands = {
 								for (let x = 0; x < outputArr.length; x++) {
 									let name = outputArr[x].display;
 									let button = match + '.' + arr[x];
-									output += '<td style="padding: 8px;"><button style="border: 2px solid #070e96 ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/shop ' + button + '|1">' + name + '</button></td>';
+									output += '<td style="padding: 8px;"><button style="border: 2px solid #000; border-radius: 15px 0px ; background: #6600CC; color: white;" name="send" value="/shop ' + button + '|1">' + name + '</button></td>';
 									if ((x === 2 || x === 5 | x === 8) && x != (+outputArr.length - +1)) output += '</table><br/><table border=0>';
 								}
 								output += '</table></center><br/></div>';
@@ -272,11 +272,11 @@ exports.commands = {
 								for (let x = 0; x < outputArr.length; x++) {
 									let name = outputArr[x].display;
 									let button = match + '.' + arr[x];
-									output += '<td style="padding: 5px;"><button style="border: 2px solid #070e96 ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/shop ' + button + '|2">' + name + '</button></td><tr>';
+									output += '<td style="padding: 5px;"><button style="border: 2px solid #000; border-radius: 15px 0px ; background: #6600CC; color: white;" name="send" value="/shop ' + button + '|2">' + name + '</button></td><tr>';
 								}
 								output += '</table></center><br/></div>';
 								//item info empty
-								output += '<div style="position: absolute; top: 0px;right: 0px;bottom: 0px; width: 39%; max-height: 300px; min-height: 250px; background-color: rgba(104,102,249,0.4);border: 2px solid; border-radius: 5px;"><br/><br/><center><b>Select an Item for more info.</b></center></div></div>';
+								output += '<div style="position: absolute; top: 0px;right: 0px;bottom: 0px; width: 39%; max-height: 300px; min-height: 250px; background-color: rgba(128, 0, 255, 0.4); border: 2px solid; border-radius: 5px; color: #FFF;"><br/><br/><center><b>Select an Item for more info.</b></center></div></div>';
 								assembleOutput(output, marquee, shop, selectionType, 'main', update, user, room, false);
 							}
 						} else {
@@ -346,7 +346,7 @@ exports.commands = {
 									}
 									let name = outputArr[x].display;
 									let button = last + '.' + arr[x];
-									output += '<td style="padding: 8px;"><button style="border: 2px solid #070e96 ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/shop ' + button + '|1">' + name + '</button></td>';
+									output += '<td style="padding: 8px;"><button style="border: 2px solid #000; border-radius: 15px 0px ; background: #6600CC; color: white;" name="send" value="/shop ' + button + '|1">' + name + '</button></td>';
 									if ((x === 2 || x === 5 | x === 8) && x != (+outputArr.length - +1)) output += '</table><br/><table border=0>';
 								}
 								output += '</table></center><br/></div>';
@@ -377,11 +377,11 @@ exports.commands = {
 									}
 									let name = outputArr[x].display;
 									let button = last + '.' + arr[x];
-									output += '<td style="padding: 5px;"><button style="border: 2px solid #070e96 ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/shop ' + button + '|2">' + name + '</button></td><tr>';
+									output += '<td style="padding: 5px;"><button style="border: 2px solid #0000; border-radius: 15px 0px ; background: #6600CC; color: white;" name="send" value="/shop ' + button + '|2">' + name + '</button></td><tr>';
 								}
 								output += '</table></center><br/></div>';
 								//item info empty
-								output += '<div style="position: absolute; top: 0px;right: 0px;bottom: 0px; width: 39%; max-height: 300px; min-height: 250px; background-color: rgba(104,102,249,0.4);border: 2px solid; border-radius: 5px;"><br/><br/><center><b>Select an Item for more info.</b></center></div></div>';
+								output += '<div style="position: absolute; top: 0px;right: 0px;bottom: 0px; width: 39%; max-height: 300px; min-height: 250px; background-color: rgba(108, 0, 255, 0.4);border: 2px solid; border-radius: 5px; color: white;"><br/><br/><center><b>Select an Item for more info.</b></center></div></div>';
 								assembleOutput(output, marquee, shop, selectionType, back, update, user, room, false);
 							}
 						} else {
@@ -411,14 +411,14 @@ exports.commands = {
 								}
 								let name = outputArr[x].display;
 								let button = last + '.' + containerArr[x];
-								output += '<td style="padding: 5px;"><button style="border: 2px solid ' + ((containerArr[x] == match) ? '#ffffff' : '#070e96') + ' ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/shop ' + button + '|2">' + name + '</button></td><tr>';
+								output += '<td style="padding: 5px;"><button style="border: 2px solid ' + ((containerArr[x] == match) ? '#ffffff' : '#000') + ' ; border-radius: 15px 0px ; background: #6600CC; color: white;" name="send" value="/shop ' + button + '|2">' + name + '</button></td><tr>';
 							}
 
 							let itemId = +path.length - +1;
 							itemId = path[itemId];
 							output += '</table></center><br/></div>';
 							scaleImage(selection.img, image => {
-								output += '<div style="position: absolute; top: 0px;right: 0px;bottom: 0px;width: 39%; max-height: 300px; min-height: 250px; background-color: rgba(104,102,249,0.4);border: 2px solid; border-radius: 5px;"><!-- split --><br/><center><b>' + selection.display + '</b><br/><br/>' + ((image) ? '<img src="' + image[0] + '" width=' + image[1] + ' height=' + image[2] + '><br/>' : '') + '<br/><b>Price: </b>' + selection.price + ' ' + selection.currency + '<br/><br/><button style="border: 2px solid #070e96 ; border-radius: 15px 0px ; background: black ; color: white;" name="send" value="/redeem ' + itemId + '">Confirm Purchase</button></center><!-- split --></div></div>';
+								output += '<div style="position: absolute; top: 0px;right: 0px;bottom: 0px;width: 39%; max-height: 300px; min-height: 250px; background-color: rgba(128, 0, 255, 0.4);border: 2px solid; border-radius: 5px;"><!-- split --><br/><center><b>' + selection.display + '</b><br/><br/>' + ((image) ? '<img src="' + image[0] + '" width=' + image[1] + ' height=' + image[2] + '><br/>' : '') + '<br/><b>Price: </b>' + selection.price + ' ' + selection.currency + '<br/><br/><button style="border: 2px solid #000 ; border-radius: 15px 0px ; background: #6600CC ; color: white;" name="send" value="/redeem ' + itemId + '">Confirm Purchase</button></center><!-- split --></div></div>';
 								marquee = selection.info;
 								assembleOutput(output, marquee, shop, selectionType, back, update, user, room, true);
 							});
@@ -545,12 +545,12 @@ exports.commands = {
 					}
 					user.shopCache = false;
 					break;
-				case 'introscroll':
+				case 'profileteam':
 					money = setupPrice(match, stardust);
 					success = runTransaction(money, match, user);
 					if (success) {
 						//WL.messageSeniorStaff(user.name + " has purchased a room. Please contact this user to setup their room.");
-						user.tokens.disableintroscroll = true;
+						user.tokens.profileteam = true;
 						successfulTransaction(match, success, user, room);
 					} else {
 						failedTransaction(user, match, money, room);
