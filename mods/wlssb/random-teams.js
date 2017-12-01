@@ -149,10 +149,9 @@ class RandomSeasonalRegStaffTeams extends RandomTeams {
 				nature: 'Timid',
 			},
 			// Global Moderators:
-			
 			'@SparkyHeliolisk': {
 				species: 'Heliolisk',
-				ability: 'Speed Boost,
+				ability: 'Speed Boost',
 				item: 'Life Orb',
 				gender: 'M',
 				moves: ['Dragon Pulse', 'Hyper Voice', 'Dark Pulse',
@@ -164,9 +163,7 @@ class RandomSeasonalRegStaffTeams extends RandomTeams {
 					spd: 4,
 				},
 				nature: 'Modest',
-			
-			
-			
+			},
 			'@A Helpful Rayquaza': {
 				species: 'Rayquaza-Mega',
 				ability: 'Draco Stream',
