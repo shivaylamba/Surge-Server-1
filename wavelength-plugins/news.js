@@ -81,20 +81,20 @@ exports.commands = {
 		},
 		subscribe: function (target, room, user) {
 			if (!user.named) return this.errorReply('You must choose a name before subscribing');
-			if (Db.NewsSubscribers.has(user.userid)) return this.errorReply("You are alreading subscribing Wavelength News.");
+			if (Db.NewsSubscribers.has(user.userid)) return this.errorReply("You are alreading subscribing Surge News.");
 			Db.NewsSubscribers.set(user.userid, true);
 			this.sendReply("You have subscribed Surge News.");
-			this.popupReply("|wide||html|You will receive Wavelength News automatically once you connect to the Wavelength next time.<br><hr><center><button class='button' name='send' value ='/news'>View News</button></center>");
+			this.popupReply("|wide||html|You will receive Surge News automatically once you connect to the Surge next time.<br><hr><center><button class='button' name='send' value ='/news'>View News</button></center>");
 		},
 		unsubscribe: function (target, room, user) {
 			if (!user.named) return this.errorReply('You must choose a name before unsubscribing');
 			if (!Db.NewsSubscribers.has(user.userid)) return this.errorReply("You have not subscribed Wavelength News.");
 			Db.NewsSubscribers.remove(user.userid);
 			this.sendReply("You have unsubscribed Surge News.");
-			this.popupReply("|wide||html|You will no longer automatically receive Wavelength News.<br><hr><center><button class='button' name='send' value='/news'>View News</button></center>");
+			this.popupReply("|wide||html|You will no longer automatically receive Surge News.<br><hr><center><button class='button' name='send' value='/news'>View News</button></center>");
 		},
 	},
-	serverannouncementshelp: ["/news view - Views current Wavelength news.",
+	serverannouncementshelp: ["/news view - Views current Surge news.",
 		"/news delete [news title] - Deletes announcement with the [title]. Requires @, &, ~",
 		"/news add [news title], [news desc] - Adds news [news]. Requires @, &, ~",
 		"/news subscribe - Subscribes to Wavelength News.",
