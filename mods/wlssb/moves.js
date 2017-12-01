@@ -24,7 +24,7 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Dragon",
 	},
-		// SparkyHeliolisk
+	// SparkyHeliolisk
 	sparkblast: {
 		category: "Special",
 		accuracy: true,
