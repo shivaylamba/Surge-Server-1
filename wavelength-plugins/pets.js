@@ -124,7 +124,7 @@ exports.commands = {
 			keys.sort(function (a, b) { return b.points - a.points; });
 			this.sendReplyBox(rankLadder('Pet Ladder', 'Points', keys.slice(0, 100), 'points'));
 		},
-	},
+
 	search: function (target, room, user) {
 		const letters = "abcdefghijklmnopqrstuvwxyz".split("");
 		const categories = {
@@ -293,7 +293,7 @@ exports.commands = {
 			default:
 				user.popup(definePopup + generalMenu + '<br /><center><font color="red"><b>Invalid Command action for PetSearch</b></font></center>');
 				break;
-											}
+			}
 	},
-},
+	},
 };
