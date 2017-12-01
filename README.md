@@ -106,6 +106,7 @@ Contributors
 
 - [Insist](https://github.com/DeathlyPlays)
 - [Gligars](https://github.com/Gligar)
+- [Shivay](https://github.com/shivaylamba)
 
 Special thanks
 
