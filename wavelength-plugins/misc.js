@@ -171,7 +171,7 @@ exports.commands = {
 			"- " + WL.nameColor('Insist', true) + " (Main Developer)<br />" +
 			"<br />" +
 			"<u><b>Major Contributors:</b></u><br />" +
-			"- " + WL.nameColor('Shivay', true) + " (Server Admin, Development)<br />" +
+			"- " + WL.nameColor('Shivay', true) + " (Server Admin, Development, CSS)<br />" +
 			"- " + WL.nameColor('Princess Qtie', true) + " (Development)<br />" +
 			"- " + WL.nameColor('Anrin N', true) + " (Development)<br/>" +
 			 "- " + WL.nameColor('SparkyHeliolisk', true) + " (Development, SSSB Lead)<br />" +
